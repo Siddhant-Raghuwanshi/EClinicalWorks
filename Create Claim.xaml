@@ -1,6 +1,14 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="Creating_New_Claims" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="990,761" sap2010:WorkflowViewState.IdRef="Creating_New_Claims_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=mscorlib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="Creating_New_Claims" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=mscorlib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property Name="readfile" Type="InArgument(ui:UiElement)" />
+  </x:Members>
+  <mva:VisualBasic.Settings>
+    <x:Null />
+  </mva:VisualBasic.Settings>
+  <sap:VirtualizedContainerService.HintSize>979,1301</sap:VirtualizedContainerService.HintSize>
+  <sap2010:WorkflowViewState.IdRef>Creating_New_Claims_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
-    <scg:List x:TypeArguments="x:String" Capacity="62">
+    <scg:List x:TypeArguments="x:String" Capacity="76">
       <x:String>System.Activities</x:String>
       <x:String>System.Activities.Statements</x:String>
       <x:String>System.Activities.Expressions</x:String>
@@ -38,6 +46,8 @@
       <x:String>System.Runtime.Serialization</x:String>
       <x:String>System.Xml.Serialization</x:String>
       <x:String>UiPath.Excel.Activities</x:String>
+      <x:String>UiPath.DataTableUtilities</x:String>
+      <x:String>System.Security</x:String>
     </scg:List>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
@@ -70,46 +80,100 @@
       <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
       <AssemblyReference>System.Memory</AssemblyReference>
       <AssemblyReference>System.Runtime.Serialization</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
+      <AssemblyReference>Microsoft.Bcl.AsyncInterfaces</AssemblyReference>
+      <AssemblyReference>System.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.ValueTuple</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
+      <AssemblyReference>NPOI</AssemblyReference>
+      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Creating_New_Claims" sap:VirtualizedContainerService.HintSize="476,696" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Creating_New_Claims" sap:VirtualizedContainerService.HintSize="552,1236" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
-      <Variable x:TypeArguments="x:String" Name="In_DataFile">
-        <Variable.Default>
-          <Literal x:TypeArguments="x:String">C:\Users\faizan.khan\Documents\UiPath\EClinicalWorks\Data</Literal>
-        </Variable.Default>
-      </Variable>
+      <Variable x:TypeArguments="sd:DataTable" Name="In_InputData" />
+      <Variable x:TypeArguments="x:String" Name="DataFile" />
+      <Variable x:TypeArguments="x:String" Default="C:\Users\faizan.khan\Documents\UiPath\EClinicalWorks" Name="ExcelPath" />
     </Sequence.Variables>
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:SelectFile DisplayName="Browse for file" Filter="All files (*.*)|*.*" sap:VirtualizedContainerService.HintSize="434,137" sap2010:WorkflowViewState.IdRef="SelectFile_1" SelectedFile="[In_DataFile]" />
-    <ui:ReadRange DataTable="{x:Null}" AddHeaders="True" DisplayName="Read Range" sap:VirtualizedContainerService.HintSize="434,87" sap2010:WorkflowViewState.IdRef="ReadRange_1" SheetName="Sheet1" WorkbookPath="Copy of TFS_Submission_October 2022 RPM Billing_11072022 (005).xlsx">
+    <ui:SelectFile DisplayName="Browse for file" Filter="All files (*.*)|*.*" sap:VirtualizedContainerService.HintSize="510,137" sap2010:WorkflowViewState.IdRef="SelectFile_2" SelectedFile="[DataFile]" />
+    <ui:ReadRange AddHeaders="True" DataTable="[In_InputData]" DisplayName="Read Range" sap:VirtualizedContainerService.HintSize="510,87" sap2010:WorkflowViewState.IdRef="ReadRange_1" SheetName="Sheet1" WorkbookPath="[DataFile]">
       <ui:ReadRange.Range>
         <InArgument x:TypeArguments="x:String">
           <Literal x:TypeArguments="x:String" Value="" />
         </InArgument>
       </ui:ReadRange.Range>
     </ui:ReadRange>
-    <uix:NApplicationCard WebDriverMode="{x:Null}" AttachMode="ByInstance" DisplayName="Use Browser Chrome: eCW (Billing, Support 2 ) Production" sap:VirtualizedContainerService.HintSize="434,300" sap2010:WorkflowViewState.IdRef="NApplicationCard_3" InteractionMode="DebuggerApi" ScopeGuid="66ad4116-992c-4c42-af2f-4b13522acfe2" Version="V2">
+    <uix:NApplicationCard WebDriverMode="{x:Null}" AttachMode="ByInstance" DisplayName="Use Application/Browser" sap:VirtualizedContainerService.HintSize="510,840" sap2010:WorkflowViewState.IdRef="NApplicationCard_4" ScopeGuid="9d1a54ea-85e1-491e-96e4-3b8bf07baf9e" Version="V2">
       <uix:NApplicationCard.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="200,84" sap2010:WorkflowViewState.IdRef="Sequence_5">
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="476,666" sap2010:WorkflowViewState.IdRef="Sequence_12">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
+            <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[In_InputData]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="434,572" sap2010:WorkflowViewState.IdRef="ForEachRow_3">
+              <ui:ForEachRow.Body>
+                <ActivityAction x:TypeArguments="sd:DataRow">
+                  <ActivityAction.Argument>
+                    <DelegateInArgument x:TypeArguments="sd:DataRow" Name="CurrentRow" />
+                  </ActivityAction.Argument>
+                  <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="376,456" sap2010:WorkflowViewState.IdRef="Sequence_13">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Provider'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="334,216" sap2010:WorkflowViewState.IdRef="NTypeInto_1" InteractionMode="DebuggerApi" ScopeIdentifier="9d1a54ea-85e1-491e-96e4-3b8bf07baf9e" Text="[CurrentRow(&quot;PrimaryCarePhysician&quot;).ToString]" Version="V1">
+                      <uix:NTypeInto.Target>
+                        <uix:TargetAnchorable BrowserURL="https://caazeo8ton5ohnbbssapp.ecwcloud.com/mobiledoc/jsp/webemr/index.jsp#/mobiledoc/jsp/webemr/webpm/claimLookup.jsp" DesignTimeRectangle="527, 126, 401, 24" ElementType="InputBox" FriendlyName="'BAGALWA, MIRIAM'" FullSelectorArgument="&lt;webctrl id='provider-lookupIpt1_6820' tag='INPUT' type='text' /&gt;" FuzzySelectorArgument="&lt;webctrl id='provider-lookupIpt1_6820' tag='INPUT' type='text' class='no-cursory-check autocomplete-off-manual form-control patient-input clearable lookupinput clsCreateClaimProvider ng-not-empty' aaname='' /&gt;" Guid="0be52be1-b99a-48f2-aa28-d8323ee7cae6" ImageBase64="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" InformativeScreenshot="2398d02763c796f35ea986810e02bbaf.png" IsResponsive="True" ScopeSelectorArgument="&lt;html app='chrome.exe' title='eCW (Billing, Support 2 ) Production' /&gt;" SearchSteps="FuzzySelector, Image" Visibility="Interactive">
+                          <uix:TargetAnchorable.Anchors>
+                            <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                              <uix:Target DesignTimeRectangle="422, 126, 90, 16" ElementType="Text" FriendlyName="'Provider'" FullSelectorArgument="&lt;webctrl parentid='pn-createclaim' tag='LABEL' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='pn-createclaim' tag='LABEL' type='' class='col-sm-2 control-label nopadding' aaname='Provider' check:innerText='Provider' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAF4AAAAUCAYAAAAEEYpkAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAJrSURBVFhH7Za/ixpBFMfnv9hWuEK4InZnuXDFbadgsZBK0iSkiKSQJY1KCt1Glisux1VucWCKwzRBLYJaqcVxBsJtigMtDm7hQDutv3mzs+r6K4Ec3OIxxbd48968WT4z851ls9kUUs8vCT4kSfAhSYIPSRJ8SJLgQ1IAfAsFxsB8KYcaMvYNJoHip2pQjoMdlNDbkhvZCVo3AftuM/cStQn+jYVGs4bz9wSJxWD2Vyc8RZN+BeZFC+6WnASfa4n4p4U4xfrlELO7CpJMhdWso3ASAfvEa8YY2BloB/yGKIjqJbTvp3C/pilWcf7L79svIUZ5ozlGO8dr82h7643RK+uIKvx26TA+BMGv97bQe+TjQ9gpBvW0jkZOQ4QZfq/90z9OvCYAeuAJkBJF8mMJ5tUtJk0DCkHRyzWqr8A4ormpCkZuDe+oVj279fr2ijEwxUBjMl0Ffy02Np6t0PwqbSjPCfCitwazM4Q76sIi2Eq2TrYnwDOFNiOVgVmswVl8/35pp8dHjtIwfzyInA9ePb1ZTOx9VqhueeKcM5ViHdXRGI0s5Y6/EJQuzFcMsWLXqwmCX1jLbzHfvXorYgIvei+/xRPf1Dn4YwsDf9191W6rCcoHn7TJdvyx3eAp7uTpxJLd2Nxmlu/E38BPvmdEvAC/zUZ88N4mrOf2S/8NfqvVnPBTzvPipCtkCcuxNavxvH9uNTVYrznsoNXw3i047gOcfhXfOvz2SfCk9QdQPK7zvHOh0fjqnM3HNUEPJH9c07Av87QRAvyi96GwHP5rW2i+WPBSzykJPiRJ8CFJgg9JEnxIkuBD0RR/AJGe7NWkzf68AAAAAElFTkSuQmCC" SearchSteps="FuzzySelector, Image" />
+                            </scg:List>
+                          </uix:TargetAnchorable.Anchors>
+                        </uix:TargetAnchorable>
+                      </uix:NTypeInto.Target>
+                    </uix:NTypeInto>
+                    <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'H4'" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="Click_1" KeyModifiers="None" MouseButton="BTN_LEFT">
+                      <ui:Click.CursorPosition>
+                        <ui:CursorPosition Position="Center">
+                          <ui:CursorPosition.OffsetX>
+                            <InArgument x:TypeArguments="x:Int32" />
+                          </ui:CursorPosition.OffsetX>
+                          <ui:CursorPosition.OffsetY>
+                            <InArgument x:TypeArguments="x:Int32" />
+                          </ui:CursorPosition.OffsetY>
+                        </ui:CursorPosition>
+                      </ui:Click.CursorPosition>
+                      <ui:Click.Target>
+                        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="45ce0825-845b-4ca0-81eb-212c44f408e1" InformativeScreenshot="56f7dacac9d1ce41e2d371001f41958c" Selector="&lt;html app='chrome.exe' title='eCW (Billing, Support 2 ) Production' /&gt;&lt;webctrl parentid='provider-lookupUl1' tag='H4' /&gt;">
+                          <ui:Target.TimeoutMS>
+                            <InArgument x:TypeArguments="x:Int32" />
+                          </ui:Target.TimeoutMS>
+                          <ui:Target.WaitForReady>
+                            <InArgument x:TypeArguments="ui:WaitForReady" />
+                          </ui:Target.WaitForReady>
+                        </ui:Target>
+                      </ui:Click.Target>
+                    </ui:Click>
+                  </Sequence>
+                </ActivityAction>
+              </ui:ForEachRow.Body>
+            </ui:ForEachRow>
           </Sequence>
         </ActivityAction>
       </uix:NApplicationCard.Body>
       <uix:NApplicationCard.TargetApp>
-        <uix:TargetApp Area="-8, -8, 1382, 744" BrowserType="Chrome" IconBase64="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" Selector="&lt;html app='chrome.exe' title='eCW (Billing, Support 2 ) Production' /&gt;" Url="https://caazeo8ton5ohnbbssapp.ecwcloud.com/mobiledoc/jsp/webemr/index.jsp#/mobiledoc/jsp/webemr/webpm/claimLookup.jsp" />
+        <uix:TargetApp Area="0, 0, 0, 0" />
       </uix:NApplicationCard.TargetApp>
     </uix:NApplicationCard>
   </Sequence>
