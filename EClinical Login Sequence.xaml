@@ -1,4 +1,12 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="EClinical_Login_Sequence" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="990,2286" sap2010:WorkflowViewState.IdRef="EClinical_Login_Sequence_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="EClinical_Login_Sequence" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property Name="Out_Argumnet" Type="OutArgument(ui:UiElement)" />
+  </x:Members>
+  <mva:VisualBasic.Settings>
+    <x:Null />
+  </mva:VisualBasic.Settings>
+  <sap:VirtualizedContainerService.HintSize>979,2287</sap:VirtualizedContainerService.HintSize>
+  <sap2010:WorkflowViewState.IdRef>EClinical_Login_Sequence_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="66">
       <x:String>System.Activities</x:String>
@@ -74,19 +82,19 @@
       <AssemblyReference>NPOI</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="EClinical_Login_Sequence" sap:VirtualizedContainerService.HintSize="494,2221" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="EClinical_Login_Sequence" sap:VirtualizedContainerService.HintSize="494,2222" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <uix:NApplicationCard WebDriverMode="{x:Null}" AttachMode="SingleWindow" CloseMode="Never" DisplayName="Use Browser Chrome: Web EMR Login Page" sap:VirtualizedContainerService.HintSize="452,2129" sap2010:WorkflowViewState.IdRef="NApplicationCard_3" InteractionMode="DebuggerApi" ScopeGuid="4d3f48a9-4832-4888-aad3-6b3692a5fc12" Version="V2" WindowResize="Maximize">
+    <uix:NApplicationCard WebDriverMode="{x:Null}" AttachMode="SingleWindow" CloseMode="Never" DisplayName="Use Browser Chrome: Web EMR Login Page" sap:VirtualizedContainerService.HintSize="452,2130" sap2010:WorkflowViewState.IdRef="NApplicationCard_3" InteractionMode="DebuggerApi" ScopeGuid="4d3f48a9-4832-4888-aad3-6b3692a5fc12" Version="V2" WindowResize="Maximize">
       <uix:NApplicationCard.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
           </ActivityAction.Argument>
-          <Sequence sap:VirtualizedContainerService.HintSize="418,1913" sap2010:WorkflowViewState.IdRef="Sequence_19">
+          <Sequence sap:VirtualizedContainerService.HintSize="418,1914" sap2010:WorkflowViewState.IdRef="Sequence_19">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -172,7 +180,7 @@
                 <uix:NClick.Target>
                   <uix:TargetAnchorable BrowserURL="https://caazeo8ton5ohnbbssapp.ecwcloud.com/mobiledoc/jsp/webemr/index.jsp#/mobiledoc/jsp/webemr/jellybean/officevisit/officeVisits.jsp" DesignTimeRectangle="122, 466, 47, 17" ElementType="Text" FriendlyName="'Claims'" FullSelectorArgument="&lt;webctrl aaname='Claims' parentid='jcarousel2' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Claims' parentid='jcarousel2' tag='SPAN' type='' class='padl10' check:innerText='Claims' /&gt;" Guid="1ac2487a-4c47-4264-b5bb-5a728c9eeb86" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAADMAAAAVCAYAAADrVNYBAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAEiSURBVFhH7ZS9DYMwEIXZKgukYpdsEKWOkoqKhiXoYAYK2ACJEYD+4jMGzo5BxiGJQZz0JP/gZ38+H97p7MNedMC4qgPGVR0wXEkFcrSQhT4EeQt1HunXfFl2MBykO7w6ZwoTM4u1ob2nZnBeKZQTIKi/ZibQDM4qLKBuCphaJ8MgOIkqHb7DzJRJ32aXkzBf8RmgP+4jumwhxGKd+rzpxS2HQTNjGKoIsmbMqAzDTkU8df3OEz0ImKLfZoY8TxWmb797yH1sY+gubDmMcc3gLdJDzmfGFIaOqVAWML2RPt3jxgo0r4H1YLjQk9ShFQyqv5khxNOTNqbFyuYzLPSPYLpsjyG/EGsYF3XAuKp9wfA6In+ELcu73R9wu160k9uSDy+Hz1+Wh0e4pgAAAABJRU5ErkJggg==" InformativeScreenshot="a773a1901a6fcb5b87daf56e9bd46530.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='eCW (Billing, Support 2 ) Production' /&gt;" SearchSteps="FuzzySelector, Image" Visibility="Interactive">
                     <uix:TargetAnchorable.Anchors>
-                      <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                      <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
                         <uix:Target DesignTimeRectangle="104, 467, 18, 18" FriendlyName="'I'" FullSelectorArgument="&lt;webctrl css-selector='body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;nav&amp;gt;ul&amp;gt;li&amp;gt;div&amp;gt;div&amp;gt;ul&amp;gt;li&amp;gt;a&amp;gt;span&amp;gt;i' idx='62' parentid='jcarousel2' tag='I' /&gt;" FuzzySelectorArgument="&lt;webctrl type='' class='svgicon svg-hospitalIcon' parentid='jcarousel2' tag='I' aaname='' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAABYAAAAWCAYAAADEtGw7AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAFSSURBVEhLzZTBaoNAEIb7VnmBnLzlBfIGPfRUCiXnYE5CoVAKDRRv7cGWgiEH8RAK7cGQQ6QQWBAEESkhFWFB+Dsa0ypZrNpIO/DLzPrzMTOyHnW6EtrQ34F7ioEFc8Dysh5xIvDm9SNYcwCsPTCfA3EIl72DMrzdif07VQJvrGt0Hlbg3gtG3QkYgZku9u9UHfx1dmiwTsnHHEpj8HiOTcTBIw+zCwnqiigx1cliKTi9oycWYwmjZy+ttysqcvbBSWdphHi9orov4+bJgD79lnYro0dexQq31nSSIqcETH35NowcsCDTRpBNUR+cjBlTsreKJMneJVEP7ECjuuzjNV5F5agH9mAMZRgudby8x8D0CGBDHc5AR3BNGeqyUcccAf0XgohSwZXmvgN3nRr/Dbi1VdSIUvAlXeXM1ziciQDcP8MpjT74jc6PBeADqyWwhE9E79xBZ+S99QAAAABJRU5ErkJggg==" SearchSteps="FuzzySelector, Image" />
                       </scg:List>
                     </uix:TargetAnchorable.Anchors>
