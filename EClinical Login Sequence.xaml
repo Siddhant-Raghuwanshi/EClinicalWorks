@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="EClinical_Login_Sequence" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="701,3400" sap2010:WorkflowViewState.IdRef="EClinical_Login_Sequence_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="EClinical_Login_Sequence" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="701,3401" sap2010:WorkflowViewState.IdRef="EClinical_Login_Sequence_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="68">
       <x:String>System.Activities</x:String>
@@ -75,36 +75,28 @@
       <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="EClinical_Login_Sequence" sap:VirtualizedContainerService.HintSize="690,3335" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="EClinical_Login_Sequence" sap:VirtualizedContainerService.HintSize="690,3336" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <uix:NApplicationCard WebDriverMode="{x:Null}" AttachMode="ByInstance" CloseMode="Never" DisplayName="Use Browser Chrome: Web EMR Login Page" sap:VirtualizedContainerService.HintSize="628,3213" sap2010:WorkflowViewState.IdRef="NApplicationCard_2" InteractionMode="DebuggerApi" ScopeGuid="8f799fe6-596c-4dfa-9223-d8f4c1b58f11" Version="V2">
+    <uix:NApplicationCard WebDriverMode="{x:Null}" AttachMode="ByInstance" CloseMode="Never" DisplayName="Use Browser Chrome: Web EMR Login Page" sap:VirtualizedContainerService.HintSize="628,3214" sap2010:WorkflowViewState.IdRef="NApplicationCard_2" InteractionMode="DebuggerApi" ScopeGuid="8f799fe6-596c-4dfa-9223-d8f4c1b58f11" Version="V2">
       <uix:NApplicationCard.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
           </ActivityAction.Argument>
-          <Sequence sap:VirtualizedContainerService.HintSize="594,2987" sap2010:WorkflowViewState.IdRef="Sequence_11">
+          <Sequence sap:VirtualizedContainerService.HintSize="594,2988" sap2010:WorkflowViewState.IdRef="Sequence_11">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="532,763" sap2010:WorkflowViewState.IdRef="Sequence_2">
+            <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="532,764" sap2010:WorkflowViewState.IdRef="Sequence_2">
               <Sequence.Variables>
-                <Variable x:TypeArguments="x:String" Name="Username">
-                  <Variable.Default>
-                    <Literal x:TypeArguments="x:String">Billing_Support_1</Literal>
-                  </Variable.Default>
-                </Variable>
-                <Variable x:TypeArguments="ui:GenericValue" Name="Password">
-                  <Variable.Default>
-                    <mva:VisualBasicValue x:TypeArguments="ui:GenericValue" ExpressionText="&quot;Crownhealth001!&quot;" />
-                  </Variable.Default>
-                </Variable>
+                <Variable x:TypeArguments="x:String" Default="Billing_Support_1" Name="Username" />
+                <Variable x:TypeArguments="ui:GenericValue" Default="[&quot;Crownhealth001!&quot;]" Name="Password" />
               </Sequence.Variables>
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -200,15 +192,15 @@
                       </ui:Target>
                     </ui:UiElementExists.Target>
                   </ui:UiElementExists>
-                  <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="436,376" sap2010:WorkflowViewState.IdRef="CommentOut_7">
+                  <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="436,376" sap2010:WorkflowViewState.IdRef="CommentOut_9">
                     <ui:CommentOut.Body>
-                      <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="400,288" sap2010:WorkflowViewState.IdRef="Sequence_13">
+                      <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="400,288" sap2010:WorkflowViewState.IdRef="Sequence_15">
                         <sap:WorkflowViewStateService.ViewState>
                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
                             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                           </scg:Dictionary>
                         </sap:WorkflowViewStateService.ViewState>
-                        <uix:NClick ClickType="Single" DisplayName="Click 'Ok'" sap:VirtualizedContainerService.HintSize="338,166" sap2010:WorkflowViewState.IdRef="NClick_5" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="8f799fe6-596c-4dfa-9223-d8f4c1b58f11" Version="V1">
+                        <uix:NClick ClickType="Single" DisplayName="Click 'Ok'" sap:VirtualizedContainerService.HintSize="338,166" sap2010:WorkflowViewState.IdRef="NClick_11" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="8f799fe6-596c-4dfa-9223-d8f4c1b58f11" Version="V1">
                           <uix:NClick.Target>
                             <uix:TargetAnchorable BrowserURL="https://caazeo8ton5ohnbbssapp.ecwcloud.com/mobiledoc/jsp/webemr/index.jsp#/mobiledoc/jsp/webemr/jellybean/officevisit/officeVisits.jsp" DesignTimeRectangle="922, 412, 38, 24" ElementType="Button" FriendlyName="'Ok'" FullSelectorArgument="&lt;webctrl aaname='Ok' parentid='providerLicense' tag='BUTTON' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Ok' parentid='providerLicense' tag='BUTTON' type='button' class='btn btn-xs btn-blue mr5 clsMyButton' check:innerText='Ok' /&gt;" Guid="467ebaa2-92cf-4813-a275-11726957a5a6" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAACoAAAAcCAYAAAAX4C3rAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAFKSURBVFhH7dexSwMxFMfxTg4OBUGcxKE4FNHiX+Ff4C5OupUubnatk9CxIOJoB5dSxKLODk7q4uKkg39AOz/5HiS86x2a0mgueMOPpkmO++Tx7uAqk8lYYkic0Ob9k9TO7mS1NwoaDFi0zUJZ2Oo/SuPmQ7ZvP4MGAxaNtVBOUQSkCRZMGSglz7sgZDCVUJ/5f9DNwZss7rWlsrOfZGG3JfXLZ7vOePmoJ43r99R1rvECBQFs/fwhNQfcYAsBXTm+kLXTYWaeOdYYB4dyYwCmcjoap8dkqdm1h3DJ3FB6s3p4kgtlDRC/Brpx9Zq0hG4Tl/xpRasHnUwvu2ZuKHHt0aTy/Rdb5en938ULFMQsTz37wDI2+3+KFyiZfo8y1lXTUP5T7Vmw3qC/nRLqOyXUd3Kh0XyKRPNxZ7CcgpKHDAaNJClokRMJdCxfDlC6XF7z0PIAAAAASUVORK5CYII=" InformativeScreenshot="da7fe1befe6225b87f6f8e941cbc1fba.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='eCW (Billing, Support 1 ) Production' /&gt;" SearchSteps="FuzzySelector, Image" Visibility="Interactive" WaitForReadyArgument="None" />
                           </uix:NClick.Target>
