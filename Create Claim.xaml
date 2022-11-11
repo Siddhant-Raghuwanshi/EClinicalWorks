@@ -5,7 +5,7 @@
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>979,1301</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>979,1263</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>Creating_New_Claims_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="76">
@@ -86,10 +86,9 @@
       <AssemblyReference>System.ValueTuple</AssemblyReference>
       <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
       <AssemblyReference>NPOI</AssemblyReference>
-      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Creating_New_Claims" sap:VirtualizedContainerService.HintSize="552,1236" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Creating_New_Claims" sap:VirtualizedContainerService.HintSize="552,1198" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="sd:DataTable" Name="In_InputData" />
       <Variable x:TypeArguments="x:String" Name="DataFile" />
@@ -108,7 +107,7 @@
         </InArgument>
       </ui:ReadRange.Range>
     </ui:ReadRange>
-    <uix:NApplicationCard WebDriverMode="{x:Null}" AttachMode="ByInstance" DisplayName="Use Application/Browser" sap:VirtualizedContainerService.HintSize="510,840" sap2010:WorkflowViewState.IdRef="NApplicationCard_4" ScopeGuid="9d1a54ea-85e1-491e-96e4-3b8bf07baf9e" Version="V2">
+    <uix:NApplicationCard WebDriverMode="{x:Null}" AttachMode="ByInstance" DisplayName="Use Application/Browser" sap:VirtualizedContainerService.HintSize="510,802" sap2010:WorkflowViewState.IdRef="NApplicationCard_4" InUiElement="[readfile]" ScopeGuid="9d1a54ea-85e1-491e-96e4-3b8bf07baf9e" Version="V2">
       <uix:NApplicationCard.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
@@ -136,7 +135,7 @@
                       <uix:NTypeInto.Target>
                         <uix:TargetAnchorable BrowserURL="https://caazeo8ton5ohnbbssapp.ecwcloud.com/mobiledoc/jsp/webemr/index.jsp#/mobiledoc/jsp/webemr/webpm/claimLookup.jsp" DesignTimeRectangle="527, 126, 401, 24" ElementType="InputBox" FriendlyName="'BAGALWA, MIRIAM'" FullSelectorArgument="&lt;webctrl id='provider-lookupIpt1_6820' tag='INPUT' type='text' /&gt;" FuzzySelectorArgument="&lt;webctrl id='provider-lookupIpt1_6820' tag='INPUT' type='text' class='no-cursory-check autocomplete-off-manual form-control patient-input clearable lookupinput clsCreateClaimProvider ng-not-empty' aaname='' /&gt;" Guid="0be52be1-b99a-48f2-aa28-d8323ee7cae6" ImageBase64="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" InformativeScreenshot="2398d02763c796f35ea986810e02bbaf.png" IsResponsive="True" ScopeSelectorArgument="&lt;html app='chrome.exe' title='eCW (Billing, Support 2 ) Production' /&gt;" SearchSteps="FuzzySelector, Image" Visibility="Interactive">
                           <uix:TargetAnchorable.Anchors>
-                            <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                            <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
                               <uix:Target DesignTimeRectangle="422, 126, 90, 16" ElementType="Text" FriendlyName="'Provider'" FullSelectorArgument="&lt;webctrl parentid='pn-createclaim' tag='LABEL' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='pn-createclaim' tag='LABEL' type='' class='col-sm-2 control-label nopadding' aaname='Provider' check:innerText='Provider' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAF4AAAAUCAYAAAAEEYpkAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAJrSURBVFhH7Za/ixpBFMfnv9hWuEK4InZnuXDFbadgsZBK0iSkiKSQJY1KCt1Glisux1VucWCKwzRBLYJaqcVxBsJtigMtDm7hQDutv3mzs+r6K4Ec3OIxxbd48968WT4z851ls9kUUs8vCT4kSfAhSYIPSRJ8SJLgQ1IAfAsFxsB8KYcaMvYNJoHip2pQjoMdlNDbkhvZCVo3AftuM/cStQn+jYVGs4bz9wSJxWD2Vyc8RZN+BeZFC+6WnASfa4n4p4U4xfrlELO7CpJMhdWso3ASAfvEa8YY2BloB/yGKIjqJbTvp3C/pilWcf7L79svIUZ5ozlGO8dr82h7643RK+uIKvx26TA+BMGv97bQe+TjQ9gpBvW0jkZOQ4QZfq/90z9OvCYAeuAJkBJF8mMJ5tUtJk0DCkHRyzWqr8A4ormpCkZuDe+oVj279fr2ijEwxUBjMl0Ffy02Np6t0PwqbSjPCfCitwazM4Q76sIi2Eq2TrYnwDOFNiOVgVmswVl8/35pp8dHjtIwfzyInA9ePb1ZTOx9VqhueeKcM5ViHdXRGI0s5Y6/EJQuzFcMsWLXqwmCX1jLbzHfvXorYgIvei+/xRPf1Dn4YwsDf9191W6rCcoHn7TJdvyx3eAp7uTpxJLd2Nxmlu/E38BPvmdEvAC/zUZ88N4mrOf2S/8NfqvVnPBTzvPipCtkCcuxNavxvH9uNTVYrznsoNXw3i047gOcfhXfOvz2SfCk9QdQPK7zvHOh0fjqnM3HNUEPJH9c07Av87QRAvyi96GwHP5rW2i+WPBSzykJPiRJ8CFJgg9JEnxIkuBD0RR/AJGe7NWkzf68AAAAAElFTkSuQmCC" SearchSteps="FuzzySelector, Image" />
                             </scg:List>
                           </uix:TargetAnchorable.Anchors>
