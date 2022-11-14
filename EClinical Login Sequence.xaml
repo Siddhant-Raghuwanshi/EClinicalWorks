@@ -5,7 +5,7 @@
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>979,2287</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>979,2653</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>EClinical_Login_Sequence_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="66">
@@ -44,6 +44,8 @@
       <x:String>System.Security</x:String>
       <x:String>UiPath.Core.Activities.Orchestrator</x:String>
       <x:String>System.ComponentModel</x:String>
+      <x:String>UiPath.Platform.Triggers</x:String>
+      <x:String>UiPath.Platform.Triggers.Scope</x:String>
     </scg:List>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
@@ -83,25 +85,25 @@
       <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="EClinical_Login_Sequence" sap:VirtualizedContainerService.HintSize="494,2222" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="EClinical_Login_Sequence" sap:VirtualizedContainerService.HintSize="596,2588" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <uix:NApplicationCard WebDriverMode="{x:Null}" AttachMode="SingleWindow" CloseMode="Never" DisplayName="Use Browser Chrome: Web EMR Login Page" sap:VirtualizedContainerService.HintSize="452,2130" sap2010:WorkflowViewState.IdRef="NApplicationCard_3" InteractionMode="DebuggerApi" OutUiElement="[Out_Argumnet]" ScopeGuid="4d3f48a9-4832-4888-aad3-6b3692a5fc12" Version="V2" WindowResize="Maximize">
+    <uix:NApplicationCard WebDriverMode="{x:Null}" AttachMode="SingleWindow" CloseMode="Never" DisplayName="Use Browser Chrome: Web EMR Login Page" sap:VirtualizedContainerService.HintSize="554,2496" sap2010:WorkflowViewState.IdRef="NApplicationCard_3" InteractionMode="DebuggerApi" OutUiElement="[Out_Argumnet]" ScopeGuid="4d3f48a9-4832-4888-aad3-6b3692a5fc12" Version="V2" WindowResize="Maximize">
       <uix:NApplicationCard.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
           </ActivityAction.Argument>
-          <Sequence sap:VirtualizedContainerService.HintSize="418,1914" sap2010:WorkflowViewState.IdRef="Sequence_19">
+          <Sequence sap:VirtualizedContainerService.HintSize="520,2280" sap2010:WorkflowViewState.IdRef="Sequence_19">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="376,1820" sap2010:WorkflowViewState.IdRef="Sequence_8">
+            <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="478,2186" sap2010:WorkflowViewState.IdRef="Sequence_8">
               <Sequence.Variables>
                 <Variable x:TypeArguments="x:String" Default="Billing_Support_2" Name="Username" />
                 <Variable x:TypeArguments="ui:GenericValue" Default="[&quot;Crownhealth001!&quot;]" Name="Password" />
@@ -111,7 +113,7 @@
                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
-              <ui:TypeInto AlterIfDisabled="{x:Null}" ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" SimulateType="{x:Null}" Activate="True" DisplayName="Type Into 'INPUT  doctorID'" sap:VirtualizedContainerService.HintSize="334,134" sap2010:WorkflowViewState.IdRef="TypeInto_2" Text="[Username]">
+              <ui:TypeInto AlterIfDisabled="{x:Null}" ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" SimulateType="{x:Null}" Activate="True" DisplayName="Type Into 'INPUT  doctorID'" sap:VirtualizedContainerService.HintSize="436,134" sap2010:WorkflowViewState.IdRef="TypeInto_2" Text="[Username]">
                 <ui:TypeInto.Target>
                   <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="e62b6def-6069-49a6-bcbb-b4cb56f97b1c" InformativeScreenshot="f6c0a6a3ba5d64bf68d15774f29eeb5b" Selector="&lt;webctrl tag='INPUT' /&gt;">
                     <ui:Target.TimeoutMS>
@@ -123,7 +125,7 @@
                   </ui:Target>
                 </ui:TypeInto.Target>
               </ui:TypeInto>
-              <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'INPUT  nextStep'" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="Click_4" KeyModifiers="None" MouseButton="BTN_LEFT">
+              <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'INPUT  nextStep'" sap:VirtualizedContainerService.HintSize="436,106" sap2010:WorkflowViewState.IdRef="Click_4" KeyModifiers="None" MouseButton="BTN_LEFT">
                 <ui:Click.CursorPosition>
                   <ui:CursorPosition Position="Center">
                     <ui:CursorPosition.OffsetX>
@@ -145,7 +147,7 @@
                   </ui:Target>
                 </ui:Click.Target>
               </ui:Click>
-              <ui:TypeInto AlterIfDisabled="{x:Null}" ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" Activate="True" DisplayName="Type Into 'INPUT  passwordField'" sap:VirtualizedContainerService.HintSize="334,134" sap2010:WorkflowViewState.IdRef="TypeInto_4" SimulateType="True" Text="[Password]">
+              <ui:TypeInto AlterIfDisabled="{x:Null}" ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" Activate="True" DisplayName="Type Into 'INPUT  passwordField'" sap:VirtualizedContainerService.HintSize="436,134" sap2010:WorkflowViewState.IdRef="TypeInto_4" SimulateType="True" Text="[Password]">
                 <ui:TypeInto.Target>
                   <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="819553af-1f89-4aad-9be2-05d8b5978e0f" InformativeScreenshot="1beeaf8cd900f2b0d4ba0f44b3642f35" Selector="&lt;webctrl tag='INPUT' type='password' /&gt;">
                     <ui:Target.TimeoutMS>
@@ -157,27 +159,50 @@
                   </ui:Target>
                 </ui:TypeInto.Target>
               </ui:TypeInto>
-              <uix:NClick ClickType="Single" DisplayName="Click 'Log In'" sap:VirtualizedContainerService.HintSize="334,156" sap2010:WorkflowViewState.IdRef="NClick_8" InteractionMode="Simulate" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="4d3f48a9-4832-4888-aad3-6b3692a5fc12" Timeout="3000" Version="V1">
-                <uix:NClick.Target>
-                  <uix:TargetAnchorable BrowserURL="https://caazeo8ton5ohnbbssapp.ecwcloud.com/mobiledoc/jsp/webemr/login/newLoginStep2.jsp" DesignTimeRectangle="58, 515, 320, 42" ElementType="Button" FriendlyName="'Log In'" FullSelectorArgument="&lt;webctrl tag='INPUT' type='submit' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='INPUT' type='submit' class='btn btn-emr btn-sm evaButton' aaname='Log In' check:text='Log In' /&gt;" Guid="d3ec018a-b74a-4d2f-abb7-9b91b4583b11" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAUQAAAAuCAYAAABQ8mBOAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAALfSURBVHhe7drPShtRFIDxvk9dd6PrPIFPkBfoRtwr3QUEu3EpWbkKggRcBEKxC12JIKZYVFKSLkzbpBn/NKYdT++ZnJlkkklr66TS5DvwW2Tu3FmFj+vEZ8IwDMMEQxAZhmFsYkFc3SrL/NKGvHj5GgCmmrZOmzc4URB1YWFlW+bWjuX5+ikATDVtnTZvMIpRELWWxBDALNHmafvCiYKoR8ikDQAwzbR94RBEADONIAKAIYgAYAgiABiCCACGIAKAIYgAYAgiABiCCACGIAKAIYgAYAgiABiCiHSd3Llv0J0UktZSkKv5Ip0bySWsAY9FEJEugoj/GEFEun4RxMzbKzm/7X3HxL+XevWTLIbrOy2phGvRjD4nFsS9G/GkK0fVrnTcZZ1O+1py+fge4KEIItI1Loj5plR+iHgfv0jWBWtxX2Mmcn5Sc+s1Kbbch/aVLOcvZPms64LZlVLpIv4MZzSIblqe26fB7X2uv9dnxvcBD0EQka5xQTzsuOu+HLwJr9Wk1HaXXMwy6w05cMterdFbC0Ln7t0L7+1LCmLlMFwfeg7whwgi0jUuiAnXC013KYibnRCDk547Ib5zJ0T3p3Bxe2C/GQ3iYDgJIh6HICJdf3VCdJ93Panbe0Dxfakc1eP7DUHEJBFEpOs37xA7jVbwvi98h1g/7b3v27y8F2l+7f/IMgZBxCQRRKQrCOLQuNDpWqbsjf2VOTu8T9fPRsNGEDFJBBFPb/+bdKQrpd3wV+ULefXhez98wD9CEPH0jt3p0O9KsVQNPmcKjej9Ynb4XmCCCCKeXv5Sip/96J+r9c9lr3ktmzsJ9wITRBABwBBEADAEEQAMQQQAQxABwBBEADAEEQAMQQQAQxABwBBEADAEEQBMYhDnlzZkbu04cQMATCNtnrYvnCiIq1tlWVjZJooAZoK2Tpun7QsnCqKOLmgt9QgJANNMWzcYQ51YEBmGYWZ5CCLDMEwwIj8BvFHkUBE0cLMAAAAASUVORK5CYII=" InformativeScreenshot="2dc60ce2e6d17a9da7e67f1ba39cef1f.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Web EMR Login Page' /&gt;" SearchSteps="FuzzySelector, Image" Visibility="Interactive" />
-                </uix:NClick.Target>
-              </uix:NClick>
-              <uix:NClick ClickType="Single" DisplayName="Click 'Ok'" sap:VirtualizedContainerService.HintSize="334,156" sap2010:WorkflowViewState.IdRef="NClick_4" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="4d3f48a9-4832-4888-aad3-6b3692a5fc12" Timeout="3000" Version="V1">
+              <ui:SendHotkey ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" Activate="True" DelayBetweenKeys="3000" DisplayName="Send Hotkey 'INPUT  Login'" sap:VirtualizedContainerService.HintSize="436,156" sap2010:WorkflowViewState.IdRef="SendHotkey_1" Key="enter" KeyModifiers="None" SpecialKey="True">
+                <ui:SendHotkey.Target>
+                  <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="920e7d49-7195-4806-b6ff-111c77bfe47d" InformativeScreenshot="02d84d642ff9731f5d0346285f7c68b8" Selector="&lt;webctrl tag='INPUT' type='submit' /&gt;">
+                    <ui:Target.TimeoutMS>
+                      <InArgument x:TypeArguments="x:Int32" />
+                    </ui:Target.TimeoutMS>
+                    <ui:Target.WaitForReady>
+                      <InArgument x:TypeArguments="ui:WaitForReady" />
+                    </ui:Target.WaitForReady>
+                  </ui:Target>
+                </ui:SendHotkey.Target>
+              </ui:SendHotkey>
+              <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="436,326" sap2010:WorkflowViewState.IdRef="CommentOut_1">
+                <ui:CommentOut.Body>
+                  <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="376,248" sap2010:WorkflowViewState.IdRef="Sequence_20">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <uix:NClick ClickType="Single" DisplayName="Click 'Log In'" sap:VirtualizedContainerService.HintSize="334,156" sap2010:WorkflowViewState.IdRef="NClick_8" InteractionMode="Simulate" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="4d3f48a9-4832-4888-aad3-6b3692a5fc12" Timeout="3000" Version="V1">
+                      <uix:NClick.Target>
+                        <uix:TargetAnchorable BrowserURL="https://caazeo8ton5ohnbbssapp.ecwcloud.com/mobiledoc/jsp/webemr/login/newLoginStep2.jsp" DesignTimeRectangle="58, 515, 320, 42" ElementType="Button" FriendlyName="'Log In'" FullSelectorArgument="&lt;webctrl tag='INPUT' type='submit' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='INPUT' type='submit' class='btn btn-emr btn-sm evaButton' aaname='Log In' check:text='Log In' /&gt;" Guid="d3ec018a-b74a-4d2f-abb7-9b91b4583b11" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAUQAAAAuCAYAAABQ8mBOAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAALfSURBVHhe7drPShtRFIDxvk9dd6PrPIFPkBfoRtwr3QUEu3EpWbkKggRcBEKxC12JIKZYVFKSLkzbpBn/NKYdT++ZnJlkkklr66TS5DvwW2Tu3FmFj+vEZ8IwDMMEQxAZhmFsYkFc3SrL/NKGvHj5GgCmmrZOmzc4URB1YWFlW+bWjuX5+ikATDVtnTZvMIpRELWWxBDALNHmafvCiYKoR8ikDQAwzbR94RBEADONIAKAIYgAYAgiABiCCACGIAKAIYgAYAgiABiCCACGIAKAIYgAYAgiABiCiHSd3Llv0J0UktZSkKv5Ip0bySWsAY9FEJEugoj/GEFEun4RxMzbKzm/7X3HxL+XevWTLIbrOy2phGvRjD4nFsS9G/GkK0fVrnTcZZ1O+1py+fge4KEIItI1Loj5plR+iHgfv0jWBWtxX2Mmcn5Sc+s1Kbbch/aVLOcvZPms64LZlVLpIv4MZzSIblqe26fB7X2uv9dnxvcBD0EQka5xQTzsuOu+HLwJr9Wk1HaXXMwy6w05cMterdFbC0Ln7t0L7+1LCmLlMFwfeg7whwgi0jUuiAnXC013KYibnRCDk547Ib5zJ0T3p3Bxe2C/GQ3iYDgJIh6HICJdf3VCdJ93Panbe0Dxfakc1eP7DUHEJBFEpOs37xA7jVbwvi98h1g/7b3v27y8F2l+7f/IMgZBxCQRRKQrCOLQuNDpWqbsjf2VOTu8T9fPRsNGEDFJBBFPb/+bdKQrpd3wV+ULefXhez98wD9CEPH0jt3p0O9KsVQNPmcKjej9Ynb4XmCCCCKeXv5Sip/96J+r9c9lr3ktmzsJ9wITRBABwBBEADAEEQAMQQQAQxABwBBEADAEEQAMQQQAQxABwBBEADAEEQBMYhDnlzZkbu04cQMATCNtnrYvnCiIq1tlWVjZJooAZoK2Tpun7QsnCqKOLmgt9QgJANNMWzcYQ51YEBmGYWZ5CCLDMEwwIj8BvFHkUBE0cLMAAAAASUVORK5CYII=" InformativeScreenshot="2dc60ce2e6d17a9da7e67f1ba39cef1f.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Web EMR Login Page' /&gt;" SearchSteps="FuzzySelector, Image" Visibility="Interactive" />
+                      </uix:NClick.Target>
+                    </uix:NClick>
+                  </Sequence>
+                </ui:CommentOut.Body>
+              </ui:CommentOut>
+              <uix:NClick ClickType="Single" DisplayName="Click 'Ok'" sap:VirtualizedContainerService.HintSize="436,156" sap2010:WorkflowViewState.IdRef="NClick_4" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="4d3f48a9-4832-4888-aad3-6b3692a5fc12" Timeout="3000" Version="V1">
                 <uix:NClick.Target>
                   <uix:TargetAnchorable BrowserURL="https://caazeo8ton5ohnbbssapp.ecwcloud.com/mobiledoc/jsp/webemr/index.jsp#/mobiledoc/jsp/webemr/jellybean/officevisit/officeVisits.jsp" DesignTimeRectangle="922, 380, 38, 24" ElementType="Button" FriendlyName="'Ok'" FullSelectorArgument="&lt;webctrl aaname='Ok' parentid='providerLicense' tag='BUTTON' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Ok' parentid='providerLicense' tag='BUTTON' type='button' class='btn btn-xs btn-blue mr5 clsMyButton' check:innerText='Ok' /&gt;" Guid="1e751896-ad85-4df8-a0d6-78ca26f6e7e2" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAACoAAAAcCAYAAAAX4C3rAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAGOSURBVFhH7dixS8NAFAZwB/8DZx11c3PTSQgGQrsrOAnFRVCHLN00UwedhWBtaJc4WQRndRBEF9FaEEfF0kzaQRyefBcuXJqgKT29EzN89HrvQn/3uBauI4ZhUK/3pl1arTtyXZdM0yQYtYXyNBr1JNQ5f6D5+hXN1S6VBgZYYEJnY1AUlk4eyb79oHKblAYGWDg2BsUudEDywAJTAoqWpz2gMjDlUJn5f9DN61eaKDk0urDCMrZo0+rpU1THeGbLI/vmPfZc1kiBAgHY8vF9bG68tB1htYDOVg6pcHCWmMccahgrh+KDAeCdEyPixDEyXd6LNpElQ0NxNqc2dlOhqAGEVw5duwjYWRaPSZb8akcn13cSZzlrhoYiWc9o2PnnqMv967+KFCgQg3zrsQ5YjPn67yIFivT/jmIsdk2E4j26PQhWGvSnk0NlJ4fKTir0T1xFcNPT9XIXu4V6Xo3JUcAu0HKVgYHfQJvNoxCKfyIsyyLf96nTeWFFHRIEXYYsFgshtFrdZwOd4zgOfQLahINVeRgbCgAAAABJRU5ErkJggg==" InformativeScreenshot="d685a47d1595baba0bc25324bbd38a6f.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='eCW (Billing, Support 2 ) Production' /&gt;" SearchSteps="FuzzySelector, Image" Visibility="Interactive" />
                 </uix:NClick.Target>
               </uix:NClick>
-              <uix:NClick ClickType="Single" DisplayName="Click 'I'" sap:VirtualizedContainerService.HintSize="334,156" sap2010:WorkflowViewState.IdRef="NClick_5" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="4d3f48a9-4832-4888-aad3-6b3692a5fc12" Version="V1">
+              <uix:NClick ClickType="Single" DisplayName="Click 'I'" sap:VirtualizedContainerService.HintSize="436,156" sap2010:WorkflowViewState.IdRef="NClick_5" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="4d3f48a9-4832-4888-aad3-6b3692a5fc12" Version="V1">
                 <uix:NClick.Target>
                   <uix:TargetAnchorable BrowserURL="https://caazeo8ton5ohnbbssapp.ecwcloud.com/mobiledoc/jsp/webemr/index.jsp#/mobiledoc/jsp/webemr/jellybean/officevisit/officeVisits.jsp" DesignTimeRectangle="27, 91, 23, 15" FriendlyName="'I'" FullSelectorArgument="&lt;webctrl tag='I' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='I' type='' class='icon icon-nav' aaname='' /&gt;" Guid="64eefae4-54d2-4559-aaf2-f708a0edcb67" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAABsAAAATCAYAAABhh3Y4AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAAxSURBVEhLY3DefP0/vfDAWEZLMIIsowceAZbREowgy+iBR4BltAQjyDJ6YDpadv0/AB7TkPddtSvqAAAAAElFTkSuQmCC" InformativeScreenshot="8c423a6185a0ee9dd75634df3250bffd.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='eCW (Billing, Support 2 ) Production' /&gt;" SearchSteps="FuzzySelector, Image" Visibility="Interactive" />
                 </uix:NClick.Target>
               </uix:NClick>
-              <uix:NClick ClickType="Single" DisplayName="Click 'Billing'" sap:VirtualizedContainerService.HintSize="334,156" sap2010:WorkflowViewState.IdRef="NClick_6" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="4d3f48a9-4832-4888-aad3-6b3692a5fc12" Version="V1">
+              <uix:NClick ClickType="Single" DisplayName="Click 'Billing'" sap:VirtualizedContainerService.HintSize="436,156" sap2010:WorkflowViewState.IdRef="NClick_6" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="4d3f48a9-4832-4888-aad3-6b3692a5fc12" Version="V1">
                 <uix:NClick.Target>
                   <uix:TargetAnchorable BrowserURL="https://caazeo8ton5ohnbbssapp.ecwcloud.com/mobiledoc/jsp/webemr/index.jsp#/mobiledoc/jsp/webemr/jellybean/officevisit/officeVisits.jsp" DesignTimeRectangle="8, 463, 61, 42" ElementType="Text" FriendlyName="'Billing'" FullSelectorArgument="&lt;webctrl aaname='Billing' css-selector='body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;nav&amp;gt;ul&amp;gt;li&amp;gt;a' parentid='jcarousel2' tag='A' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Billing' type='' parentid='jcarousel2' tag='A' class='cursor' check:innerText='Billing' /&gt;" Guid="c7538962-bc4b-4858-92d2-fb967b122e2c" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAEEAAAAuCAYAAAB3VXTKAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAK5SURBVGhD7ZpBi9NAFMf9Vn4BTx78BisseBFPgiCCn8C97IKwlwVXRFhYReopZQ89eag9dKlgKQiBgUKh1UMbCoHC883Le0m6O8iSvJHd6fzgTzLJZJL8dpJM0r0nAHL/wcOdisAKCgmPnr7YqQisIPYEwhZcFUOOwAr8Sdh724XBxMBilUO+bpblbAzJ18/w8fQQnjj20TQCK/Ag4fEbOJ9ktJM2LIfvYc/VvkIEVqAt4RV00px20IppD54729eJwAqUJZyOob2CHEYfHG0rRmAFuhLe/VToBWCg42hbMwIr0JXQMdR2O1aXcORoWzMCK4gSCFtwVWySKAGzJeFfJ3N8CcutOl1IaSMkSkCCkoC4RoGU2kNElpXEnoBECUhQEpoSlIS1gW8XPUhc6ZtieF3WGcOCNkLi5YAEJWGTwTQ1kLoy5Vftss6f6sUrKAlNiRKQKAEJRcLWCNCy4amwwVEiz5ZInSAkbAx0DvBuX564/VJ0BqM1F5H8x9n2B5jf3+Hgy69i/q5LOJ/ksOif0PxRH+/49r3AFN8Ln13g2IDeEwwkL7H+6x6kVM5g9GkftzmE3gzLMxRSa9NHBFagK+GuRGAFUQJhC66KIUdgBbspYT6fU1hB7AmELbgqhhyBFShKSLaHi8shPyqHGaQJrsc3x5SWncDA2LEATlf+f2hxRWAFuhLkxItX4ysneE1Cbd1/jsAKPEqQkR8ud/cEO8JkUXbbVfVLNtWn9byA0Os1AivwdTlkMDiult9EAphuUd9+cLHzMuVlxbY4rxCBFfjqCbXr/YYS5K9PvYhO3rZBx4rUpCpEYAU+JfCBt5Hg6d4hsAJfl0P1dGgu4co9QS4NhQisQFGCcspHK5dLYQoRWMHtlUA3RjrUgupSax+BFdxiCR4jsIIogbAF17++hhyBFexyTwD4C5CJKXEhB2+5AAAAAElFTkSuQmCC" InformativeScreenshot="794c6d386571b3d6e7548e58dae560b9.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='eCW (Billing, Support 2 ) Production' /&gt;" SearchSteps="FuzzySelector, Image" Visibility="Interactive" />
                 </uix:NClick.Target>
               </uix:NClick>
-              <uix:NClick ClickType="Single" DisplayName="Click 'Claims'" sap:VirtualizedContainerService.HintSize="334,156" sap2010:WorkflowViewState.IdRef="NClick_7" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="4d3f48a9-4832-4888-aad3-6b3692a5fc12" Timeout="3000" Version="V1">
+              <uix:NClick ClickType="Single" DisplayName="Click 'Claims'" sap:VirtualizedContainerService.HintSize="436,156" sap2010:WorkflowViewState.IdRef="NClick_7" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="4d3f48a9-4832-4888-aad3-6b3692a5fc12" Timeout="3000" Version="V1">
                 <uix:NClick.Target>
                   <uix:TargetAnchorable BrowserURL="https://caazeo8ton5ohnbbssapp.ecwcloud.com/mobiledoc/jsp/webemr/index.jsp#/mobiledoc/jsp/webemr/jellybean/officevisit/officeVisits.jsp" DesignTimeRectangle="122, 466, 47, 17" ElementType="Text" FriendlyName="'Claims'" FullSelectorArgument="&lt;webctrl aaname='Claims' parentid='jcarousel2' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Claims' parentid='jcarousel2' tag='SPAN' type='' class='padl10' check:innerText='Claims' /&gt;" Guid="1ac2487a-4c47-4264-b5bb-5a728c9eeb86" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAADMAAAAVCAYAAADrVNYBAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAEiSURBVFhH7ZS9DYMwEIXZKgukYpdsEKWOkoqKhiXoYAYK2ACJEYD+4jMGzo5BxiGJQZz0JP/gZ38+H97p7MNedMC4qgPGVR0wXEkFcrSQhT4EeQt1HunXfFl2MBykO7w6ZwoTM4u1ob2nZnBeKZQTIKi/ZibQDM4qLKBuCphaJ8MgOIkqHb7DzJRJ32aXkzBf8RmgP+4jumwhxGKd+rzpxS2HQTNjGKoIsmbMqAzDTkU8df3OEz0ImKLfZoY8TxWmb797yH1sY+gubDmMcc3gLdJDzmfGFIaOqVAWML2RPt3jxgo0r4H1YLjQk9ShFQyqv5khxNOTNqbFyuYzLPSPYLpsjyG/EGsYF3XAuKp9wfA6In+ELcu73R9wu160k9uSDy+Hz1+Wh0e4pgAAAABJRU5ErkJggg==" InformativeScreenshot="a773a1901a6fcb5b87daf56e9bd46530.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='eCW (Billing, Support 2 ) Production' /&gt;" SearchSteps="FuzzySelector, Image" Visibility="Interactive">
                     <uix:TargetAnchorable.Anchors>
@@ -188,7 +213,7 @@
                   </uix:TargetAnchorable>
                 </uix:NClick.Target>
               </uix:NClick>
-              <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'BUTTON  claimLookupBtn10'" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="Click_10" KeyModifiers="None" MouseButton="BTN_LEFT" SimulateClick="True">
+              <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'BUTTON  claimLookupBtn10'" sap:VirtualizedContainerService.HintSize="436,106" sap2010:WorkflowViewState.IdRef="Click_10" KeyModifiers="None" MouseButton="BTN_LEFT" SimulateClick="True">
                 <ui:Click.CursorPosition>
                   <ui:CursorPosition Position="Center">
                     <ui:CursorPosition.OffsetX>
@@ -210,7 +235,7 @@
                   </ui:Target>
                 </ui:Click.Target>
               </ui:Click>
-              <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'BUTTON  claimLookupBtn11'" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="Click_11" KeyModifiers="None" MouseButton="BTN_LEFT" SimulateClick="True">
+              <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'BUTTON  claimLookupBtn11'" sap:VirtualizedContainerService.HintSize="436,106" sap2010:WorkflowViewState.IdRef="Click_11" KeyModifiers="None" MouseButton="BTN_LEFT" SimulateClick="True">
                 <ui:Click.CursorPosition>
                   <ui:CursorPosition Position="Center">
                     <ui:CursorPosition.OffsetX>
