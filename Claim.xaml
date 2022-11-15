@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="Claim" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="1000,1691" sap2010:WorkflowViewState.IdRef="Claim_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:sc="clr-namespace:System.ComponentModel;assembly=System" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="Claim" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="695,1251" sap2010:WorkflowViewState.IdRef="Claim_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:sc="clr-namespace:System.ComponentModel;assembly=System" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="36">
       <x:String>System.Activities</x:String>
@@ -73,22 +73,21 @@
       <AssemblyReference>NPOI</AssemblyReference>
       <AssemblyReference>System.Runtime.Serialization</AssemblyReference>
       <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
-      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Claim" sap:VirtualizedContainerService.HintSize="803,1626" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Claim" sap:VirtualizedContainerService.HintSize="705,1186" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <uix:NApplicationCard WebDriverMode="{x:Null}" AttachMode="ByInstance" DisplayName="Use Browser Chrome: eCW (Billing, Support 1 ) Production" sap:VirtualizedContainerService.HintSize="741,1504" sap2010:WorkflowViewState.IdRef="NApplicationCard_2" InteractionMode="DebuggerApi" ScopeGuid="7c3f8b8c-acb5-460d-8391-f7812536f181" Version="V2">
+    <uix:NApplicationCard WebDriverMode="{x:Null}" AttachMode="ByInstance" DisplayName="Use Browser Chrome: eCW (Billing, Support 1 ) Production" sap:VirtualizedContainerService.HintSize="643,1064" sap2010:WorkflowViewState.IdRef="NApplicationCard_2" InteractionMode="DebuggerApi" ScopeGuid="7c3f8b8c-acb5-460d-8391-f7812536f181" Version="V2">
       <uix:NApplicationCard.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="707,1278" sap2010:WorkflowViewState.IdRef="Sequence_5">
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="609,838" sap2010:WorkflowViewState.IdRef="Sequence_5">
             <Sequence.Variables>
               <Variable x:TypeArguments="sd:DataTable" Name="dt_DataTable" />
             </Sequence.Variables>
@@ -97,66 +96,49 @@
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[dt_DataTable]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="645,1154" sap2010:WorkflowViewState.IdRef="ForEachRow_2">
+            <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[dt_DataTable]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="547,714" sap2010:WorkflowViewState.IdRef="ForEachRow_2">
               <ui:ForEachRow.Body>
                 <ActivityAction x:TypeArguments="sd:DataRow">
                   <ActivityAction.Argument>
                     <DelegateInArgument x:TypeArguments="sd:DataRow" Name="CurrentRow" />
                   </ActivityAction.Argument>
-                  <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="611,1028" sap2010:WorkflowViewState.IdRef="Sequence_6">
+                  <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="513,588" sap2010:WorkflowViewState.IdRef="Sequence_6">
+                    <Sequence.Variables>
+                      <Variable x:TypeArguments="x:String" Name="IsData" />
+                    </Sequence.Variables>
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
-                    <If sap:VirtualizedContainerService.HintSize="549,905" sap2010:WorkflowViewState.IdRef="If_1">
-                      <If.Then>
-                        <Sequence sap:VirtualizedContainerService.HintSize="513,707" sap2010:WorkflowViewState.IdRef="Sequence_8">
-                          <sap:WorkflowViewStateService.ViewState>
-                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                            </scg:Dictionary>
-                          </sap:WorkflowViewStateService.ViewState>
-                          <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Code'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="451,226" sap2010:WorkflowViewState.IdRef="NTypeInto_8" ScopeIdentifier="7c3f8b8c-acb5-460d-8391-f7812536f181" Text="[CurrentRow(&quot;Diagnoses&quot;).ToString]" Version="V1">
-                            <uix:NTypeInto.Target>
-                              <uix:TargetAnchorable BrowserURL="https://caazeo8ton5ohnbbssapp.ecwcloud.com/mobiledoc/jsp/webemr/index.jsp#/mobiledoc/jsp/webemr/webpm/claimLookup.jsp" DesignTimeRectangle="280, 361, 64, 21" ElementType="InputBox" FriendlyName="'E11.00'" FullSelectorArgument="&lt;webctrl id='icdCodesTable1668421793419' tableRow='1' tag='TABLE' /&gt;&lt;webctrl tableRow='2' tag='INPUT' type='text' /&gt;" FuzzySelectorArgument="&lt;webctrl id='icdCodesTable1668421793419' tag='TABLE' /&gt;&lt;webctrl class='input-xs editableTDText1668421793419 claimICDInput1668421793419' tag='INPUT' type='text' aaname='' /&gt;" Guid="340376bf-82bc-4dda-95ef-248b5c7fb1c0" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAEQAAAAZCAYAAACIA4ibAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAGOSURBVFhH7ZYxa8JAGIbvZ9wquLi1f8GxY6BLoENxKsVJOkmXEhxK6SClQ3EqmM0OBbvZRdClTTY37VBKxqM4OL69NndGT73GQm/xe+CDi68Ev8fvLmEvH5+gyop1+q+gyoqBWIKEGJAQAxJiQEIMSIjBGiEDBIyBLdZhG4lKAYFBowzOPLTf1UdzbJlGfufSR4nL+xYPUAtHmKnEnrlho5D6k4AQutTPmo7QOi6gUCxIUUbTtmwB8VAB26uh+yaQxC34fB9X8e+ZKzYKCYbqcpH4Bv55D6IfrDZty+Yk6BwxlO8m6nqG3hkDb0RybcvcsZ0QzdDStC1DhEBuBy/MNuDk3lNb0pa5I98ZcjFQmeLPQlZlJ6Fu2pa5I98ZMlWRZhcn5H+2jED3ZM058TOBtswd+SZEP2U0WwmZIbr2ULmN5Eq2/XgKvvQk4ag/p/e3Za7Id4aYY7uVEPnPVzl4tStX30hBTfWuwUvwm6moFFvmhjVCdhsSYkBCDEiIAQkxICEGbDwegyormpAlgC9I6/cad6bf1gAAAABJRU5ErkJggg==" InformativeScreenshot="2b0e1f8fbd39c87b557a1d921a60df85.png" IsResponsive="True" ScopeSelectorArgument="&lt;html app='chrome.exe' title='eCW (Billing, Support 1 ) Production' /&gt;" SearchSteps="FuzzySelector, Image" Visibility="Interactive">
-                                <uix:TargetAnchorable.Anchors>
-                                  <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
-                                    <uix:Target DesignTimeRectangle="275, 340, 71, 20" ElementType="Text" FriendlyName="'Code'" FullSelectorArgument="&lt;webctrl aaname='#  Code Name ' parentid='billingClaimTbl4' tableRow='1' tag='TABLE' /&gt;&lt;webctrl aaname='Code' tableRow='1' tag='TH' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='#  Code Name ' parentid='billingClaimTbl4' tag='TABLE' /&gt;&lt;webctrl aaname='Code' type='' tag='TH' class='' check:innerText='Code' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAEsAAAAYCAYAAACyVACzAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAIlSURBVFhH7ZkxS8NAFMf7OTq5ODk5uXTyA7h0UQdFRJAiIgStUEREMEKRDooUqg4lUCmVFjGDFKFFWjJEF8nQYkAJHTo4+An+vrs0aarWJk5R7uBHL/fyWvLj3rtAI6ZpQuAPISsAkWazCcbV/QP/FHzFcRPRO+9gsAVnLhjEcSNk+UDICoCQFQAhKwAjZVWrl5hbS2IsLiE6m0RsW4HS7sf9oSFB+Ym772J/hx9l1SsZkpREPKdBbXdQf9QgFzTUe3H//HdZlo6tBQmTJ7p78+/577L0EmLxFLYagwku1isuTmRMzFJ5koiJTQUXhhPvopzP2DEq3ZmcgkWvrGcD8sEuxmmNx49qUC0nN7wMl3V3RhJkyE+DCQ7F0xSiy1lkH6k82y1kD+l6rQSVxe8VTJLolesWxTooK2ne82xZHRzvSZjKNFBngl5a2JMkTOdbX34jbPxyZ5mQ6QFj50Z/jd9vy60WZERXSyg7MavhKUO7JNluHCCj9b8rpAyXZdFDURlNe4W4+JC1XrF3Gcfbs+z5ys1bP/ePMFwWoRZY+aSwmO+dhk8GlKrBT0M1vz+yDBO3r7wM1UqWrj1luEM7ied20Xzp8lO2OKTcw8SPsnijvjrDDJ2KvFTYe1a6Zr868AafxtS8Hfvc4Iu5XvPnDb6CjdXPDX7fPRzGl9KQdSc3vIyQJfAiZAVAyAqAkBUAISsAriw2EfgjAs9g/2CI8f0wTRMfW/rIIgXd1K8AAAAASUVORK5CYII=" SearchSteps="FuzzySelector, Image" />
-                                  </scg:List>
-                                </uix:TargetAnchorable.Anchors>
-                              </uix:TargetAnchorable>
-                            </uix:NTypeInto.Target>
-                          </uix:NTypeInto>
-                          <ui:IfElseIf DisplayName="Else If" sap:VirtualizedContainerService.HintSize="451,317" sap2010:WorkflowViewState.IdRef="IfElseIf_2">
-                            <ui:IfElseIf.ConditionBlocks>
-                              <sc:BindingList x:TypeArguments="ui:IfElseIfBlock" AllowEdit="True" AllowNew="True" AllowRemove="True" RaiseListChangedEvents="True">
-                                <ui:IfElseIfBlock BlockType="If">
-                                  <ui:IfElseIfBlock.Then>
-                                    <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="400,113" sap2010:WorkflowViewState.IdRef="Sequence_10">
-                                      <sap:WorkflowViewStateService.ViewState>
-                                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                        </scg:Dictionary>
-                                      </sap:WorkflowViewStateService.ViewState>
-                                    </Sequence>
-                                  </ui:IfElseIfBlock.Then>
-                                </ui:IfElseIfBlock>
-                              </sc:BindingList>
-                            </ui:IfElseIf.ConditionBlocks>
-                          </ui:IfElseIf>
-                        </Sequence>
-                      </If.Then>
-                      <If.Else>
-                        <Sequence sap2010:WorkflowViewState.IdRef="Sequence_9">
-                          <sap:WorkflowViewStateService.ViewState>
-                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                            </scg:Dictionary>
-                          </sap:WorkflowViewStateService.ViewState>
-                        </Sequence>
-                      </If.Else>
-                    </If>
+                    <ui:IfElseIf DisplayName="Else If" sap:VirtualizedContainerService.HintSize="451,465" sap2010:WorkflowViewState.IdRef="IfElseIf_3">
+                      <ui:IfElseIf.ConditionBlocks>
+                        <sc:BindingList x:TypeArguments="ui:IfElseIfBlock" AllowEdit="True" AllowNew="True" AllowRemove="True" RaiseListChangedEvents="True">
+                          <ui:IfElseIfBlock BlockType="If" Condition="[IsData(CurrentRow(&quot;CPT Code 99453&quot;)).ToString]">
+                            <ui:IfElseIfBlock.Then>
+                              <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="400,113" sap2010:WorkflowViewState.IdRef="Sequence_11">
+                                <sap:WorkflowViewStateService.ViewState>
+                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                  </scg:Dictionary>
+                                </sap:WorkflowViewStateService.ViewState>
+                              </Sequence>
+                            </ui:IfElseIfBlock.Then>
+                          </ui:IfElseIfBlock>
+                          <ui:IfElseIfBlock BlockType="Else">
+                            <ui:IfElseIfBlock.Then>
+                              <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="400,113" sap2010:WorkflowViewState.IdRef="Sequence_12">
+                                <sap:WorkflowViewStateService.ViewState>
+                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                  </scg:Dictionary>
+                                </sap:WorkflowViewStateService.ViewState>
+                              </Sequence>
+                            </ui:IfElseIfBlock.Then>
+                          </ui:IfElseIfBlock>
+                        </sc:BindingList>
+                      </ui:IfElseIf.ConditionBlocks>
+                    </ui:IfElseIf>
                   </Sequence>
                 </ActivityAction>
               </ui:ForEachRow.Body>
