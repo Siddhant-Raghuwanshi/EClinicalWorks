@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="DateReading" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="980,3807" sap2010:WorkflowViewState.IdRef="DateReading_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="DateReading" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="980,3645" sap2010:WorkflowViewState.IdRef="DateReading_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="40">
       <x:String>System.Activities</x:String>
@@ -44,7 +44,7 @@
     </scg:List>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
-    <scg:List x:TypeArguments="AssemblyReference" Capacity="34">
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="35">
       <AssemblyReference>System.Activities</AssemblyReference>
       <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
       <AssemblyReference>mscorlib</AssemblyReference>
@@ -79,9 +79,10 @@
       <AssemblyReference>System.ValueTuple</AssemblyReference>
       <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
       <AssemblyReference>NPOI</AssemblyReference>
+      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="DateReading" sap:VirtualizedContainerService.HintSize="756,3742" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="DateReading" sap:VirtualizedContainerService.HintSize="756,3580" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="Var1" />
       <Variable x:TypeArguments="sd:DataTable" Name="In_data" />
@@ -91,13 +92,13 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:ExcelApplicationScope Password="{x:Null}" DisplayName="Excel Application Scope" sap:VirtualizedContainerService.HintSize="714,3650" sap2010:WorkflowViewState.IdRef="ExcelApplicationScope_1" InstanceCachePeriod="3000" WorkbookPath="Copy of TFS_Submission_October 2022 RPM Billing_11072022 (005).xlsx">
+    <ui:ExcelApplicationScope Password="{x:Null}" DisplayName="Excel Application Scope" sap:VirtualizedContainerService.HintSize="714,3488" sap2010:WorkflowViewState.IdRef="ExcelApplicationScope_1" InstanceCachePeriod="3000" WorkbookPath="Copy of TFS_Submission_October 2022 RPM Billing_11072022 (005).xlsx">
       <ui:ExcelApplicationScope.Body>
         <ActivityAction x:TypeArguments="ui:WorkbookApplication">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="ui:WorkbookApplication" Name="ExcelWorkbookScope" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="680,3541" sap2010:WorkflowViewState.IdRef="Sequence_8">
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="680,3379" sap2010:WorkflowViewState.IdRef="Sequence_8">
             <Sequence.Variables>
               <Variable x:TypeArguments="x:String" Name="output" />
               <Variable x:TypeArguments="sd:DataTable" Name="In_Data" />
@@ -115,55 +116,50 @@
               </ui:ExcelReadRange.Range>
             </ui:ExcelReadRange>
             <ui:OutputDataTable DataTable="[In_data]" DisplayName="Output Data Table" sap:VirtualizedContainerService.HintSize="638,79" sap2010:WorkflowViewState.IdRef="OutputDataTable_1" Text="[output]" />
-            <uix:NApplicationCard WebDriverMode="{x:Null}" AttachMode="ByInstance" DisplayName="Use Browser Chrome: eCW (Billing, Support 2 ) Production" sap:VirtualizedContainerService.HintSize="638,992" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" ScopeGuid="f8786682-4ebb-4851-aa6d-47c6ddb17396" Version="V2">
+            <uix:NApplicationCard WebDriverMode="{x:Null}" AttachMode="ByInstance" DisplayName="Use Browser Chrome: eCW (Billing, Support 2 ) Production" sap:VirtualizedContainerService.HintSize="638,830" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" ScopeGuid="f8786682-4ebb-4851-aa6d-47c6ddb17396" Version="V2">
               <uix:NApplicationCard.Body>
                 <ActivityAction x:TypeArguments="x:Object">
                   <ActivityAction.Argument>
                     <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
                   </ActivityAction.Argument>
-                  <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="476,776" sap2010:WorkflowViewState.IdRef="Sequence_24">
+                  <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="602,574" sap2010:WorkflowViewState.IdRef="Sequence_24">
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
-                    <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[In_Data]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="434,682" sap2010:WorkflowViewState.IdRef="ForEachRow_2">
+                    <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="{x:Null}" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="560,481" sap2010:WorkflowViewState.IdRef="ForEachRow_3">
                       <ui:ForEachRow.Body>
                         <ActivityAction x:TypeArguments="sd:DataRow">
                           <ActivityAction.Argument>
-                            <DelegateInArgument x:TypeArguments="sd:DataRow" Name="Row" />
+                            <DelegateInArgument x:TypeArguments="sd:DataRow" Name="CurrentRow" />
                           </ActivityAction.Argument>
-                          <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="376,566" sap2010:WorkflowViewState.IdRef="Sequence_23">
-                            <Sequence.Variables>
-                              <Variable x:TypeArguments="x:String" Name="variable1" />
-                            </Sequence.Variables>
+                          <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="526,365" sap2010:WorkflowViewState.IdRef="Sequence_31">
                             <sap:WorkflowViewStateService.ViewState>
                               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                               </scg:Dictionary>
                             </sap:WorkflowViewStateService.ViewState>
-                            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into '*'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="334,216" sap2010:WorkflowViewState.IdRef="NTypeInto_2" ScopeIdentifier="f8786682-4ebb-4851-aa6d-47c6ddb17396" Text="[Row(&quot;Diagnoses&quot;).ToString]" Version="V1">
-                              <uix:NTypeInto.Target>
-                                <uix:TargetAnchorable BrowserURL="https://caazeo8ton5ohnbbssapp.ecwcloud.com/mobiledoc/jsp/webemr/index.jsp#/mobiledoc/jsp/webemr/webpm/claimLookup.jsp" DesignTimeRectangle="285, 396, 62, 21" ElementType="InputBox" FriendlyName="'I10'" FullSelectorArgument="&lt;webctrl id='icdCodesTable1668588804202' tableRow='1' tag='TABLE' /&gt;&lt;webctrl tableRow='6' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl id='icdCodesTable1668588804202' tag='TABLE' /&gt;&lt;webctrl type='text' tag='INPUT' class='input-xs editableTDText1668588804202 claimICDInput1668588804202 ng-valid ng-not-empty ng-dirty ng-valid-parse ng-touched' aaname='' /&gt;" Guid="11df5e89-4b5c-4800-b035-d02ff27ce4d3" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAEIAAAAZCAYAAACFHfjcAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAEhSURBVFhH7dgta8NQFMbx8zFiAzV1m9tsXWygYnWln2BEjbpxZfRU7J0YVMYUalMx6Nwqxm3ERERFZOWzLDwTSysCUZeeH1xxcqP+5I0IVEucc9DloFcEaQjSEKQhSEOQhqDLIbYGIgYFx1ZpsRgJ5PnfUZz2FkkUNucHGD+kKI7c8EyvEPV6ickoRBh0Q+yQ3gjilx2q+oD86R4yX6Hmrk96hKiRPy6Q7T9hp50Q7waBJNicOH9lmMgMq4qzR/rfGqjOQlRvs855BZYiMFuOHhkW4jWGTG2z86eAucoQekXQR4rbs2dEDPvN2SPDQvy+Ne46b40ow4G7PhkYolHm/I4QhFGCvORxz1wOcYU0BGkI0hCkIUhDkP7F5tIQ7XL4Ac9Z10yUSSPYAAAAAElFTkSuQmCC" InformativeScreenshot="56ff2db59e38a9fc088ba15f88eb6f88.png" IsResponsive="True" ScopeSelectorArgument="&lt;html app='chrome.exe' title='eCW (Billing, Support 2 ) Production' /&gt;" SearchSteps="FuzzySelector, Image" Visibility="Interactive">
-                                  <uix:TargetAnchorable.Anchors>
-                                    <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
-                                      <uix:Target DesignTimeRectangle="204, 395, 24, 22" ElementType="Text" FriendlyName="'*'" FullSelectorArgument="&lt;webctrl id='icdCodesTable1668588804202' tableRow='1' tag='TABLE' /&gt;&lt;webctrl tableRow='6' tag='TD' /&gt;" FuzzySelectorArgument="&lt;webctrl id='icdCodesTable1668588804202' tag='TABLE' /&gt;&lt;webctrl type='' tag='TD' class='text-center' aaname='*' check:innerText='*' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAABwAAAAaCAYAAACkVDyJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAADHSURBVEhL7dAhDsIwGIbhHqNXmAOJxSGQmCZTywRBcoXJHgFFMrNkOCxyODjA0tnJygrEx8oqUJT8bENsb/KnaZv0ycaUUrDTZ+/v/w8cakb0S/tsAjvvN/CagG1S1G77TTTwYWDsWh6wDPMWNK8TbySwzgQYDyBigfkqwm4dgLMEhbv/FAmE0dC6Rr7l4A2cXOxet1/tiQba7hKLmcQ5i8DDFJU79kUGq9Me0bFhTAEZS9y0u/BEBqlNYOdNYOeNFBxqBgYVnvML9qx5XktOAAAAAElFTkSuQmCC" SearchSteps="FuzzySelector, Image" />
-                                    </scg:List>
-                                  </uix:TargetAnchorable.Anchors>
-                                </uix:TargetAnchorable>
-                              </uix:NTypeInto.Target>
-                            </uix:NTypeInto>
-                            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'INPUT billingClaimIpt34'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="334,216" sap2010:WorkflowViewState.IdRef="NTypeInto_4" ScopeIdentifier="f8786682-4ebb-4851-aa6d-47c6ddb17396" Text="[Row(&quot;CPT Code 99453&quot;).ToString]" Version="V1">
-                              <uix:NTypeInto.Target>
-                                <uix:TargetAnchorable BrowserURL="https://caazeo8ton5ohnbbssapp.ecwcloud.com/mobiledoc/jsp/webemr/index.jsp#/mobiledoc/jsp/webemr/webpm/claimLookup.jsp" DesignTimeRectangle="257, 495, 50, 21" ElementType="InputBox" FriendlyName="'INPUT billingClaimIpt34'" FullSelectorArgument="&lt;webctrl id='claimCPTCodesTable1668588804202' tableRow='1' tag='TABLE' /&gt;&lt;webctrl tableRow='3' tag='INPUT' type='text' /&gt;" FuzzySelectorArgument="&lt;webctrl id='claimCPTCodesTable1668588804202' tag='TABLE' /&gt;&lt;webctrl class='editableTDText1668588804202 closable1668588804202 ng-pristine ng-valid ng-empty ng-touched idt-alert-subject' tag='INPUT' type='text' aaname='' /&gt;" Guid="87758cd8-f475-45db-a8a5-19897e2e2ee7" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAADYAAAAZCAYAAAB6v90+AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAABHSURBVFhH7dixDQBACMNA9t+RWULz5S/gyCchaouOSanZ3TRO78XermMYjWE0htEYRmMYjWE0htEYRmMYTW/Y78PTMKUXSw5KF9kNhb3hNQAAAABJRU5ErkJggg==" InformativeScreenshot="aec273ad6a725fb1c5f3f46587d8481e.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='eCW (Billing, Support 2 ) Production' /&gt;" SearchSteps="FuzzySelector, Image" Visibility="Interactive">
-                                  <uix:TargetAnchorable.Anchors>
-                                    <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
-                                      <uix:Target DesignTimeRectangle="237, 499, 13, 15" ElementType="CheckBox" FriendlyName="'Checkbox'" FullSelectorArgument="&lt;webctrl id='claimCPTCodesTable1668588804202' tableRow='1' tag='TABLE' /&gt;&lt;webctrl tableRow='3' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl id='claimCPTCodesTable1668588804202' tag='TABLE' /&gt;&lt;webctrl type='checkbox' tag='INPUT' class='' aaname='' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAABEAAAATCAYAAAB2pebxAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAADHSURBVDhPY/hPBTAIDZl3+v9/0QagQClhDFIHUg8DcEOINQCGQephAG4INoXIWKDu///9d/7/D1iAEIMBog1ZcAai7sN3hBgMEGVIwSaoIiAw6EeIwwBWQ0BOh7EdZkAVAEHCSlR1MIBhCEjh+28QGxXaIGwQAHkH2QAQhgEMQy48g/BBms8/hbBBYsiaYRgGMAwBeQVmEAiAAhLZe8gYBnCGCcwg5IBExzCA1RAQBhmEnCawYRiAG0KVFEuVvEMJGCyG/P8PAJi8LtHSZwH6AAAAAElFTkSuQmCC" SearchSteps="FuzzySelector, Image" />
-                                    </scg:List>
-                                  </uix:TargetAnchorable.Anchors>
-                                </uix:TargetAnchorable>
-                              </uix:NTypeInto.Target>
-                            </uix:NTypeInto>
+                            <If Condition="[CurrentRow(&quot;Diagnoses0&quot;).ToString]" sap:VirtualizedContainerService.HintSize="484,272" sap2010:WorkflowViewState.IdRef="If_6">
+                              <If.Then>
+                                <Sequence sap:VirtualizedContainerService.HintSize="200,84" sap2010:WorkflowViewState.IdRef="Sequence_32">
+                                  <sap:WorkflowViewStateService.ViewState>
+                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                    </scg:Dictionary>
+                                  </sap:WorkflowViewStateService.ViewState>
+                                </Sequence>
+                              </If.Then>
+                              <If.Else>
+                                <Sequence sap2010:WorkflowViewState.IdRef="Sequence_33">
+                                  <sap:WorkflowViewStateService.ViewState>
+                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                    </scg:Dictionary>
+                                  </sap:WorkflowViewStateService.ViewState>
+                                </Sequence>
+                              </If.Else>
+                            </If>
                           </Sequence>
                         </ActivityAction>
                       </ui:ForEachRow.Body>
