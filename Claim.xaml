@@ -1,14 +1,14 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="Claim" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="Claim" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data" xmlns:ueab="clr-namespace:UiPath.Excel.Activities.Business;assembly=UiPath.Excel.Activities" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <x:Members>
     <x:Property Name="argument1" Type="InArgument(ui:UiElement)" />
   </x:Members>
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>980,3682</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>980,3541</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>Claim_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
-    <scg:List x:TypeArguments="x:String" Capacity="74">
+    <scg:List x:TypeArguments="x:String" Capacity="40">
       <x:String>System.Activities</x:String>
       <x:String>System.Activities.Statements</x:String>
       <x:String>System.Activities.Expressions</x:String>
@@ -52,7 +52,7 @@
     </scg:List>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
-    <scg:List x:TypeArguments="AssemblyReference" Capacity="66">
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="34">
       <AssemblyReference>System.Activities</AssemblyReference>
       <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
       <AssemblyReference>mscorlib</AssemblyReference>
@@ -86,11 +86,10 @@
       <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
       <AssemblyReference>UiPath.Excel.Activities.Design</AssemblyReference>
       <AssemblyReference>UiPath.Excel</AssemblyReference>
-      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
       <AssemblyReference>System.Runtime.Serialization</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Claim" sap:VirtualizedContainerService.HintSize="706,3617" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Claim" sap:VirtualizedContainerService.HintSize="552,3476" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="ui:UiElement" Name="readfile" />
       <Variable x:TypeArguments="ui:UiElement" Name="readfile1" />
@@ -100,41 +99,56 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <uix:NApplicationCard WebDriverMode="{x:Null}" AttachMode="ByInstance" DisplayName="Use Browser Chrome: eCW (Billing, Support 2 ) Production" sap:VirtualizedContainerService.HintSize="664,3525" sap2010:WorkflowViewState.IdRef="NApplicationCard_2" InteractionMode="DebuggerApi" ScopeGuid="685e974a-b8b9-45e3-8bba-50ac601e1eb0" Version="V2">
-      <uix:NApplicationCard.Body>
-        <ActivityAction x:TypeArguments="x:Object">
+    <ueab:ExcelProcessScopeX DisplayAlerts="{x:Null}" ExistingProcessAction="{x:Null}" FileConflictResolution="{x:Null}" LaunchMethod="{x:Null}" LaunchTimeout="{x:Null}" MacroSettings="{x:Null}" ProcessMode="{x:Null}" ShowExcelWindow="{x:Null}" DisplayName="Excel Process Scope" sap:VirtualizedContainerService.HintSize="510,495" sap2010:WorkflowViewState.IdRef="ExcelProcessScopeX_1">
+      <ueab:ExcelProcessScopeX.Body>
+        <ActivityAction x:TypeArguments="ui:IExcelProcess">
           <ActivityAction.Argument>
-            <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+            <DelegateInArgument x:TypeArguments="ui:IExcelProcess" Name="ExcelProcessScopeTag" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="630,3309" sap2010:WorkflowViewState.IdRef="Sequence_3">
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="476,409" sap2010:WorkflowViewState.IdRef="Sequence_10">
             <Sequence.Variables>
-              <Variable x:TypeArguments="sd:DataTable" Name="In_DataTable" />
+              <Variable x:TypeArguments="x:String" Name="output_data" />
+              <Variable x:TypeArguments="sd:DataTable" Name="inputdata" />
             </Sequence.Variables>
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <ui:ReadRange AddHeaders="True" DataTable="[In_DataTable]" DisplayName="Read Range" sap:VirtualizedContainerService.HintSize="588,87" sap2010:WorkflowViewState.IdRef="ReadRange_1" SheetName="Sheet1" WorkbookPath="Faizan\1Copy of TFS_Submission_October 2022 RPM Billing_11072022 (005).xlsx">
-              <ui:ReadRange.Range>
-                <InArgument x:TypeArguments="x:String">
-                  <Literal x:TypeArguments="x:String" Value="" />
-                </InArgument>
-              </ui:ReadRange.Range>
-            </ui:ReadRange>
-            <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[In_DataTable]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="588,3089" sap2010:WorkflowViewState.IdRef="ForEachRow_1">
+            <ui:SelectFile DisplayName="Browse for file" Filter="" sap:VirtualizedContainerService.HintSize="434,190" sap2010:WorkflowViewState.IdRef="SelectFile_1" SelectedFile="[output_data]" />
+            <ui:ReadRange DataTable="{x:Null}" Range="{x:Null}" AddHeaders="True" DisplayName="Read Range" sap:VirtualizedContainerService.HintSize="434,87" sap2010:WorkflowViewState.IdRef="ReadRange_2" SheetName="Sheet1" WorkbookPath="[output_data]" />
+          </Sequence>
+        </ActivityAction>
+      </ueab:ExcelProcessScopeX.Body>
+    </ueab:ExcelProcessScopeX>
+    <uix:NApplicationCard WebDriverMode="{x:Null}" AttachMode="ByInstance" DisplayName="Use Browser Chrome: eCW (Billing, Support 2 ) Production" sap:VirtualizedContainerService.HintSize="510,2758" sap2010:WorkflowViewState.IdRef="NApplicationCard_3" InteractionMode="DebuggerApi" ScopeGuid="d356ee1e-5f75-42fb-ad46-a1cfd9420c3f" Version="V2">
+      <uix:NApplicationCard.Body>
+        <ActivityAction x:TypeArguments="x:Object">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="476,2542" sap2010:WorkflowViewState.IdRef="Sequence_16">
+            <Sequence.Variables>
+              <Variable x:TypeArguments="x:Int32" Name="inputdata1" />
+            </Sequence.Variables>
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="[inputdata1]" DataTable="[inputdata1]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="434,2448" sap2010:WorkflowViewState.IdRef="ForEachRow_2">
               <ui:ForEachRow.Body>
                 <ActivityAction x:TypeArguments="sd:DataRow">
                   <ActivityAction.Argument>
                     <DelegateInArgument x:TypeArguments="sd:DataRow" Name="CurrentRow" />
                   </ActivityAction.Argument>
-                  <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="554,2973" sap2010:WorkflowViewState.IdRef="Sequence_4">
+                  <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="376,2332" sap2010:WorkflowViewState.IdRef="Sequence_15">
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
-                    <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Patient'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="512,216" sap2010:WorkflowViewState.IdRef="NTypeInto_1" InteractionMode="DebuggerApi" ScopeIdentifier="685e974a-b8b9-45e3-8bba-50ac601e1eb0" Text="[CurrentRow(&quot;Last Name&quot;).ToString+ &quot;,&quot; +CurrentRow(&quot;First Name&quot;).ToString]" Version="V1">
+                    <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Patient'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="334,216" sap2010:WorkflowViewState.IdRef="NTypeInto_2" InteractionMode="DebuggerApi" ScopeIdentifier="d356ee1e-5f75-42fb-ad46-a1cfd9420c3f" Text="[CurrentRow(&quot;Last Name&quot;).ToString+ &quot;,&quot; +CurrentRow(&quot;First Name&quot;).ToString]" Version="V1">
                       <uix:NTypeInto.Target>
                         <uix:TargetAnchorable BrowserURL="https://caazeo8ton5ohnbbssapp.ecwcloud.com/mobiledoc/jsp/webemr/index.jsp#/mobiledoc/jsp/webemr/webpm/claimLookup.jsp" DesignTimeRectangle="567, 157, 184, 24" ElementType="InputBox" FriendlyName="'Hairston, Randy, A'" FullSelectorArgument="&lt;webctrl id='claimLookupTbl3' tableRow='1' tag='TABLE' /&gt;&lt;webctrl tableRow='1' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl id='claimLookupTbl3' tag='TABLE' /&gt;&lt;webctrl type='text' tag='INPUT' class='no-cursory-check form-control input-height patient-input clearable pt-lookup-class patientForFilter ng-touched ng-not-empty ng-dirty x' aaname='Hairston, Randy, A' /&gt;" Guid="d628931e-7c04-47ed-baad-7b74d958b256" ImageBase64="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" InformativeScreenshot="5078066384d54b1d733d80be7e74c124.png" IsResponsive="True" ScopeSelectorArgument="&lt;html app='chrome.exe' title='eCW (Billing, Support 2 ) Production' /&gt;" SearchSteps="FuzzySelector, Image" Visibility="Interactive">
                           <uix:TargetAnchorable.Anchors>
@@ -145,12 +159,12 @@
                         </uix:TargetAnchorable>
                       </uix:NTypeInto.Target>
                     </uix:NTypeInto>
-                    <uix:NClick ClickType="Single" DisplayName="Click 'Graham, Raymond'" sap:VirtualizedContainerService.HintSize="512,156" sap2010:WorkflowViewState.IdRef="NClick_2" InteractionMode="DebuggerApi" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="685e974a-b8b9-45e3-8bba-50ac601e1eb0" Version="V1">
+                    <uix:NClick ClickType="Single" DisplayName="Click 'Graham, Raymond'" sap:VirtualizedContainerService.HintSize="334,156" sap2010:WorkflowViewState.IdRef="NClick_11" InteractionMode="DebuggerApi" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="d356ee1e-5f75-42fb-ad46-a1cfd9420c3f" Version="V1">
                       <uix:NClick.Target>
                         <uix:TargetAnchorable BrowserURL="https://caazeo8ton5ohnbbssapp.ecwcloud.com/mobiledoc/jsp/webemr/index.jsp#/mobiledoc/jsp/webemr/webpm/claimLookup.jsp" DesignTimeRectangle="568, 182, 356, 46" FriendlyName="'Graham, Raymond'" FullSelectorArgument="&lt;webctrl id='claimLookupTbl3' tableRow='1' tag='TABLE' /&gt;&lt;webctrl parentid='patient-lookupUl1' tableRow='1' tag='DIV' /&gt;" FuzzySelectorArgument="&lt;webctrl id='claimLookupTbl3' tag='TABLE' /&gt;&lt;webctrl parentid='patient-lookupUl1' type='' tag='DIV' class='def_det active' aaname='' check:innerText='Graham, Raymond (67Y, M)&amp;#xD;&amp;#xA;&amp;#xD;&amp;#xA;A/C No: 19485|360-623-8144| DOB: 02/05/1955&amp;#xD;&amp;#xA;&amp;#xD;&amp;#xA; : YES&amp;#xD;&amp;#xA;HUB' /&gt;" Guid="f5bc2b58-9681-4a76-8570-b4323064828a" ImageBase64="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" InformativeScreenshot="a92fb396ed4daa48387cf717dd32f733.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='eCW (Billing, Support 2 ) Production' /&gt;" SearchSteps="FuzzySelector, Image" Visibility="Interactive" />
                       </uix:NClick.Target>
                     </uix:NClick>
-                    <uix:NClick ClickType="Single" DisplayName="Click 'Service Dt(s)'" sap:VirtualizedContainerService.HintSize="512,156" sap2010:WorkflowViewState.IdRef="NClick_4" InteractionMode="DebuggerApi" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="685e974a-b8b9-45e3-8bba-50ac601e1eb0" Version="V1">
+                    <uix:NClick ClickType="Single" DisplayName="Click 'Service Dt(s)'" sap:VirtualizedContainerService.HintSize="334,156" sap2010:WorkflowViewState.IdRef="NClick_12" InteractionMode="DebuggerApi" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="d356ee1e-5f75-42fb-ad46-a1cfd9420c3f" Version="V1">
                       <uix:NClick.Target>
                         <uix:TargetAnchorable BrowserURL="https://caazeo8ton5ohnbbssapp.ecwcloud.com/mobiledoc/jsp/webemr/index.jsp#/mobiledoc/jsp/webemr/webpm/claimLookup.jsp" DesignTimeRectangle="291, 194, 16, 18" FriendlyName="'I'" FullSelectorArgument="&lt;webctrl tableRow='1' tag='TABLE' /&gt;&lt;webctrl tableRow='2' tag='I' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl type='' tag='I' class='icon icon-inputcalender' aaname='' /&gt;" Guid="7e3e4031-3969-4693-bcc8-351ed3b042b2" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAABQAAAAWCAYAAADAQbwGAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAADBSURBVDhP7ZTBCcQgEEW3q5wl95xDWvDmLQVICHizDvFsDXqwgHSRAmYZ1xGEBBJwF3bZB5+JH3lgEB/QmM8JjTHQdR0453LzIsaY+nVdc1NTCYUQaXPf90VIk0JrFE7TlL5xEpVwGIa04a4QQxwKGWOwbRssy1KOSPHeg1IqzXEcS08cCjFSSrDWwjzPpcNwzlOvta564lR4N8T7hfu+59V18J8TTYR4K4i/8FeFp9eGXpu7OX1tWvAFwhACtEuAJ+PgykZ8BxXTAAAAAElFTkSuQmCC" InformativeScreenshot="1d5d184998ea03b5914373a046ffa859.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='eCW (Billing, Support 2 ) Production' /&gt;" SearchSteps="FuzzySelector, Image" Visibility="Interactive">
                           <uix:TargetAnchorable.Anchors>
@@ -161,7 +175,7 @@
                         </uix:TargetAnchorable>
                       </uix:NClick.Target>
                     </uix:NClick>
-                    <uix:NClick ClickType="Single" DisplayName="Click 'Prev'" sap:VirtualizedContainerService.HintSize="512,156" sap2010:WorkflowViewState.IdRef="NClick_5" InteractionMode="DebuggerApi" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="685e974a-b8b9-45e3-8bba-50ac601e1eb0" Version="V1">
+                    <uix:NClick ClickType="Single" DisplayName="Click 'Prev'" sap:VirtualizedContainerService.HintSize="334,156" sap2010:WorkflowViewState.IdRef="NClick_13" InteractionMode="DebuggerApi" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="685e974a-b8b9-45e3-8bba-50ac601e1eb0" Version="V1">
                       <uix:NClick.Target>
                         <uix:TargetAnchorable BrowserURL="https://caazeo8ton5ohnbbssapp.ecwcloud.com/mobiledoc/jsp/webemr/index.jsp#/mobiledoc/jsp/webemr/webpm/claimLookup.jsp" DesignTimeRectangle="260, 220, 48, 21" ElementType="DropDown" FriendlyName="'Oct'" FullSelectorArgument="&lt;webctrl parentid='ui-datepicker-div' tag='SELECT' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='ui-datepicker-div' tag='SELECT' type='' class='ui-datepicker-month' aaname='' /&gt;" Guid="cf5dfd23-2ee7-45bf-b708-c05a200f32e9" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAADQAAAAZCAYAAAB+Sg0DAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAFfSURBVFhH7ZdBasMwEEVzJ53Gh4ivYrL0LZxloVcIRlkYCqXtohQMXnlXGpj425ItqxKSQgKWyIOBSLP5TyM7ePfz3VBKlbbQ6e2dXvknvdQfURSyIrPqMAuhcf5q6ffvQrGArMisSs1CsI1JRoLMyP5PCCOMFWR/Cm2ZcKG6IMbYUvuKOtHaAkFC3TEfJAriYg3GvQdJlWVJfd+L1QL20DMRIMSpYDlVrVjOdFTtGRW1WFrgh/VBuEBg3IAsy1ZS+I099ExS/kJtRbllEphSfpSdSXC+kgc+yChrbcI21OBSyrSn4y+EZ8d2tdAbggOEX+QkkAybENAFXDLgzhPCtTQFv00IqFIuGeAvNIZ1PUP3FwJSyiUDAoSmSbjecvYrZzoMfyDikgFBQiP6/5B4dhamien96TCwd/ukfAgX2jhPoa1jFErueyi5L1YpBVuMMIZCVlUGtRJKoRITaugKpHfrrQyAsfAAAAAASUVORK5CYII=" InformativeScreenshot="7fbe20ffbd806daed897c46c1be12102.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='eCW (Billing, Support 2 ) Production' /&gt;" SearchSteps="FuzzySelector, Image" Visibility="Interactive">
                           <uix:TargetAnchorable.Anchors>
@@ -172,7 +186,7 @@
                         </uix:TargetAnchorable>
                       </uix:NClick.Target>
                     </uix:NClick>
-                    <uix:NClick AlterIfDisabled="False" ClickType="Single" CursorMotionType="Smooth" DisplayName="Click 'chrome.exe'" sap:VirtualizedContainerService.HintSize="512,156" sap2010:WorkflowViewState.IdRef="NClick_7" InteractionMode="HardwareEvents" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="685e974a-b8b9-45e3-8bba-50ac601e1eb0" Version="V1">
+                    <uix:NClick AlterIfDisabled="False" ClickType="Single" CursorMotionType="Smooth" DelayBefore="1" DisplayName="Click 'chrome.exe'" sap:VirtualizedContainerService.HintSize="334,156" sap2010:WorkflowViewState.IdRef="NClick_14" InteractionMode="DebuggerApi" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="685e974a-b8b9-45e3-8bba-50ac601e1eb0" Version="V1">
                       <uix:NClick.Target>
                         <uix:TargetAnchorable DesignTimeRectangle="2, 160, 35, 24" FriendlyName="'chrome.exe'" Guid="c329928e-e447-4756-afc9-5983f72823d4" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAACMAAAAYCAYAAABwZEQ3AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAADWSURBVEhL7ZZNCsIwEEY9iZfwiD2Aeotew0XX4sJVl+4L3bkb59Ok5G8k1iFGyAcPmrQwL5O0dEMKuRx3tD+bwRdRkdFKXTLbA1EtNBmJP5C5mhNlcyfqUs8pE8l0t1f9PpwrIBTJjFx3OPlzYGCZkTsWzrv0k7+IT/FlWGIWOoDuzIwdQ24JJBg3a6R8GZwVaTtwjwviGoVdMQsEi3cGW5kqqivD5JyZYjI5b9O7bUotJJdI5kn4nTFnxQWFl5j7diHImg6lZX5Ek5FoMhLtH1hKRTJED3jwIaELFr5vAAAAAElFTkSuQmCC" InformativeScreenshot="50d0fbb7229e049d106ba7fc12e64871.png" ScopeSelectorArgument="&lt;wnd app='chrome.exe' cls='Chrome_WidgetWin_1' idx='*' /&gt;" SearchSteps="Image" TargetType="ImageBased" Visibility="Interactive">
                           <uix:TargetAnchorable.PointOffset>
@@ -181,7 +195,19 @@
                         </uix:TargetAnchorable>
                       </uix:NClick.Target>
                     </uix:NClick>
-                    <ui:Click DelayMS="{x:Null}" SendWindowMessages="{x:Null}" AlterIfDisabled="False" ClickType="CLICK_SINGLE" DelayBefore="1" DisplayName="Click 'A  #'" sap:VirtualizedContainerService.HintSize="512,106" sap2010:WorkflowViewState.IdRef="Click_5" KeyModifiers="None" MouseButton="BTN_LEFT" SimulateClick="True">
+                    <ui:SendHotkey ClickBeforeTyping="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" Activate="False" DelayBefore="1" DisplayName="Send Hotkey" sap:VirtualizedContainerService.HintSize="334,136" sap2010:WorkflowViewState.IdRef="SendHotkey_4" Key="enter" KeyModifiers="None" SpecialKey="True">
+                      <ui:SendHotkey.Target>
+                        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}" Id="b53e3595-389a-4fa1-9eb5-a9a976288997">
+                          <ui:Target.TimeoutMS>
+                            <InArgument x:TypeArguments="x:Int32" />
+                          </ui:Target.TimeoutMS>
+                          <ui:Target.WaitForReady>
+                            <InArgument x:TypeArguments="ui:WaitForReady" />
+                          </ui:Target.WaitForReady>
+                        </ui:Target>
+                      </ui:SendHotkey.Target>
+                    </ui:SendHotkey>
+                    <ui:Click DelayMS="{x:Null}" SendWindowMessages="{x:Null}" AlterIfDisabled="False" ClickType="CLICK_SINGLE" DelayBefore="1" DisplayName="Click 'A  #'" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="Click_6" KeyModifiers="None" MouseButton="BTN_LEFT" SimulateClick="True">
                       <ui:Click.CursorPosition>
                         <ui:CursorPosition Position="Center">
                           <ui:CursorPosition.OffsetX>
@@ -203,27 +229,27 @@
                         </ui:Target>
                       </ui:Click.Target>
                     </ui:Click>
-                    <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="512,594" sap2010:WorkflowViewState.IdRef="CommentOut_4">
+                    <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="334,51" sap2010:WorkflowViewState.IdRef="CommentOut_6">
                       <ui:CommentOut.Body>
-                        <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="476,516" sap2010:WorkflowViewState.IdRef="Sequence_9">
+                        <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="476,516" sap2010:WorkflowViewState.IdRef="Sequence_13">
                           <sap:WorkflowViewStateService.ViewState>
                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
                               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                             </scg:Dictionary>
                           </sap:WorkflowViewStateService.ViewState>
-                          <ui:OnUiElementAppear ContinueOnError="{x:Null}" FoundElement="{x:Null}" WaitActive="{x:Null}" DisplayName="On Element Appear 'DIV  ui-datepicker-div'" sap:VirtualizedContainerService.HintSize="434,424" sap2010:WorkflowViewState.IdRef="OnUiElementAppear_1" RepeatForever="True" WaitVisible="True">
+                          <ui:OnUiElementAppear ContinueOnError="{x:Null}" FoundElement="{x:Null}" WaitActive="{x:Null}" DisplayName="On Element Appear 'DIV  ui-datepicker-div'" sap:VirtualizedContainerService.HintSize="434,424" sap2010:WorkflowViewState.IdRef="OnUiElementAppear_2" RepeatForever="True" WaitVisible="True">
                             <ui:OnUiElementAppear.Body>
-                              <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="376,248" sap2010:WorkflowViewState.IdRef="Sequence_7">
+                              <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="376,248" sap2010:WorkflowViewState.IdRef="Sequence_12">
                                 <sap:WorkflowViewStateService.ViewState>
                                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                   </scg:Dictionary>
                                 </sap:WorkflowViewStateService.ViewState>
-                                <uix:NClick AlterIfDisabled="True" ClickType="Single" DelayBefore="1" DisplayName="Click '1'" sap:VirtualizedContainerService.HintSize="334,156" sap2010:WorkflowViewState.IdRef="NClick_1" InteractionMode="DebuggerApi" KeyModifiers="None" MouseButton="Middle" ScopeIdentifier="685e974a-b8b9-45e3-8bba-50ac601e1eb0" Version="V1">
+                                <uix:NClick AlterIfDisabled="True" ClickType="Single" DelayBefore="1" DisplayName="Click '1'" sap:VirtualizedContainerService.HintSize="334,156" sap2010:WorkflowViewState.IdRef="NClick_15" InteractionMode="DebuggerApi" KeyModifiers="None" MouseButton="Middle" ScopeIdentifier="685e974a-b8b9-45e3-8bba-50ac601e1eb0" Version="V1">
                                   <uix:NClick.Target>
                                     <uix:TargetAnchorable BrowserURL="https://caazeo8ton5ohnbbssapp.ecwcloud.com/mobiledoc/jsp/webemr/index.jsp#/mobiledoc/jsp/webemr/webpm/claimLookup.jsp" DesignTimeRectangle="399, 327, 27, 24" ElementType="Text" FriendlyName="'1'" FullSelectorArgument="&lt;webctrl parentid='ui-datepicker-div' tag='TABLE' /&gt;&lt;webctrl tableRow='2' tag='A' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='ui-datepicker-div' tag='TABLE' /&gt;&lt;webctrl type='' tag='A' class='ui-state-default ui-state-active' aaname='1' check:innerText='1' /&gt;" Guid="355b95b0-1641-417b-88a1-d8c4a2fe4bf5" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAB8AAAAcCAYAAACZOmSXAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAACASURBVEhL7ZHBCYAwEAStxrKswmLswT4EW7ACH4L6EETQEw8C+zhFYjQPd2DI4xbmkUQiwrjS5enrIowr1ji0COOKNQ4t4h0fi0zWoZWlqcz7mYhX3IW3qf8+PtelRt1rbc5EHv35EWb8rgjjijW+MmrcR4RxxRqHFmE8Cn+Ni+wK6XUlOnExVAAAAABJRU5ErkJggg==" InformativeScreenshot="6488d16e672112e1d1f435ca5208cf0b.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='eCW (Billing, Support 2 ) Production' /&gt;" SearchSteps="FuzzySelector, Image" Visibility="Interactive">
                                       <uix:TargetAnchorable.Anchors>
-                                        <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                                        <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
                                           <uix:Target DesignTimeRectangle="260, 265, 48, 21" ElementType="DropDown" FriendlyName="'Oct'" FullSelectorArgument="&lt;webctrl parentid='ui-datepicker-div' tag='SELECT' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='ui-datepicker-div' tag='SELECT' type='' class='ui-datepicker-month' aaname='' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAADQAAAAZCAYAAAB+Sg0DAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAFkSURBVFhH7ZdBaoQwFIZ7J0/jyht4AQ/g3p03cOuy0CtIaRcDhWK7KIWuBDdSWnjla42NqTbJ0KEa5oPHTPIY+D9fRvHi+ekgIVXYQs3dvVzdPMjldbuLIiuZdYdJiMbt44u8vr3LXiArmXWpSQjbPckoyEz2H0KMcK+Q/Sy0ZbyFmqaRKIqmyrJMhmEYu/+Pl1Bd15IkiXRdN+587Z1KqixL6ft+XH3DHr0lnIWQSNNU2nbeQwQhJvcbVVXNLoQNAnMC4jieSfGdPXpLUs5CiOR5vjgJpkSBElRHsiiKz1Jrc8Jr6MGV1NKeibMQE1g7WvQIDXwqOQW/Yd9nQmAK2GTgTydEYKTN4McKgS5lkwFnIcLY/kOnEAIlZZMBZyFgCra73NqRY7rmxfABEZsMeAmB+RxCQEdNzOwjydr1pnAs3kJb5yy0dRaFgnsfCu6NVUlhywj3UGTVZaiZUAgVmNBBPgBHG+8vek44PQAAAABJRU5ErkJggg==" SearchSteps="FuzzySelector, Image" />
                                         </scg:List>
                                       </uix:TargetAnchorable.Anchors>
@@ -245,19 +271,25 @@
                           </ui:OnUiElementAppear>
                         </Sequence>
                       </ui:CommentOut.Body>
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
                     </ui:CommentOut>
-                    <uix:NClick ClickType="Single" DisplayName="Click 'Claim Status'" sap:VirtualizedContainerService.HintSize="512,156" sap2010:WorkflowViewState.IdRef="NClick_9" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="685e974a-b8b9-45e3-8bba-50ac601e1eb0" Version="V1">
+                    <uix:NClick ClickType="Single" DisplayName="Click 'Claim Status'" sap:VirtualizedContainerService.HintSize="334,156" sap2010:WorkflowViewState.IdRef="NClick_16" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="685e974a-b8b9-45e3-8bba-50ac601e1eb0" Version="V1">
                       <uix:NClick.Target>
                         <uix:TargetAnchorable BrowserURL="https://caazeo8ton5ohnbbssapp.ecwcloud.com/mobiledoc/jsp/webemr/index.jsp#/mobiledoc/jsp/webemr/webpm/claimLookup.jsp" DesignTimeRectangle="201, 295, 238, 24" ElementType="DropDown" FriendlyName="'All Claims'" FullSelectorArgument="&lt;webctrl tableRow='1' tag='TABLE' /&gt;&lt;webctrl tableRow='4' tag='SELECT' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl type='' tag='SELECT' class='form-control input-sm ng-valid ng-not-empty ng-dirty ng-valid-parse ng-touched' aaname='' /&gt;" Guid="c4ea7b00-c478-42ba-91d0-1604d0e28b38" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAPIAAAAcCAYAAABbJuJWAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAPPSURBVHhe7ZwxaxtJGIbnZ2wrSHMQsNRZrSCFVS64SCCVuMK4VGVc2BiRIggXQaQ4jDulCNjFwaYwqArIRcyqWxOSyBwuxGHjBadQbLDf+77ZlbOSJSGsXLJS3gderJmdGa2NH823K1jz7zeAYZjZDkVmmDlIn8gfT/6B77dwdHTEMExKo46qq0l370TWA58/f8H5+TkuLi4Yhklp1FF1NSnznchq+eXlJa6urnBzc8MwTEqjjqqr6uw9kXXLvr6+xu3tLQgh6UUdVVfV2aEiq+2EkPSjrlJkQmYcikzIHECRCZkDfoDIPqpZA/NkB+24J6KJijGoHMatLRmz1Ywa9+gi2K+gtJiBkTnmUR7uyp5db/y8BKGHVaeInU9xm5DfiOlFPqzAeeLCzeZQbcV9lslF9rfzME4B6/sBOmGIzrGHnb8De4wik9+RjY0NhOLCINq3ubkZt74zpchdNNYc5LZ9+C9zyL30435lQpHP9lCScaX9+yetTCwyIXOCSqyVaTab7ZNZX2ufHtMxSaYTudvAuuykdhdsVZHLVqXQ7jGZyN2DspzYKrzhHg/MC9HcLiH/SPpk7cxiCbVWNzp0WodrXNRPtaHv7aL2toZnjx0Z6+CPP+vw3yfaT2vwv9qZCA+rcb+sK2V9aTeQjyhCfg0q7MLCgv1/7MmclFiPJQVXphLZSnh3bazXys6duJOK3HnjyslVZPRwBud1Wk20rYBd+K8KMM/30NHmPZENnOd1BPpHON6RY7LOssjbkfbJnpThBs/e6swAtUWD4uuolO92ArTP7EtCfhmDMo+TWJlC5BDeSrQzJuOsNeLd7P/YkdtobJVQkN3TeVywP81yfaTI5YPevhq13Td2pNBBffl7O9h1kTEZFFdq8I5HnAghP5mkzJpREisPF9le2xZQ+xBt+zYH63CcdTSsP5OJHAnoJKTrJzmvvVuEycr68e9id/MxIg9WB6NEtpwFaOyWUZSyPf/CZ2lNUkFP5nESKw8WOdwviVTJa2JFhJGSNZJyQpFFmeaW3rUuovIuumsdnvjwWpFkyXn+dk5KeSmPdfmzJqpLcmxqkUO0P8j7DivXCUkBvY1yHA8WWUXov0utRHexzYqnt6UmFFmR0a9W7W5oywj9HvmvIV8/nXooL0XfNWeWyvDe1VD4ASJ7a3kpraP31nXrx9yPyWzxYJEJIemBIhMyB1BkQuYAikzIHDBSZH1siD5ChBCSftTVoY/60Qd5fWmf2EeIEELSizqqrg59+F5PZrVct2yGYdIZdTQpsaZPZIZhZjMUmWFmPsB/N9nDjSBYMdoAAAAASUVORK5CYII=" InformativeScreenshot="d4e8528722380d47b36b2088b37b4e2b.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='eCW (Billing, Support 2 ) Production' /&gt;" SearchSteps="FuzzySelector, Image" Visibility="Interactive">
                           <uix:TargetAnchorable.Anchors>
-                            <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                            <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
                               <uix:Target DesignTimeRectangle="117, 301, 66, 15" ElementType="Text" FriendlyName="'Claim Status'" FullSelectorArgument="&lt;webctrl tableRow='1' tag='TABLE' /&gt;&lt;webctrl tableRow='4' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl type='' tag='SPAN' class='toggledropdown ng-binding' aaname='Claim Status' check:innerText='Claim Status' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAEYAAAATCAYAAAAtbXvAAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAANISURBVFhH7ZXBSyJRHMffX2GegpAOyxIRhBB0MiHIw4IdFjx0SAiym0FgQUiIQcQKiyQsIXSYwx48dJjDgu0hTAhZQWQFBxIcCA0EOwju7bu/92ZGZ0Ynio09zeELM+/35v3e+/y+7zfs6Q/galIuGAe5YBzkgnGQC8ZBLhgHWcH0GsgfR7HsY2CMYdYfRebXEE+3KXpPQTbPnVAf+S2GUL4zJfZKNWXshj7AQ7mZbwWhAxn1afP+g0xgOshHvPBELlFsD6E+91G5LaPyTLFXgflX9SHtMCwc3kDpDaG0G5BrfT3WQmY9jNyD/ZtJqT+O4DkuT429RWMw9+dYYFHkH60ThCxgWsjHNjA/w101h2BcRkWMd5DbJMdcccfwZy92Ly4R+ejV5qXLKElR7buZAHav7c7ihWEIXrRs4w2CMkdraC5mmxK5aIjiF8PZXsx/zqLYA5TrfX1fmhK39L29qOZ37lBjbXLo9vfxnkZg6ldhsE+SfkibbIsrDx2o/HlQRWLRi8QdH7eD4Ye4RGVAsVoWQUoePKtCoe8q3yjX4jmK+nqGVMqzOuPF6nYW0m/DLaQHCSFmdYzabkHha3OgdIXDknYo+Zjymh3zApjiCRXt4EYb77VQN5nCCkZUYxwcybw49aFcPIxl/wpW1wKiQqIyU8CE8kb1y0iwJSTvp6xnV7cFidwgAKWrWgEmwPQhp2mOvgfuHC3v28Cod+fTC0EaXyX6wMP2IJElzROM2Ijy2RLYVkEHSHd/7QUw+mY1MKaDvQTGkLja+hwbGKWwR45LoSgcM0Qh/gYwP4+s788dyFcphHzekeu4TM23iqSfYTkmjZqv0iR72ZqvsF9MFpVUafP8irwPmBbk6wbqXfoLDoaoSHvwGNetXUCYBXBa0+bWpQjYWhYlHnssYJtca+Qy70+sKwCHkWnS86CPwiEVVs+t0HVUBVyg9DVgAWoCQ+pWkdnZwKzevGb9R5C6NG4+SLMwbqhxCaex9wOT21rRc1NDDe0jVyNIIjaEfBIQv3EPd2uvjKRomlrjzaUD41x8f6IpzyGp9z4prp/JF8bp9yy5T8tdujB+InTW9X1IHJ6+HysYVyO5YBzkgnGQC8ZBLpipAv4CJ89xJiBw+bgAAAAASUVORK5CYII=" SearchSteps="FuzzySelector, Image" />
                             </scg:List>
                           </uix:TargetAnchorable.Anchors>
                         </uix:TargetAnchorable>
                       </uix:NClick.Target>
                     </uix:NClick>
-                    <ui:SendHotkey ClickBeforeTyping="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" Activate="True" DelayBefore="1" DisplayName="Send Hotkey 'pane'" sap:VirtualizedContainerService.HintSize="512,156" sap2010:WorkflowViewState.IdRef="SendHotkey_1" Key="enter" KeyModifiers="None" SpecialKey="True">
+                    <ui:SendHotkey ClickBeforeTyping="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" Activate="True" DelayBefore="1" DisplayName="Send Hotkey 'pane'" sap:VirtualizedContainerService.HintSize="334,156" sap2010:WorkflowViewState.IdRef="SendHotkey_5" Key="enter" KeyModifiers="None" SpecialKey="True">
                       <ui:SendHotkey.Target>
                         <ui:Target Element="{x:Null}" Selector="{x:Null}" Id="0dcdfdfb-8ff9-4243-8cb1-fa4c835db8c3" InformativeScreenshot="032c878e575e6d42cf1e07c7737b9559">
                           <ui:Target.ClippingRegion>
@@ -272,28 +304,34 @@
                         </ui:Target>
                       </ui:SendHotkey.Target>
                     </ui:SendHotkey>
-                    <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="512,326" sap2010:WorkflowViewState.IdRef="CommentOut_3">
+                    <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="334,51" sap2010:WorkflowViewState.IdRef="CommentOut_7">
                       <ui:CommentOut.Body>
-                        <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="376,248" sap2010:WorkflowViewState.IdRef="Sequence_8">
+                        <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="376,248" sap2010:WorkflowViewState.IdRef="Sequence_14">
                           <sap:WorkflowViewStateService.ViewState>
                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
                               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                             </scg:Dictionary>
                           </sap:WorkflowViewStateService.ViewState>
-                          <uix:NClick ClickType="Single" DisplayName="Click 'chrome.exe'" sap:VirtualizedContainerService.HintSize="334,156" sap2010:WorkflowViewState.IdRef="NClick_10" InteractionMode="HardwareEvents" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="685e974a-b8b9-45e3-8bba-50ac601e1eb0" Version="V1">
+                          <uix:NClick ClickType="Single" DisplayName="Click 'chrome.exe'" sap:VirtualizedContainerService.HintSize="334,156" sap2010:WorkflowViewState.IdRef="NClick_17" InteractionMode="HardwareEvents" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="685e974a-b8b9-45e3-8bba-50ac601e1eb0" Version="V1">
                             <uix:NClick.Target>
                               <uix:TargetAnchorable DesignTimeRectangle="150, 49, 69, 24" FriendlyName="'chrome.exe'" Guid="0ce62b82-edbf-4c5c-9cc0-4cf17e23ce83" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAFMAAAAeCAYAAABQdCKyAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAHeSURBVGhD7ZlBTsMwEEVzEg5VqRdqcwAuEdRrsGh7gq667KI7JHbshvlWxvyYNHHVCQIxX/oinvHYnhe3CNHIpK7SrRtpGnYrB6QunazWnc740mGzku7SD5CnuvbYx48trUVx1fVlRblWOh1b/rAZzk3rb9JJkpBPdXamYv9BfHDusse+B5yT1mflvcz9vBmYoXsUMB0VMB0VMB0VMB3VPD2LhH0cMB0dMB0dMB1dDXP/IfKufxlwbKvjHHvVZ52zpTwbc0vtNL57Ezmfxmv+mutgAhSaLmDVwjSQgFfmamGetX6ve4zlfourYAIGGkbj3FAVTMRvgIT/3c3ErUgwtGn+qFfB1BpRYIMYuYSJvbKoLp8Bz7rPTvc14Qx2+5OobhBXLfni5mEWMLipGpipmTtgsvE9bZ+EAUx95pc6Ns51Yy94Ic/CRLOlrPnFb6bqFkx7hhl6ObbzL3kjzbMwv71ZglMFE3Et4ebZDBMQuOmpm1kL0/wTUCdhDmCRrZkqmOrUyETOGsS6GQLWo/GjMJN1n7F+vDwJ89ahAACHqoUJ283I0rHF823Rn1nYW3OPwsRcFtd5e/4XULjaAdPRAdPRAdPRAdPR8W8LRwVMRwVMRwVMRwVMRwVMN4l8Ao6ghv/Hsg+UAAAAAElFTkSuQmCC" InformativeScreenshot="6c432ebc8c0d9988012a871f719427b5.png" ScopeSelectorArgument="&lt;wnd app='chrome.exe' cls='Chrome_WidgetWin_1' idx='*' /&gt;" SearchSteps="Image" TargetType="ImageBased" Visibility="Interactive" />
                             </uix:NClick.Target>
                           </uix:NClick>
                         </Sequence>
                       </ui:CommentOut.Body>
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
                     </ui:CommentOut>
-                    <uix:NClick ClickType="Single" DisplayName="Click 'Lookup'" sap:VirtualizedContainerService.HintSize="512,156" sap2010:WorkflowViewState.IdRef="NClick_3" InteractionMode="DebuggerApi" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="685e974a-b8b9-45e3-8bba-50ac601e1eb0" Version="V1">
+                    <uix:NClick ClickType="Single" DisplayName="Click 'Lookup'" sap:VirtualizedContainerService.HintSize="334,156" sap2010:WorkflowViewState.IdRef="NClick_18" InteractionMode="DebuggerApi" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="685e974a-b8b9-45e3-8bba-50ac601e1eb0" Version="V1">
                       <uix:NClick.Target>
                         <uix:TargetAnchorable BrowserURL="https://caazeo8ton5ohnbbssapp.ecwcloud.com/mobiledoc/jsp/webemr/index.jsp#/mobiledoc/jsp/webemr/webpm/claimLookup.jsp" DesignTimeRectangle="1279, 307, 80, 30" ElementType="Button" FriendlyName="'Lookup'" FullSelectorArgument="&lt;webctrl id='claimLookupTbl1' tag='TABLE' /&gt;&lt;webctrl id='btnclaimlookup' tableRow='1' tag='BUTTON' /&gt;" FuzzySelectorArgument="&lt;webctrl id='claimLookupTbl1' tag='TABLE' /&gt;&lt;webctrl id='btnclaimlookup' type='' tag='BUTTON' class='btn btn-lblue btn-sm spacer20' aaname=' Lookup' check:innerText='Lookup' /&gt;" Guid="5461f41c-c35a-4ee9-b706-2326a97e24ca" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAFQAAAAiCAYAAADBEP4dAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAIpSURBVGhD7Zo9SwNBEIb9P4qCjYIiQiy00MIoiqWCjQoWQQS1VTSCH6UICtaxEPwDwSKNVkawSJXKFCEEAqaQ8d7L7WXvbs/LmQmcOAMP3O7OTthnd0mzfR+fRAIfIpQZj9DswxMtndzSwtG10AFwBWe6Q1coBmbPHmnw/JX6L96FDoArONOlukJhW2TGB87gLiAUR9g0QYgG7kQoIyKUGRHKjAhlRoQyI0KZYRGa2jymdDrdEcj1z8+Wv6hergT6f0+NStSknHGst7AIHTh/o5nVjFGgDnKQ658vQg0Mnr7Q3MqaUSTAGHJMc0VoCMOHeZpfXA7IRB/GTHPAT0JzVdLCJ6nYdPpbUSqqMa9Qu8Zng7LOdzvPAjWqtdZ3vkH1aoMKlgMVcTeaVSgYObgPCB3dzxlzFWFC0e8uVrUdMfbidcF2+4sKebSV0IotR68dKdStAVDHlx8Bu1CQ2jpxZU5tHBlzdMxCIUNfHGifPNOctizkWeM+md4cB79QtWEOYZsdRk+ETmSuXKGT25fGHJ1eCS3kgzX+sdBWf3dXPpgHofpvoe298rpw1PFtQASJEeoPtQh7wW5oAkGHf0qtPF1wO0plq+05oU0qWQ5UxDmdIBFCE4Mt1Hvl49IToeM7NzS9vkdju3c0lH025iSSpAr9s4jQ5CFCmRGhzIhQZkQoM0ah8tDhd4Q+dJCnOPGBq9CnOEoqbOMIC9HAlS4TeIQK3SNCWSH6BnRDjrL8VxQgAAAAAElFTkSuQmCC" InformativeScreenshot="cef8e12c82d564ee0e95e0b14760e7a2.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='eCW (Billing, Support 2 ) Production' /&gt;" SearchSteps="FuzzySelector, Image" Visibility="Interactive" />
                       </uix:NClick.Target>
                     </uix:NClick>
-                    <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'SPAN'" sap:VirtualizedContainerService.HintSize="512,106" sap2010:WorkflowViewState.IdRef="Click_2" KeyModifiers="None" MouseButton="BTN_LEFT" SimulateClick="True">
+                    <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'SPAN'" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="Click_7" KeyModifiers="None" MouseButton="BTN_LEFT" SimulateClick="True">
                       <ui:Click.CursorPosition>
                         <ui:CursorPosition Position="Center">
                           <ui:CursorPosition.OffsetX>
@@ -318,13 +356,303 @@
                   </Sequence>
                 </ActivityAction>
               </ui:ForEachRow.Body>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
             </ui:ForEachRow>
           </Sequence>
         </ActivityAction>
       </uix:NApplicationCard.Body>
       <uix:NApplicationCard.TargetApp>
-        <uix:TargetApp Area="-8, -8, 1382, 744" BrowserType="Chrome" IconBase64="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" InformativeScreenshot="aa8c9749c9c6623e5af3a375dde7fd3d.png" Selector="&lt;html app='chrome.exe' title='eCW (Billing, Support 2 ) Production' /&gt;" Url="https://caazeo8ton5ohnbbssapp.ecwcloud.com/mobiledoc/jsp/webemr/index.jsp#/mobiledoc/jsp/webemr/webpm/claimLookup.jsp" />
+        <uix:TargetApp Area="-8, -8, 1382, 744" BrowserType="Chrome" IconBase64="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" InformativeScreenshot="e50c5bb8706102ae13051c433716d017.png" Selector="&lt;html app='chrome.exe' title='eCW (Billing, Support 2 ) Production' /&gt;" Url="https://caazeo8ton5ohnbbssapp.ecwcloud.com/mobiledoc/jsp/webemr/index.jsp#/mobiledoc/jsp/webemr/webpm/claimLookup.jsp" />
       </uix:NApplicationCard.TargetApp>
     </uix:NApplicationCard>
+    <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="510,51" sap2010:WorkflowViewState.IdRef="CommentOut_8">
+      <ui:CommentOut.Body>
+        <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="552,2981" sap2010:WorkflowViewState.IdRef="Sequence_17">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+          <uix:NApplicationCard WebDriverMode="{x:Null}" AttachMode="SingleWindow" CloseMode="Always" DisplayName="Use Browser Chrome: eCW (Billing, Support 2 ) Production" sap:VirtualizedContainerService.HintSize="510,2889" sap2010:WorkflowViewState.IdRef="NApplicationCard_2" InteractionMode="DebuggerApi" IsIncognito="False" OpenMode="Always" ScopeGuid="685e974a-b8b9-45e3-8bba-50ac601e1eb0" Version="V2">
+            <uix:NApplicationCard.Body>
+              <ActivityAction x:TypeArguments="x:Object">
+                <ActivityAction.Argument>
+                  <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+                </ActivityAction.Argument>
+                <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="476,2633" sap2010:WorkflowViewState.IdRef="Sequence_3">
+                  <Sequence.Variables>
+                    <Variable x:TypeArguments="sd:DataTable" Name="In_DataTable" />
+                  </Sequence.Variables>
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="434,51" sap2010:WorkflowViewState.IdRef="CommentOut_5">
+                    <ui:CommentOut.Body>
+                      <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="376,179" sap2010:WorkflowViewState.IdRef="Sequence_11">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                        <ui:ReadRange AddHeaders="True" DataTable="[In_DataTable]" DisplayName="Read Range" sap:VirtualizedContainerService.HintSize="334,87" sap2010:WorkflowViewState.IdRef="ReadRange_1" SheetName="Sheet1" WorkbookPath="Data\Copy of TFS_Submission_October 2022 RPM Billing_11072022 (005).xlsx">
+                          <ui:ReadRange.Range>
+                            <InArgument x:TypeArguments="x:String">
+                              <Literal x:TypeArguments="x:String" Value="" />
+                            </InArgument>
+                          </ui:ReadRange.Range>
+                        </ui:ReadRange>
+                      </Sequence>
+                    </ui:CommentOut.Body>
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                  </ui:CommentOut>
+                  <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="{x:Null}" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="434,2448" sap2010:WorkflowViewState.IdRef="ForEachRow_1">
+                    <ui:ForEachRow.Body>
+                      <ActivityAction x:TypeArguments="sd:DataRow">
+                        <ActivityAction.Argument>
+                          <DelegateInArgument x:TypeArguments="sd:DataRow" Name="CurrentRow" />
+                        </ActivityAction.Argument>
+                        <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="376,2332" sap2010:WorkflowViewState.IdRef="Sequence_4">
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                          <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Patient'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="334,216" sap2010:WorkflowViewState.IdRef="NTypeInto_1" InteractionMode="DebuggerApi" ScopeIdentifier="685e974a-b8b9-45e3-8bba-50ac601e1eb0" Text="[CurrentRow(&quot;Last Name&quot;).ToString+ &quot;,&quot; +CurrentRow(&quot;First Name&quot;).ToString]" Version="V1">
+                            <uix:NTypeInto.Target>
+                              <uix:TargetAnchorable BrowserURL="https://caazeo8ton5ohnbbssapp.ecwcloud.com/mobiledoc/jsp/webemr/index.jsp#/mobiledoc/jsp/webemr/webpm/claimLookup.jsp" DesignTimeRectangle="567, 157, 184, 24" ElementType="InputBox" FriendlyName="'Hairston, Randy, A'" FullSelectorArgument="&lt;webctrl id='claimLookupTbl3' tableRow='1' tag='TABLE' /&gt;&lt;webctrl tableRow='1' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl id='claimLookupTbl3' tag='TABLE' /&gt;&lt;webctrl type='text' tag='INPUT' class='no-cursory-check form-control input-height patient-input clearable pt-lookup-class patientForFilter ng-touched ng-not-empty ng-dirty x' aaname='Hairston, Randy, A' /&gt;" Guid="d628931e-7c04-47ed-baad-7b74d958b256" ImageBase64="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" InformativeScreenshot="5078066384d54b1d733d80be7e74c124.png" IsResponsive="True" ScopeSelectorArgument="&lt;html app='chrome.exe' title='eCW (Billing, Support 2 ) Production' /&gt;" SearchSteps="FuzzySelector, Image" Visibility="Interactive">
+                                <uix:TargetAnchorable.Anchors>
+                                  <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                    <uix:Target DesignTimeRectangle="447, 164, 112, 13" ElementType="Text" FriendlyName="'Patient'" FullSelectorArgument="&lt;webctrl id='claimLookupTbl3' tableRow='1' tag='TABLE' /&gt;&lt;webctrl tableRow='1' tag='LABEL' /&gt;" FuzzySelectorArgument="&lt;webctrl id='claimLookupTbl3' tag='TABLE' /&gt;&lt;webctrl type='' tag='LABEL' class='control-label' aaname='Patient' check:innerText='Patient' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAHQAAAARCAYAAAAMo4jOAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAIYSURBVFhH7ZexS+tQFIfvX6GdBBEHcRBBBMGpLRTSrd0cHHRqxwpCEUREFEQQRCiIFN6Q4Q0Z3pCtU/E9kILweFio0IJdqiDUoaDbz3Nvbpq21mCeTpczfJDkXG5KvvxOTsXjK8CYAws1DBZqGCzUMFioYbBQw2ChUWnaSAsBoYhhNr2FcmPMulC6KK8LpMudMbWvwUKjooRmUGrS8XMXzu4KROoStXFr+7zA2Y6hWB1X+19aOE3p3zFwnYVGZVCoPK8eUFIP4Kp6C+W8hdlJmd5pJAsuie7CLsxhop9qubaDUpYS+kMn9KmOUsHClKzPWMj9bAV7Z89ROgxqe9UXqtVJ5rTej8ja+Kfuz0KjMyi014V7bA0l9K7ZQVse925QXKBU/pbX/6BIDz5I6LDQyuEikmd1r/bgIjdp4fSWjtXLEsOG7a2rXWQgEvpeoy+WhoVGZegbKjCV2oLtf0NV0jJYWl7BaiKukupJDBN6g72FYD8ftVYJ3dHp9891N2Ch38QHD1JSOV6EWHd0+6NvXOLzQnOubKV+XTPUzkfOWeg3ESZ0PwaRd1XLbV+fINmXSO2X0rrxy5f2vuWKLLXSZ2+fdqODO7kuTOi9g4yI4+ivrmlYaFRChD42HKzNk1Q1ENk4ygeprNmberA5QWV0KOrRMEVDkTdMyb9Cl7iS18OE0uTs7sfVsDXR7wos1DhYqGGwUKMA3gBWOse+yTxJfgAAAABJRU5ErkJggg==" SearchSteps="FuzzySelector, Image" />
+                                  </scg:List>
+                                </uix:TargetAnchorable.Anchors>
+                              </uix:TargetAnchorable>
+                            </uix:NTypeInto.Target>
+                          </uix:NTypeInto>
+                          <uix:NClick ClickType="Single" DisplayName="Click 'Graham, Raymond'" sap:VirtualizedContainerService.HintSize="334,156" sap2010:WorkflowViewState.IdRef="NClick_2" InteractionMode="DebuggerApi" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="685e974a-b8b9-45e3-8bba-50ac601e1eb0" Version="V1">
+                            <uix:NClick.Target>
+                              <uix:TargetAnchorable BrowserURL="https://caazeo8ton5ohnbbssapp.ecwcloud.com/mobiledoc/jsp/webemr/index.jsp#/mobiledoc/jsp/webemr/webpm/claimLookup.jsp" DesignTimeRectangle="568, 182, 356, 46" FriendlyName="'Graham, Raymond'" FullSelectorArgument="&lt;webctrl id='claimLookupTbl3' tableRow='1' tag='TABLE' /&gt;&lt;webctrl parentid='patient-lookupUl1' tableRow='1' tag='DIV' /&gt;" FuzzySelectorArgument="&lt;webctrl id='claimLookupTbl3' tag='TABLE' /&gt;&lt;webctrl parentid='patient-lookupUl1' type='' tag='DIV' class='def_det active' aaname='' check:innerText='Graham, Raymond (67Y, M)&amp;#xD;&amp;#xA;&amp;#xD;&amp;#xA;A/C No: 19485|360-623-8144| DOB: 02/05/1955&amp;#xD;&amp;#xA;&amp;#xD;&amp;#xA; : YES&amp;#xD;&amp;#xA;HUB' /&gt;" Guid="f5bc2b58-9681-4a76-8570-b4323064828a" ImageBase64="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" InformativeScreenshot="a92fb396ed4daa48387cf717dd32f733.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='eCW (Billing, Support 2 ) Production' /&gt;" SearchSteps="FuzzySelector, Image" Visibility="Interactive" />
+                            </uix:NClick.Target>
+                          </uix:NClick>
+                          <uix:NClick ClickType="Single" DisplayName="Click 'Service Dt(s)'" sap:VirtualizedContainerService.HintSize="334,156" sap2010:WorkflowViewState.IdRef="NClick_4" InteractionMode="DebuggerApi" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="685e974a-b8b9-45e3-8bba-50ac601e1eb0" Version="V1">
+                            <uix:NClick.Target>
+                              <uix:TargetAnchorable BrowserURL="https://caazeo8ton5ohnbbssapp.ecwcloud.com/mobiledoc/jsp/webemr/index.jsp#/mobiledoc/jsp/webemr/webpm/claimLookup.jsp" DesignTimeRectangle="291, 194, 16, 18" FriendlyName="'I'" FullSelectorArgument="&lt;webctrl tableRow='1' tag='TABLE' /&gt;&lt;webctrl tableRow='2' tag='I' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl type='' tag='I' class='icon icon-inputcalender' aaname='' /&gt;" Guid="7e3e4031-3969-4693-bcc8-351ed3b042b2" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAABQAAAAWCAYAAADAQbwGAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAADBSURBVDhP7ZTBCcQgEEW3q5wl95xDWvDmLQVICHizDvFsDXqwgHSRAmYZ1xGEBBJwF3bZB5+JH3lgEB/QmM8JjTHQdR0453LzIsaY+nVdc1NTCYUQaXPf90VIk0JrFE7TlL5xEpVwGIa04a4QQxwKGWOwbRssy1KOSPHeg1IqzXEcS08cCjFSSrDWwjzPpcNwzlOvta564lR4N8T7hfu+59V18J8TTYR4K4i/8FeFp9eGXpu7OX1tWvAFwhACtEuAJ+PgykZ8BxXTAAAAAElFTkSuQmCC" InformativeScreenshot="1d5d184998ea03b5914373a046ffa859.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='eCW (Billing, Support 2 ) Production' /&gt;" SearchSteps="FuzzySelector, Image" Visibility="Interactive">
+                                <uix:TargetAnchorable.Anchors>
+                                  <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                    <uix:Target DesignTimeRectangle="118, 196, 65, 15" ElementType="Text" FriendlyName="'Service Dt(s)'" FullSelectorArgument="&lt;webctrl tableRow='1' tag='TABLE' /&gt;&lt;webctrl tableRow='2' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl type='' tag='SPAN' class='toggledropdown ng-binding' aaname='Service Dt(s)' check:innerText='Service Dt(s)' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAEUAAAATCAYAAADGWsDDAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAN2SURBVFhH7VY9SyNRFH2/IpNKELGQRURYFgQrNyAkXSwWUqSIIGhgCQkIKohIcGEJChI2sIRAiiksUlhMITtuIVFYBEGCgQwYMCBGCMRCiN3Z+2beZOYlkwWxWWSKQzLv4977zrvnzLDHF8CHDJ8UD/ikeMAnxQM+KR7wSfGAQ0pDw2pkCgHGwCbmEFnXUHMtfAv0vXGMbV+g5TH3GmjbVBuvj0OZQmglD+3ee62NmhrDx81RuZsoLM1h47wnjQtSulBXGKY3T2F0ejDu6tCuu9LC/wEmKUQu/99qN1HZDSOgJKEKYlonWwiIeRNPp0gpURRunRiDMPcsqVIDCFIeUIoxhH40+xN9dOoopMMYMzsojNUjseZWRUTJonKWQ2iCIVL+hZ2ZIDbO7L1dlOIU82dTOszjSw/Vcsbcw1gQk181GDRu/M4h+iFojX3JQ2/bcRzIcTiaOFi0chjHGUwqPKYFXkdLy4D1D9yDvh8TayhHhHI88fErqjuMgxs7pks+rbMs5pUg5hN5qDdOl+h7swgd1q3nNklMEQE4KRR8LF6EfteFQQn42v5N3VcQY8so0S1KN0x5ppUYCg1a89xD7Z5al69VMlAFEdVD6oD106GWHyZFHhuc17/PYt6+6LsKooxq53mJIOO2K+L3UEkzJCrOmWWjpZZU95ctcvauaBNnkTMrw+wGk5QFieHHmyLt3UKFCKqVo2ArVhe4i+WFMtJ4fw/BqCSHcjg37OC1pPDnSPlBPJMa4uPU7VFslC9Qe5ZjOOsGSbHxJ4dploUmSFnVZCMyYZIyqFfezkGkTriB8V9rn7vYkaR8LuLSNeaFwUPb8rEP9G9SLBjXGr4lFhD4lBXyGUkK6f64jlqbDkEtfakmEZjJQac5Lgm2RAWLAK3Gg3n73qRQ0qNlBNaSSIiO4WPuYk1js+Vjt7EptVmkNNHCT11LViKmDSkOvQxKm9bhtI41r++SJ61pfdlJ8nHH7GhI9Gu35BNVPUgpxOcsMzVNKIPCtQjw3ESJjNYxqCKqfHwEKZaX0JuM5GePyTc4YHhpYbTnecQ+UXvzGuiTIHU8/PYz49jy4p8NaRVVtyE3KLdp4OPYOSfiuNEKCXM/TNnx6XUe3ef2wPdxNcg24C2f9wLzlWyZvec8B7eKRVm675sUwhs+3ny44ZPiAZ+UIQB/AYqyKkOAZz2xAAAAAElFTkSuQmCC" SearchSteps="FuzzySelector, Image" />
+                                  </scg:List>
+                                </uix:TargetAnchorable.Anchors>
+                              </uix:TargetAnchorable>
+                            </uix:NClick.Target>
+                          </uix:NClick>
+                          <uix:NClick ClickType="Single" DisplayName="Click 'Prev'" sap:VirtualizedContainerService.HintSize="334,156" sap2010:WorkflowViewState.IdRef="NClick_5" InteractionMode="DebuggerApi" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="685e974a-b8b9-45e3-8bba-50ac601e1eb0" Version="V1">
+                            <uix:NClick.Target>
+                              <uix:TargetAnchorable BrowserURL="https://caazeo8ton5ohnbbssapp.ecwcloud.com/mobiledoc/jsp/webemr/index.jsp#/mobiledoc/jsp/webemr/webpm/claimLookup.jsp" DesignTimeRectangle="260, 220, 48, 21" ElementType="DropDown" FriendlyName="'Oct'" FullSelectorArgument="&lt;webctrl parentid='ui-datepicker-div' tag='SELECT' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='ui-datepicker-div' tag='SELECT' type='' class='ui-datepicker-month' aaname='' /&gt;" Guid="cf5dfd23-2ee7-45bf-b708-c05a200f32e9" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAADQAAAAZCAYAAAB+Sg0DAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAFfSURBVFhH7ZdBasMwEEVzJ53Gh4ivYrL0LZxloVcIRlkYCqXtohQMXnlXGpj425ItqxKSQgKWyIOBSLP5TyM7ePfz3VBKlbbQ6e2dXvknvdQfURSyIrPqMAuhcf5q6ffvQrGArMisSs1CsI1JRoLMyP5PCCOMFWR/Cm2ZcKG6IMbYUvuKOtHaAkFC3TEfJAriYg3GvQdJlWVJfd+L1QL20DMRIMSpYDlVrVjOdFTtGRW1WFrgh/VBuEBg3IAsy1ZS+I099ExS/kJtRbllEphSfpSdSXC+kgc+yChrbcI21OBSyrSn4y+EZ8d2tdAbggOEX+QkkAybENAFXDLgzhPCtTQFv00IqFIuGeAvNIZ1PUP3FwJSyiUDAoSmSbjecvYrZzoMfyDikgFBQiP6/5B4dhamien96TCwd/ukfAgX2jhPoa1jFErueyi5L1YpBVuMMIZCVlUGtRJKoRITaugKpHfrrQyAsfAAAAAASUVORK5CYII=" InformativeScreenshot="7fbe20ffbd806daed897c46c1be12102.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='eCW (Billing, Support 2 ) Production' /&gt;" SearchSteps="FuzzySelector, Image" Visibility="Interactive">
+                                <uix:TargetAnchorable.Anchors>
+                                  <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                    <uix:Target DesignTimeRectangle="203, 221, 22, 22" ElementType="Text" FriendlyName="'Prev'" FullSelectorArgument="&lt;webctrl parentid='ui-datepicker-div' tag='A' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='ui-datepicker-div' tag='A' type='' class='ui-datepicker-prev ui-corner-all' aaname='Prev' check:innerText='Prev' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAABoAAAAaCAYAAACpSkzOAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAADFSURBVEhLY3j25Np/euBRi8jGoxb9P3D1+n/LRbf/X7hzHas8LkySRcduXP8vNvX2f4lpd7DK48NEW3Ti5jWwBRwT7vzfcP4GVjX4MFEWnbt97b/09NtgS1adJd0SECZoEcgShZm3/7P23/m/9Ax5loAwQYsM598CW7LoFPmWgDBBi7TnUu4bECY66EDxs4KWQQfCyIlh7XnS8g8ME2URCNMlecPw4et0yLAwvBdaBJ2+RcMiiBI8ahHZeNQisjGdLLr2HwDVTXP9ODXIVAAAAABJRU5ErkJggg==" SearchSteps="FuzzySelector, Image" />
+                                  </scg:List>
+                                </uix:TargetAnchorable.Anchors>
+                              </uix:TargetAnchorable>
+                            </uix:NClick.Target>
+                          </uix:NClick>
+                          <uix:NClick AlterIfDisabled="False" ClickType="Single" CursorMotionType="Smooth" DelayBefore="1" DisplayName="Click 'chrome.exe'" sap:VirtualizedContainerService.HintSize="334,156" sap2010:WorkflowViewState.IdRef="NClick_7" InteractionMode="DebuggerApi" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="685e974a-b8b9-45e3-8bba-50ac601e1eb0" Version="V1">
+                            <uix:NClick.Target>
+                              <uix:TargetAnchorable DesignTimeRectangle="2, 160, 35, 24" FriendlyName="'chrome.exe'" Guid="c329928e-e447-4756-afc9-5983f72823d4" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAACMAAAAYCAYAAABwZEQ3AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAADWSURBVEhL7ZZNCsIwEEY9iZfwiD2Aeotew0XX4sJVl+4L3bkb59Ok5G8k1iFGyAcPmrQwL5O0dEMKuRx3tD+bwRdRkdFKXTLbA1EtNBmJP5C5mhNlcyfqUs8pE8l0t1f9PpwrIBTJjFx3OPlzYGCZkTsWzrv0k7+IT/FlWGIWOoDuzIwdQ24JJBg3a6R8GZwVaTtwjwviGoVdMQsEi3cGW5kqqivD5JyZYjI5b9O7bUotJJdI5kn4nTFnxQWFl5j7diHImg6lZX5Ek5FoMhLtH1hKRTJED3jwIaELFr5vAAAAAElFTkSuQmCC" InformativeScreenshot="50d0fbb7229e049d106ba7fc12e64871.png" ScopeSelectorArgument="&lt;wnd app='chrome.exe' cls='Chrome_WidgetWin_1' idx='*' /&gt;" SearchSteps="Image" TargetType="ImageBased" Visibility="Interactive">
+                                <uix:TargetAnchorable.PointOffset>
+                                  <uix:PointOffset X="-4" Y="-2" />
+                                </uix:TargetAnchorable.PointOffset>
+                              </uix:TargetAnchorable>
+                            </uix:NClick.Target>
+                          </uix:NClick>
+                          <ui:SendHotkey ClickBeforeTyping="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" Activate="False" DelayBefore="1" DisplayName="Send Hotkey" sap:VirtualizedContainerService.HintSize="334,136" sap2010:WorkflowViewState.IdRef="SendHotkey_3" Key="enter" KeyModifiers="None" SpecialKey="True">
+                            <ui:SendHotkey.Target>
+                              <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}" Id="b53e3595-389a-4fa1-9eb5-a9a976288997">
+                                <ui:Target.TimeoutMS>
+                                  <InArgument x:TypeArguments="x:Int32" />
+                                </ui:Target.TimeoutMS>
+                                <ui:Target.WaitForReady>
+                                  <InArgument x:TypeArguments="ui:WaitForReady" />
+                                </ui:Target.WaitForReady>
+                              </ui:Target>
+                            </ui:SendHotkey.Target>
+                          </ui:SendHotkey>
+                          <ui:Click DelayMS="{x:Null}" SendWindowMessages="{x:Null}" AlterIfDisabled="False" ClickType="CLICK_SINGLE" DelayBefore="1" DisplayName="Click 'A  #'" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="Click_5" KeyModifiers="None" MouseButton="BTN_LEFT" SimulateClick="True">
+                            <ui:Click.CursorPosition>
+                              <ui:CursorPosition Position="Center">
+                                <ui:CursorPosition.OffsetX>
+                                  <InArgument x:TypeArguments="x:Int32" />
+                                </ui:CursorPosition.OffsetX>
+                                <ui:CursorPosition.OffsetY>
+                                  <InArgument x:TypeArguments="x:Int32" />
+                                </ui:CursorPosition.OffsetY>
+                              </ui:CursorPosition>
+                            </ui:Click.CursorPosition>
+                            <ui:Click.Target>
+                              <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="77f50b9d-e58b-4829-844b-d8d3f6473446" InformativeScreenshot="0741552c6221748d26bfd977fb652080" Selector="&lt;webctrl parentid='ui-datepicker-div' tag='TABLE' /&gt;&lt;webctrl tableRow='2' tag='A' /&gt;">
+                                <ui:Target.TimeoutMS>
+                                  <InArgument x:TypeArguments="x:Int32" />
+                                </ui:Target.TimeoutMS>
+                                <ui:Target.WaitForReady>
+                                  <InArgument x:TypeArguments="ui:WaitForReady" />
+                                </ui:Target.WaitForReady>
+                              </ui:Target>
+                            </ui:Click.Target>
+                          </ui:Click>
+                          <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="334,51" sap2010:WorkflowViewState.IdRef="CommentOut_4">
+                            <ui:CommentOut.Body>
+                              <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="476,516" sap2010:WorkflowViewState.IdRef="Sequence_9">
+                                <sap:WorkflowViewStateService.ViewState>
+                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                  </scg:Dictionary>
+                                </sap:WorkflowViewStateService.ViewState>
+                                <ui:OnUiElementAppear ContinueOnError="{x:Null}" FoundElement="{x:Null}" WaitActive="{x:Null}" DisplayName="On Element Appear 'DIV  ui-datepicker-div'" sap:VirtualizedContainerService.HintSize="434,424" sap2010:WorkflowViewState.IdRef="OnUiElementAppear_1" RepeatForever="True" WaitVisible="True">
+                                  <ui:OnUiElementAppear.Body>
+                                    <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="376,248" sap2010:WorkflowViewState.IdRef="Sequence_7">
+                                      <sap:WorkflowViewStateService.ViewState>
+                                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                        </scg:Dictionary>
+                                      </sap:WorkflowViewStateService.ViewState>
+                                      <uix:NClick AlterIfDisabled="True" ClickType="Single" DelayBefore="1" DisplayName="Click '1'" sap:VirtualizedContainerService.HintSize="334,156" sap2010:WorkflowViewState.IdRef="NClick_1" InteractionMode="DebuggerApi" KeyModifiers="None" MouseButton="Middle" ScopeIdentifier="685e974a-b8b9-45e3-8bba-50ac601e1eb0" Version="V1">
+                                        <uix:NClick.Target>
+                                          <uix:TargetAnchorable BrowserURL="https://caazeo8ton5ohnbbssapp.ecwcloud.com/mobiledoc/jsp/webemr/index.jsp#/mobiledoc/jsp/webemr/webpm/claimLookup.jsp" DesignTimeRectangle="399, 327, 27, 24" ElementType="Text" FriendlyName="'1'" FullSelectorArgument="&lt;webctrl parentid='ui-datepicker-div' tag='TABLE' /&gt;&lt;webctrl tableRow='2' tag='A' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='ui-datepicker-div' tag='TABLE' /&gt;&lt;webctrl type='' tag='A' class='ui-state-default ui-state-active' aaname='1' check:innerText='1' /&gt;" Guid="355b95b0-1641-417b-88a1-d8c4a2fe4bf5" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAB8AAAAcCAYAAACZOmSXAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAACASURBVEhL7ZHBCYAwEAStxrKswmLswT4EW7ACH4L6EETQEw8C+zhFYjQPd2DI4xbmkUQiwrjS5enrIowr1ji0COOKNQ4t4h0fi0zWoZWlqcz7mYhX3IW3qf8+PtelRt1rbc5EHv35EWb8rgjjijW+MmrcR4RxxRqHFmE8Cn+Ni+wK6XUlOnExVAAAAABJRU5ErkJggg==" InformativeScreenshot="6488d16e672112e1d1f435ca5208cf0b.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='eCW (Billing, Support 2 ) Production' /&gt;" SearchSteps="FuzzySelector, Image" Visibility="Interactive">
+                                            <uix:TargetAnchorable.Anchors>
+                                              <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                                <uix:Target DesignTimeRectangle="260, 265, 48, 21" ElementType="DropDown" FriendlyName="'Oct'" FullSelectorArgument="&lt;webctrl parentid='ui-datepicker-div' tag='SELECT' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='ui-datepicker-div' tag='SELECT' type='' class='ui-datepicker-month' aaname='' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAADQAAAAZCAYAAAB+Sg0DAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAFkSURBVFhH7ZdBaoQwFIZ7J0/jyht4AQ/g3p03cOuy0CtIaRcDhWK7KIWuBDdSWnjla42NqTbJ0KEa5oPHTPIY+D9fRvHi+ekgIVXYQs3dvVzdPMjldbuLIiuZdYdJiMbt44u8vr3LXiArmXWpSQjbPckoyEz2H0KMcK+Q/Sy0ZbyFmqaRKIqmyrJMhmEYu/+Pl1Bd15IkiXRdN+587Z1KqixL6ft+XH3DHr0lnIWQSNNU2nbeQwQhJvcbVVXNLoQNAnMC4jieSfGdPXpLUs5CiOR5vjgJpkSBElRHsiiKz1Jrc8Jr6MGV1NKeibMQE1g7WvQIDXwqOQW/Yd9nQmAK2GTgTydEYKTN4McKgS5lkwFnIcLY/kOnEAIlZZMBZyFgCra73NqRY7rmxfABEZsMeAmB+RxCQEdNzOwjydr1pnAs3kJb5yy0dRaFgnsfCu6NVUlhywj3UGTVZaiZUAgVmNBBPgBHG+8vek44PQAAAABJRU5ErkJggg==" SearchSteps="FuzzySelector, Image" />
+                                              </scg:List>
+                                            </uix:TargetAnchorable.Anchors>
+                                          </uix:TargetAnchorable>
+                                        </uix:NClick.Target>
+                                      </uix:NClick>
+                                    </Sequence>
+                                  </ui:OnUiElementAppear.Body>
+                                  <ui:OnUiElementAppear.Target>
+                                    <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="5dad0b01-3405-4500-9eef-9719f6d46147" InformativeScreenshot="dc60aa55abdfbeb4a1b4b71106bb0b45" Selector="&lt;webctrl id='ui-datepicker-div' tag='DIV' /&gt;">
+                                      <ui:Target.TimeoutMS>
+                                        <InArgument x:TypeArguments="x:Int32" />
+                                      </ui:Target.TimeoutMS>
+                                      <ui:Target.WaitForReady>
+                                        <InArgument x:TypeArguments="ui:WaitForReady" />
+                                      </ui:Target.WaitForReady>
+                                    </ui:Target>
+                                  </ui:OnUiElementAppear.Target>
+                                </ui:OnUiElementAppear>
+                              </Sequence>
+                            </ui:CommentOut.Body>
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                          </ui:CommentOut>
+                          <uix:NClick ClickType="Single" DisplayName="Click 'Claim Status'" sap:VirtualizedContainerService.HintSize="334,156" sap2010:WorkflowViewState.IdRef="NClick_9" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="685e974a-b8b9-45e3-8bba-50ac601e1eb0" Version="V1">
+                            <uix:NClick.Target>
+                              <uix:TargetAnchorable BrowserURL="https://caazeo8ton5ohnbbssapp.ecwcloud.com/mobiledoc/jsp/webemr/index.jsp#/mobiledoc/jsp/webemr/webpm/claimLookup.jsp" DesignTimeRectangle="201, 295, 238, 24" ElementType="DropDown" FriendlyName="'All Claims'" FullSelectorArgument="&lt;webctrl tableRow='1' tag='TABLE' /&gt;&lt;webctrl tableRow='4' tag='SELECT' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl type='' tag='SELECT' class='form-control input-sm ng-valid ng-not-empty ng-dirty ng-valid-parse ng-touched' aaname='' /&gt;" Guid="c4ea7b00-c478-42ba-91d0-1604d0e28b38" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAPIAAAAcCAYAAABbJuJWAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAPPSURBVHhe7ZwxaxtJGIbnZ2wrSHMQsNRZrSCFVS64SCCVuMK4VGVc2BiRIggXQaQ4jDulCNjFwaYwqArIRcyqWxOSyBwuxGHjBadQbLDf+77ZlbOSJSGsXLJS3gderJmdGa2NH823K1jz7zeAYZjZDkVmmDlIn8gfT/6B77dwdHTEMExKo46qq0l370TWA58/f8H5+TkuLi4Yhklp1FF1NSnznchq+eXlJa6urnBzc8MwTEqjjqqr6uw9kXXLvr6+xu3tLQgh6UUdVVfV2aEiq+2EkPSjrlJkQmYcikzIHECRCZkDfoDIPqpZA/NkB+24J6KJijGoHMatLRmz1Ywa9+gi2K+gtJiBkTnmUR7uyp5db/y8BKGHVaeInU9xm5DfiOlFPqzAeeLCzeZQbcV9lslF9rfzME4B6/sBOmGIzrGHnb8De4wik9+RjY0NhOLCINq3ubkZt74zpchdNNYc5LZ9+C9zyL30435lQpHP9lCScaX9+yetTCwyIXOCSqyVaTab7ZNZX2ufHtMxSaYTudvAuuykdhdsVZHLVqXQ7jGZyN2DspzYKrzhHg/MC9HcLiH/SPpk7cxiCbVWNzp0WodrXNRPtaHv7aL2toZnjx0Z6+CPP+vw3yfaT2vwv9qZCA+rcb+sK2V9aTeQjyhCfg0q7MLCgv1/7MmclFiPJQVXphLZSnh3bazXys6duJOK3HnjyslVZPRwBud1Wk20rYBd+K8KMM/30NHmPZENnOd1BPpHON6RY7LOssjbkfbJnpThBs/e6swAtUWD4uuolO92ArTP7EtCfhmDMo+TWJlC5BDeSrQzJuOsNeLd7P/YkdtobJVQkN3TeVywP81yfaTI5YPevhq13Td2pNBBffl7O9h1kTEZFFdq8I5HnAghP5mkzJpREisPF9le2xZQ+xBt+zYH63CcdTSsP5OJHAnoJKTrJzmvvVuEycr68e9id/MxIg9WB6NEtpwFaOyWUZSyPf/CZ2lNUkFP5nESKw8WOdwviVTJa2JFhJGSNZJyQpFFmeaW3rUuovIuumsdnvjwWpFkyXn+dk5KeSmPdfmzJqpLcmxqkUO0P8j7DivXCUkBvY1yHA8WWUXov0utRHexzYqnt6UmFFmR0a9W7W5oywj9HvmvIV8/nXooL0XfNWeWyvDe1VD4ASJ7a3kpraP31nXrx9yPyWzxYJEJIemBIhMyB1BkQuYAikzIHDBSZH1siD5ChBCSftTVoY/60Qd5fWmf2EeIEELSizqqrg59+F5PZrVct2yGYdIZdTQpsaZPZIZhZjMUmWFmPsB/N9nDjSBYMdoAAAAASUVORK5CYII=" InformativeScreenshot="d4e8528722380d47b36b2088b37b4e2b.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='eCW (Billing, Support 2 ) Production' /&gt;" SearchSteps="FuzzySelector, Image" Visibility="Interactive">
+                                <uix:TargetAnchorable.Anchors>
+                                  <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                    <uix:Target DesignTimeRectangle="117, 301, 66, 15" ElementType="Text" FriendlyName="'Claim Status'" FullSelectorArgument="&lt;webctrl tableRow='1' tag='TABLE' /&gt;&lt;webctrl tableRow='4' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl type='' tag='SPAN' class='toggledropdown ng-binding' aaname='Claim Status' check:innerText='Claim Status' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAEYAAAATCAYAAAAtbXvAAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAANISURBVFhH7ZXBSyJRHMffX2GegpAOyxIRhBB0MiHIw4IdFjx0SAiym0FgQUiIQcQKiyQsIXSYwx48dJjDgu0hTAhZQWQFBxIcCA0EOwju7bu/92ZGZ0Ynio09zeELM+/35v3e+/y+7zfs6Q/galIuGAe5YBzkgnGQC8ZBLhgHWcH0GsgfR7HsY2CMYdYfRebXEE+3KXpPQTbPnVAf+S2GUL4zJfZKNWXshj7AQ7mZbwWhAxn1afP+g0xgOshHvPBELlFsD6E+91G5LaPyTLFXgflX9SHtMCwc3kDpDaG0G5BrfT3WQmY9jNyD/ZtJqT+O4DkuT429RWMw9+dYYFHkH60ThCxgWsjHNjA/w101h2BcRkWMd5DbJMdcccfwZy92Ly4R+ejV5qXLKElR7buZAHav7c7ihWEIXrRs4w2CMkdraC5mmxK5aIjiF8PZXsx/zqLYA5TrfX1fmhK39L29qOZ37lBjbXLo9vfxnkZg6ldhsE+SfkibbIsrDx2o/HlQRWLRi8QdH7eD4Ye4RGVAsVoWQUoePKtCoe8q3yjX4jmK+nqGVMqzOuPF6nYW0m/DLaQHCSFmdYzabkHha3OgdIXDknYo+Zjymh3zApjiCRXt4EYb77VQN5nCCkZUYxwcybw49aFcPIxl/wpW1wKiQqIyU8CE8kb1y0iwJSTvp6xnV7cFidwgAKWrWgEmwPQhp2mOvgfuHC3v28Cod+fTC0EaXyX6wMP2IJElzROM2Ijy2RLYVkEHSHd/7QUw+mY1MKaDvQTGkLja+hwbGKWwR45LoSgcM0Qh/gYwP4+s788dyFcphHzekeu4TM23iqSfYTkmjZqv0iR72ZqvsF9MFpVUafP8irwPmBbk6wbqXfoLDoaoSHvwGNetXUCYBXBa0+bWpQjYWhYlHnssYJtca+Qy70+sKwCHkWnS86CPwiEVVs+t0HVUBVyg9DVgAWoCQ+pWkdnZwKzevGb9R5C6NG4+SLMwbqhxCaex9wOT21rRc1NDDe0jVyNIIjaEfBIQv3EPd2uvjKRomlrjzaUD41x8f6IpzyGp9z4prp/JF8bp9yy5T8tdujB+InTW9X1IHJ6+HysYVyO5YBzkgnGQC8ZBLpipAv4CJ89xJiBw+bgAAAAASUVORK5CYII=" SearchSteps="FuzzySelector, Image" />
+                                  </scg:List>
+                                </uix:TargetAnchorable.Anchors>
+                              </uix:TargetAnchorable>
+                            </uix:NClick.Target>
+                          </uix:NClick>
+                          <ui:SendHotkey ClickBeforeTyping="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" Activate="True" DelayBefore="1" DisplayName="Send Hotkey 'pane'" sap:VirtualizedContainerService.HintSize="334,156" sap2010:WorkflowViewState.IdRef="SendHotkey_1" Key="enter" KeyModifiers="None" SpecialKey="True">
+                            <ui:SendHotkey.Target>
+                              <ui:Target Element="{x:Null}" Selector="{x:Null}" Id="0dcdfdfb-8ff9-4243-8cb1-fa4c835db8c3" InformativeScreenshot="032c878e575e6d42cf1e07c7737b9559">
+                                <ui:Target.ClippingRegion>
+                                  <ui:Region Rectangle="2, 33, 98, 27" />
+                                </ui:Target.ClippingRegion>
+                                <ui:Target.TimeoutMS>
+                                  <InArgument x:TypeArguments="x:Int32" />
+                                </ui:Target.TimeoutMS>
+                                <ui:Target.WaitForReady>
+                                  <InArgument x:TypeArguments="ui:WaitForReady" />
+                                </ui:Target.WaitForReady>
+                              </ui:Target>
+                            </ui:SendHotkey.Target>
+                          </ui:SendHotkey>
+                          <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="334,51" sap2010:WorkflowViewState.IdRef="CommentOut_3">
+                            <ui:CommentOut.Body>
+                              <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="376,248" sap2010:WorkflowViewState.IdRef="Sequence_8">
+                                <sap:WorkflowViewStateService.ViewState>
+                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                  </scg:Dictionary>
+                                </sap:WorkflowViewStateService.ViewState>
+                                <uix:NClick ClickType="Single" DisplayName="Click 'chrome.exe'" sap:VirtualizedContainerService.HintSize="334,156" sap2010:WorkflowViewState.IdRef="NClick_10" InteractionMode="HardwareEvents" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="685e974a-b8b9-45e3-8bba-50ac601e1eb0" Version="V1">
+                                  <uix:NClick.Target>
+                                    <uix:TargetAnchorable DesignTimeRectangle="150, 49, 69, 24" FriendlyName="'chrome.exe'" Guid="0ce62b82-edbf-4c5c-9cc0-4cf17e23ce83" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAFMAAAAeCAYAAABQdCKyAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAHeSURBVGhD7ZlBTsMwEEVzEg5VqRdqcwAuEdRrsGh7gq667KI7JHbshvlWxvyYNHHVCQIxX/oinvHYnhe3CNHIpK7SrRtpGnYrB6QunazWnc740mGzku7SD5CnuvbYx48trUVx1fVlRblWOh1b/rAZzk3rb9JJkpBPdXamYv9BfHDusse+B5yT1mflvcz9vBmYoXsUMB0VMB0VMB0VMB3VPD2LhH0cMB0dMB0dMB1dDXP/IfKufxlwbKvjHHvVZ52zpTwbc0vtNL57Ezmfxmv+mutgAhSaLmDVwjSQgFfmamGetX6ve4zlfourYAIGGkbj3FAVTMRvgIT/3c3ErUgwtGn+qFfB1BpRYIMYuYSJvbKoLp8Bz7rPTvc14Qx2+5OobhBXLfni5mEWMLipGpipmTtgsvE9bZ+EAUx95pc6Ns51Yy94Ic/CRLOlrPnFb6bqFkx7hhl6ObbzL3kjzbMwv71ZglMFE3Et4ebZDBMQuOmpm1kL0/wTUCdhDmCRrZkqmOrUyETOGsS6GQLWo/GjMJN1n7F+vDwJ89ahAACHqoUJ283I0rHF823Rn1nYW3OPwsRcFtd5e/4XULjaAdPRAdPRAdPRAdPR8W8LRwVMRwVMRwVMRwVMRwVMN4l8Ao6ghv/Hsg+UAAAAAElFTkSuQmCC" InformativeScreenshot="6c432ebc8c0d9988012a871f719427b5.png" ScopeSelectorArgument="&lt;wnd app='chrome.exe' cls='Chrome_WidgetWin_1' idx='*' /&gt;" SearchSteps="Image" TargetType="ImageBased" Visibility="Interactive" />
+                                  </uix:NClick.Target>
+                                </uix:NClick>
+                              </Sequence>
+                            </ui:CommentOut.Body>
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                          </ui:CommentOut>
+                          <uix:NClick ClickType="Single" DisplayName="Click 'Lookup'" sap:VirtualizedContainerService.HintSize="334,156" sap2010:WorkflowViewState.IdRef="NClick_3" InteractionMode="DebuggerApi" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="685e974a-b8b9-45e3-8bba-50ac601e1eb0" Version="V1">
+                            <uix:NClick.Target>
+                              <uix:TargetAnchorable BrowserURL="https://caazeo8ton5ohnbbssapp.ecwcloud.com/mobiledoc/jsp/webemr/index.jsp#/mobiledoc/jsp/webemr/webpm/claimLookup.jsp" DesignTimeRectangle="1279, 307, 80, 30" ElementType="Button" FriendlyName="'Lookup'" FullSelectorArgument="&lt;webctrl id='claimLookupTbl1' tag='TABLE' /&gt;&lt;webctrl id='btnclaimlookup' tableRow='1' tag='BUTTON' /&gt;" FuzzySelectorArgument="&lt;webctrl id='claimLookupTbl1' tag='TABLE' /&gt;&lt;webctrl id='btnclaimlookup' type='' tag='BUTTON' class='btn btn-lblue btn-sm spacer20' aaname=' Lookup' check:innerText='Lookup' /&gt;" Guid="5461f41c-c35a-4ee9-b706-2326a97e24ca" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAFQAAAAiCAYAAADBEP4dAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAIpSURBVGhD7Zo9SwNBEIb9P4qCjYIiQiy00MIoiqWCjQoWQQS1VTSCH6UICtaxEPwDwSKNVkawSJXKFCEEAqaQ8d7L7WXvbs/LmQmcOAMP3O7OTthnd0mzfR+fRAIfIpQZj9DswxMtndzSwtG10AFwBWe6Q1coBmbPHmnw/JX6L96FDoArONOlukJhW2TGB87gLiAUR9g0QYgG7kQoIyKUGRHKjAhlRoQyI0KZYRGa2jymdDrdEcj1z8+Wv6hergT6f0+NStSknHGst7AIHTh/o5nVjFGgDnKQ658vQg0Mnr7Q3MqaUSTAGHJMc0VoCMOHeZpfXA7IRB/GTHPAT0JzVdLCJ6nYdPpbUSqqMa9Qu8Zng7LOdzvPAjWqtdZ3vkH1aoMKlgMVcTeaVSgYObgPCB3dzxlzFWFC0e8uVrUdMfbidcF2+4sKebSV0IotR68dKdStAVDHlx8Bu1CQ2jpxZU5tHBlzdMxCIUNfHGifPNOctizkWeM+md4cB79QtWEOYZsdRk+ETmSuXKGT25fGHJ1eCS3kgzX+sdBWf3dXPpgHofpvoe298rpw1PFtQASJEeoPtQh7wW5oAkGHf0qtPF1wO0plq+05oU0qWQ5UxDmdIBFCE4Mt1Hvl49IToeM7NzS9vkdju3c0lH025iSSpAr9s4jQ5CFCmRGhzIhQZkQoM0ah8tDhd4Q+dJCnOPGBq9CnOEoqbOMIC9HAlS4TeIQK3SNCWSH6BnRDjrL8VxQgAAAAAElFTkSuQmCC" InformativeScreenshot="cef8e12c82d564ee0e95e0b14760e7a2.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='eCW (Billing, Support 2 ) Production' /&gt;" SearchSteps="FuzzySelector, Image" Visibility="Interactive" />
+                            </uix:NClick.Target>
+                          </uix:NClick>
+                          <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'SPAN'" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="Click_2" KeyModifiers="None" MouseButton="BTN_LEFT" SimulateClick="True">
+                            <ui:Click.CursorPosition>
+                              <ui:CursorPosition Position="Center">
+                                <ui:CursorPosition.OffsetX>
+                                  <InArgument x:TypeArguments="x:Int32" />
+                                </ui:CursorPosition.OffsetX>
+                                <ui:CursorPosition.OffsetY>
+                                  <InArgument x:TypeArguments="x:Int32" />
+                                </ui:CursorPosition.OffsetY>
+                              </ui:CursorPosition>
+                            </ui:Click.CursorPosition>
+                            <ui:Click.Target>
+                              <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="164a6549-93e5-4ae1-9157-f5b0b448e6a0" InformativeScreenshot="808cb2a1fc6f0b9fde759d7f351a3280" Selector="&lt;html app='chrome.exe' title='eCW (Billing, Support 2 ) Production' /&gt;&lt;webctrl id='this-table' tag='TABLE' /&gt;&lt;webctrl aaname='Graham, Raymond' tableRow='2' tag='SPAN' /&gt;">
+                                <ui:Target.TimeoutMS>
+                                  <InArgument x:TypeArguments="x:Int32" />
+                                </ui:Target.TimeoutMS>
+                                <ui:Target.WaitForReady>
+                                  <InArgument x:TypeArguments="ui:WaitForReady" />
+                                </ui:Target.WaitForReady>
+                              </ui:Target>
+                            </ui:Click.Target>
+                          </ui:Click>
+                        </Sequence>
+                      </ActivityAction>
+                    </ui:ForEachRow.Body>
+                  </ui:ForEachRow>
+                </Sequence>
+              </ActivityAction>
+            </uix:NApplicationCard.Body>
+            <uix:NApplicationCard.TargetApp>
+              <uix:TargetApp Area="-8, -8, 1382, 744" BrowserType="Chrome" IconBase64="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" InformativeScreenshot="f7900bc58cbfadee195a4fdf7996e043.png" Selector="&lt;html app='chrome.exe' title='eCW (Billing, Support 2 ) Production' /&gt;" Url="https://caazeo8ton5ohnbbssapp.ecwcloud.com/mobiledoc/jsp/webemr/index.jsp#/mobiledoc/jsp/webemr/webpm/claimLookup.jsp" />
+            </uix:NApplicationCard.TargetApp>
+          </uix:NApplicationCard>
+        </Sequence>
+      </ui:CommentOut.Body>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </ui:CommentOut>
   </Sequence>
 </Activity>
