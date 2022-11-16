@@ -1,0 +1,388 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="Sequence" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="1091,6159" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=mscorlib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data" xmlns:ueab="clr-namespace:UiPath.Excel.Activities.Business;assembly=UiPath.Excel.Activities" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>UiPath.Excel</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>System.Xml.Serialization</x:String>
+      <x:String>UiPath.Excel.Activities.Business</x:String>
+      <x:String>System.Activities.DynamicUpdate</x:String>
+      <x:String>UiPath.Excel.Activities</x:String>
+      <x:String>UiPath.DataTableUtilities</x:String>
+      <x:String>System.Security</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>UiPath.UIAutomationNext.Contracts</x:String>
+      <x:String>UiPath.UIAutomationCore.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>System.Runtime.InteropServices</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>UiPath.Excel</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>UiPath.Mail.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="Sequence" sap:VirtualizedContainerService.HintSize="1101,6094" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="sd:DataTable" Name="DT_datatable" />
+    </Sequence.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <ueab:ExcelProcessScopeX DisplayAlerts="{x:Null}" ExistingProcessAction="{x:Null}" FileConflictResolution="{x:Null}" LaunchMethod="{x:Null}" LaunchTimeout="{x:Null}" MacroSettings="{x:Null}" ProcessMode="{x:Null}" ShowExcelWindow="{x:Null}" DisplayName="Excel Process Scope" sap:VirtualizedContainerService.HintSize="1039,315" sap2010:WorkflowViewState.IdRef="ExcelProcessScopeX_1">
+      <ueab:ExcelProcessScopeX.Body>
+        <ActivityAction x:TypeArguments="ui:IExcelProcess">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="ui:IExcelProcess" Name="ExcelProcessScopeTag" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="400,219" sap2010:WorkflowViewState.IdRef="Sequence_2">
+            <Sequence.Variables>
+              <Variable x:TypeArguments="x:String" Name="variable1" />
+              <Variable x:TypeArguments="x:String" Name="variable2" />
+            </Sequence.Variables>
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <ui:ReadRange Range="{x:Null}" AddHeaders="True" DataTable="[DT_datatable]" DisplayName="Read Range" sap:VirtualizedContainerService.HintSize="338,97" sap2010:WorkflowViewState.IdRef="ReadRange_1" SheetName="Oct22 Billing" WorkbookPath="TFS_Submission_October 2022 RPM Billing_11072022.xlsx">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </ui:ReadRange>
+          </Sequence>
+        </ActivityAction>
+      </ueab:ExcelProcessScopeX.Body>
+    </ueab:ExcelProcessScopeX>
+    <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[DT_datatable]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="1039,5617" sap2010:WorkflowViewState.IdRef="ForEachRow_1">
+      <ui:ForEachRow.Body>
+        <ActivityAction x:TypeArguments="sd:DataRow">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="sd:DataRow" Name="CurrentRow" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="1005,5492" sap2010:WorkflowViewState.IdRef="Sequence_20">
+            <Sequence.Variables>
+              <Variable x:TypeArguments="x:String" Name="IsData" />
+            </Sequence.Variables>
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <If Condition="[IsDBNull(CurrentRow(&quot;Diagnoses1&quot;))]" sap:VirtualizedContainerService.HintSize="943,889" sap2010:WorkflowViewState.IdRef="If_1">
+              <If.Then>
+                <Sequence sap:VirtualizedContainerService.HintSize="498,692" sap2010:WorkflowViewState.IdRef="Sequence_4">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="436,94" sap2010:WorkflowViewState.IdRef="MessageBox_1" Text="[&quot;Diagnoses no is&quot;+CurrentRow(&quot;Diagnoses1&quot;).ToString]" />
+                  <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="436,436" sap2010:WorkflowViewState.IdRef="CommentOut_1">
+                    <ui:CommentOut.Body>
+                      <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="400,348" sap2010:WorkflowViewState.IdRef="Sequence_3">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                        <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Code'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="338,226" sap2010:WorkflowViewState.IdRef="NTypeInto_1" ScopeIdentifier="7c3f8b8c-acb5-460d-8391-f7812536f181" Text="[CurrentRow(&quot;Diagnoses1&quot;).ToString]" Version="V1">
+                          <uix:NTypeInto.Target>
+                            <uix:TargetAnchorable BrowserURL="https://caazeo8ton5ohnbbssapp.ecwcloud.com/mobiledoc/jsp/webemr/index.jsp#/mobiledoc/jsp/webemr/webpm/claimLookup.jsp" DesignTimeRectangle="280, 361, 64, 21" ElementType="InputBox" FriendlyName="'INPUT txtnewIcd16684977…'" FullSelectorArgument="&lt;webctrl id='icdCodesTable1668497717033' tableRow='1' tag='TABLE' /&gt;&lt;webctrl tableRow='2' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl id='icdCodesTable1668497717033' tag='TABLE' /&gt;&lt;webctrl type='text' tag='INPUT' class='input-xs editableTDText1668497717033 claimICDInput1668497717033 ng-pristine ng-valid ng-empty idt-alert-subject ng-touched' aaname='' /&gt;" Guid="4feb1e86-fa9f-45a7-b443-be4f0449f633" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAEQAAAAZCAYAAACIA4ibAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAABkSURBVFhH7dJBDYBADAXR+veCCq4gYY8IWAWfY7MDDnZe8gV00rqeGder47zjehUtDAKfIFV7NzIIGAQMAgYBg4BBwCBgEDAIGAQMAgYBg4BBwCBgENj7+h8GgRpjxPX8kEXyArA63dc9GC0VAAAAAElFTkSuQmCC" InformativeScreenshot="fd484285ae1a41e3cd17fcbf8bb7ceaa.png" IsResponsive="True" ScopeSelectorArgument="&lt;html app='chrome.exe' title='eCW (Billing, Support 1 ) Production' /&gt;" SearchSteps="FuzzySelector, Image" Visibility="Interactive">
+                              <uix:TargetAnchorable.Anchors>
+                                <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                  <uix:Target DesignTimeRectangle="275, 340, 71, 20" ElementType="Text" FriendlyName="'Code'" FullSelectorArgument="&lt;webctrl aaname='#  Code Name ' parentid='billingClaimTbl4' tableRow='1' tag='TABLE' /&gt;&lt;webctrl aaname='Code' tableRow='1' tag='TH' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='#  Code Name ' parentid='billingClaimTbl4' tag='TABLE' /&gt;&lt;webctrl aaname='Code' type='' tag='TH' class='' check:innerText='Code' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAEsAAAAYCAYAAACyVACzAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAIlSURBVFhH7ZkxS8NAFMf7OTq5ODk5uXTyA7h0UQdFRJAiIgStUEREMEKRDooUqg4lUCmVFjGDFKFFWjJEF8nQYkAJHTo4+An+vrs0aarWJk5R7uBHL/fyWvLj3rtAI6ZpQuAPISsAkWazCcbV/QP/FHzFcRPRO+9gsAVnLhjEcSNk+UDICoCQFQAhKwAjZVWrl5hbS2IsLiE6m0RsW4HS7sf9oSFB+Ym772J/hx9l1SsZkpREPKdBbXdQf9QgFzTUe3H//HdZlo6tBQmTJ7p78+/577L0EmLxFLYagwku1isuTmRMzFJ5koiJTQUXhhPvopzP2DEq3ZmcgkWvrGcD8sEuxmmNx49qUC0nN7wMl3V3RhJkyE+DCQ7F0xSiy1lkH6k82y1kD+l6rQSVxe8VTJLolesWxTooK2ne82xZHRzvSZjKNFBngl5a2JMkTOdbX34jbPxyZ5mQ6QFj50Z/jd9vy60WZERXSyg7MavhKUO7JNluHCCj9b8rpAyXZdFDURlNe4W4+JC1XrF3Gcfbs+z5ys1bP/ePMFwWoRZY+aSwmO+dhk8GlKrBT0M1vz+yDBO3r7wM1UqWrj1luEM7ied20Xzp8lO2OKTcw8SPsnijvjrDDJ2KvFTYe1a6Zr868AafxtS8Hfvc4Iu5XvPnDb6CjdXPDX7fPRzGl9KQdSc3vIyQJfAiZAVAyAqAkBUAISsAriw2EfgjAs9g/2CI8f0wTRMfW/rIIgXd1K8AAAAASUVORK5CYII=" SearchSteps="FuzzySelector, Image" />
+                                </scg:List>
+                              </uix:TargetAnchorable.Anchors>
+                            </uix:TargetAnchorable>
+                          </uix:NTypeInto.Target>
+                        </uix:NTypeInto>
+                      </Sequence>
+                    </ui:CommentOut.Body>
+                  </ui:CommentOut>
+                </Sequence>
+              </If.Then>
+            </If>
+            <If Condition="[IsDBNull(CurrentRow(&quot;Diagnoses2&quot;))]" sap:VirtualizedContainerService.HintSize="943,889" sap2010:WorkflowViewState.IdRef="If_2">
+              <If.Then>
+                <Sequence sap:VirtualizedContainerService.HintSize="498,692" sap2010:WorkflowViewState.IdRef="Sequence_6">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="436,94" sap2010:WorkflowViewState.IdRef="MessageBox_2" Text="[&quot;Diagnoses no is&quot;+CurrentRow(&quot;Diagnoses2&quot;).ToString]" />
+                  <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="436,436" sap2010:WorkflowViewState.IdRef="CommentOut_2">
+                    <ui:CommentOut.Body>
+                      <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="400,348" sap2010:WorkflowViewState.IdRef="Sequence_5">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                        <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Code'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="338,226" sap2010:WorkflowViewState.IdRef="NTypeInto_2" ScopeIdentifier="7c3f8b8c-acb5-460d-8391-f7812536f181" Text="[CurrentRow(&quot;Diagnoses2&quot;).ToString]" Version="V1">
+                          <uix:NTypeInto.Target>
+                            <uix:TargetAnchorable BrowserURL="https://caazeo8ton5ohnbbssapp.ecwcloud.com/mobiledoc/jsp/webemr/index.jsp#/mobiledoc/jsp/webemr/webpm/claimLookup.jsp" DesignTimeRectangle="280, 361, 64, 21" ElementType="InputBox" FriendlyName="'INPUT txtnewIcd16684977…'" FullSelectorArgument="&lt;webctrl id='icdCodesTable1668497717033' tableRow='1' tag='TABLE' /&gt;&lt;webctrl tableRow='2' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl id='icdCodesTable1668497717033' tag='TABLE' /&gt;&lt;webctrl type='text' tag='INPUT' class='input-xs editableTDText1668497717033 claimICDInput1668497717033 ng-pristine ng-valid ng-empty idt-alert-subject ng-touched' aaname='' /&gt;" Guid="d136be02-904c-4993-8db5-ab389e5b2f29" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAEQAAAAZCAYAAACIA4ibAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAABcSURBVFhH7dIxDcAwEATB58/FKNLGEL4MACO4lC8vhh3pCKyu3u/EzWo9O25W0cUgYBAwCBgEDAIGAYOAQcAgYBAwCBgEDAIGAYOAQcAgYBAwCBgEqrvjZj7kkvyK3BCz9HOqUgAAAABJRU5ErkJggg==" InformativeScreenshot="9c0f3098bf8b5f5aa8d8356b6a78cfd2.png" IsResponsive="True" ScopeSelectorArgument="&lt;html app='chrome.exe' title='eCW (Billing, Support 1 ) Production' /&gt;" SearchSteps="FuzzySelector, Image" Visibility="Interactive">
+                              <uix:TargetAnchorable.Anchors>
+                                <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                  <uix:Target DesignTimeRectangle="275, 340, 71, 20" ElementType="Text" FriendlyName="'Code'" FullSelectorArgument="&lt;webctrl aaname='#  Code Name ' parentid='billingClaimTbl4' tableRow='1' tag='TABLE' /&gt;&lt;webctrl aaname='Code' tableRow='1' tag='TH' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='#  Code Name ' parentid='billingClaimTbl4' tag='TABLE' /&gt;&lt;webctrl aaname='Code' type='' tag='TH' class='' check:innerText='Code' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAEsAAAAYCAYAAACyVACzAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAIlSURBVFhH7ZkxS8NAFMf7OTq5ODk5uXTyA7h0UQdFRJAiIgStUEREMEKRDooUqg4lUCmVFjGDFKFFWjJEF8nQYkAJHTo4+An+vrs0aarWJk5R7uBHL/fyWvLj3rtAI6ZpQuAPISsAkWazCcbV/QP/FHzFcRPRO+9gsAVnLhjEcSNk+UDICoCQFQAhKwAjZVWrl5hbS2IsLiE6m0RsW4HS7sf9oSFB+Ym772J/hx9l1SsZkpREPKdBbXdQf9QgFzTUe3H//HdZlo6tBQmTJ7p78+/577L0EmLxFLYagwku1isuTmRMzFJ5koiJTQUXhhPvopzP2DEq3ZmcgkWvrGcD8sEuxmmNx49qUC0nN7wMl3V3RhJkyE+DCQ7F0xSiy1lkH6k82y1kD+l6rQSVxe8VTJLolesWxTooK2ne82xZHRzvSZjKNFBngl5a2JMkTOdbX34jbPxyZ5mQ6QFj50Z/jd9vy60WZERXSyg7MavhKUO7JNluHCCj9b8rpAyXZdFDURlNe4W4+JC1XrF3Gcfbs+z5ys1bP/ePMFwWoRZY+aSwmO+dhk8GlKrBT0M1vz+yDBO3r7wM1UqWrj1luEM7ied20Xzp8lO2OKTcw8SPsnijvjrDDJ2KvFTYe1a6Zr868AafxtS8Hfvc4Iu5XvPnDb6CjdXPDX7fPRzGl9KQdSc3vIyQJfAiZAVAyAqAkBUAISsAriw2EfgjAs9g/2CI8f0wTRMfW/rIIgXd1K8AAAAASUVORK5CYII=" SearchSteps="FuzzySelector, Image" />
+                                </scg:List>
+                              </uix:TargetAnchorable.Anchors>
+                            </uix:TargetAnchorable>
+                          </uix:NTypeInto.Target>
+                        </uix:NTypeInto>
+                      </Sequence>
+                    </ui:CommentOut.Body>
+                  </ui:CommentOut>
+                </Sequence>
+              </If.Then>
+              <If.Else>
+                <Sequence sap:VirtualizedContainerService.HintSize="400,113" sap2010:WorkflowViewState.IdRef="Sequence_7">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                </Sequence>
+              </If.Else>
+            </If>
+            <If Condition="[IsDBNull(CurrentRow(&quot;Diagnoses3&quot;))]" sap:VirtualizedContainerService.HintSize="943,889" sap2010:WorkflowViewState.IdRef="If_3">
+              <If.Then>
+                <Sequence sap:VirtualizedContainerService.HintSize="498,692" sap2010:WorkflowViewState.IdRef="Sequence_9">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="436,94" sap2010:WorkflowViewState.IdRef="MessageBox_3" Text="[&quot;Diagnoses no is&quot;+CurrentRow(&quot;Diagnoses3&quot;).ToString]" />
+                  <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="436,436" sap2010:WorkflowViewState.IdRef="CommentOut_3">
+                    <ui:CommentOut.Body>
+                      <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="400,348" sap2010:WorkflowViewState.IdRef="Sequence_8">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                        <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'INPUT txtnewIcd16684977…'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="338,226" sap2010:WorkflowViewState.IdRef="NTypeInto_3" ScopeIdentifier="7c3f8b8c-acb5-460d-8391-f7812536f181" Text="[CurrentRow(&quot;Diagnoses3&quot;).ToString]" Version="V1">
+                          <uix:NTypeInto.Target>
+                            <uix:TargetAnchorable BrowserURL="https://caazeo8ton5ohnbbssapp.ecwcloud.com/mobiledoc/jsp/webemr/index.jsp#/mobiledoc/jsp/webemr/webpm/claimLookup.jsp" DesignTimeRectangle="280, 361, 64, 21" ElementType="InputBox" FriendlyName="'INPUT txtnewIcd16684977…'" FullSelectorArgument="&lt;webctrl id='icdCodesTable1668497717033' tableRow='1' tag='TABLE' /&gt;&lt;webctrl tableRow='2' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl id='icdCodesTable1668497717033' tag='TABLE' /&gt;&lt;webctrl type='text' tag='INPUT' class='input-xs editableTDText1668497717033 claimICDInput1668497717033 ng-pristine ng-valid ng-empty idt-alert-subject ng-touched' aaname='' /&gt;" Guid="d5f53a89-b67f-4a03-b943-b5ce875d9141" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAEQAAAAZCAYAAACIA4ibAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAABkSURBVFhH7dJBDYBADAXR+veCCq4gYY8IWAWfY7MDDnZe8gV00rqeGder47zjehUtDAKfIFV7NzIIGAQMAgYBg4BBwCBgEDAIGAQMAgYBg4BBwCBgENj7+h8GgRpjxPX8kEXyArA63dc9GC0VAAAAAElFTkSuQmCC" InformativeScreenshot="9ccf939f0ef2c3a5e6c7d71cbcffcd61.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='eCW (Billing, Support 1 ) Production' /&gt;" SearchSteps="FuzzySelector, Image" Visibility="Interactive" />
+                          </uix:NTypeInto.Target>
+                        </uix:NTypeInto>
+                      </Sequence>
+                    </ui:CommentOut.Body>
+                  </ui:CommentOut>
+                </Sequence>
+              </If.Then>
+              <If.Else>
+                <Sequence sap:VirtualizedContainerService.HintSize="400,113" sap2010:WorkflowViewState.IdRef="Sequence_10">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                </Sequence>
+              </If.Else>
+            </If>
+            <If Condition="[IsDBNull(CurrentRow(&quot;Diagnoses4&quot;))]" sap:VirtualizedContainerService.HintSize="943,889" sap2010:WorkflowViewState.IdRef="If_4">
+              <If.Then>
+                <Sequence sap:VirtualizedContainerService.HintSize="498,692" sap2010:WorkflowViewState.IdRef="Sequence_12">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="436,94" sap2010:WorkflowViewState.IdRef="MessageBox_4" Text="[&quot;Diagnoses no is&quot;+CurrentRow(&quot;Diagnoses4&quot;).ToString]" />
+                  <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="436,436" sap2010:WorkflowViewState.IdRef="CommentOut_4">
+                    <ui:CommentOut.Body>
+                      <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="400,348" sap2010:WorkflowViewState.IdRef="Sequence_11">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                        <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Code'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="338,226" sap2010:WorkflowViewState.IdRef="NTypeInto_4" ScopeIdentifier="7c3f8b8c-acb5-460d-8391-f7812536f181" Text="[CurrentRow(&quot;Diagnoses4&quot;).ToString]" Version="V1">
+                          <uix:NTypeInto.Target>
+                            <uix:TargetAnchorable BrowserURL="https://caazeo8ton5ohnbbssapp.ecwcloud.com/mobiledoc/jsp/webemr/index.jsp#/mobiledoc/jsp/webemr/webpm/claimLookup.jsp" DesignTimeRectangle="280, 361, 64, 21" ElementType="InputBox" FriendlyName="'INPUT txtnewIcd16684977…'" FullSelectorArgument="&lt;webctrl id='icdCodesTable1668497717033' tableRow='1' tag='TABLE' /&gt;&lt;webctrl tableRow='2' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl id='icdCodesTable1668497717033' tag='TABLE' /&gt;&lt;webctrl type='text' tag='INPUT' class='input-xs editableTDText1668497717033 claimICDInput1668497717033 ng-pristine ng-valid ng-empty idt-alert-subject ng-touched' aaname='' /&gt;" Guid="00418881-c4c2-4dc0-9c78-e1886189a66a" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAEQAAAAZCAYAAACIA4ibAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAABcSURBVFhH7dIxDcAwEATB58/FKNLGEL4MACO4lC8vhh3pCKyu3u/EzWo9O25W0cUgYBAwCBgEDAIGAYOAQcAgYBAwCBgEDAIGAYOAQcAgYBAwCBgEqrvjZj7kkvyK3BCz9HOqUgAAAABJRU5ErkJggg==" InformativeScreenshot="fd484285ae1a41e3cd17fcbf8bb7ceaa.png" IsResponsive="True" ScopeSelectorArgument="&lt;html app='chrome.exe' title='eCW (Billing, Support 1 ) Production' /&gt;" SearchSteps="FuzzySelector, Image" Visibility="Interactive">
+                              <uix:TargetAnchorable.Anchors>
+                                <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                  <uix:Target DesignTimeRectangle="275, 340, 71, 20" ElementType="Text" FriendlyName="'Code'" FullSelectorArgument="&lt;webctrl aaname='#  Code Name ' parentid='billingClaimTbl4' tableRow='1' tag='TABLE' /&gt;&lt;webctrl aaname='Code' tableRow='1' tag='TH' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='#  Code Name ' parentid='billingClaimTbl4' tag='TABLE' /&gt;&lt;webctrl aaname='Code' type='' tag='TH' class='' check:innerText='Code' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAEsAAAAYCAYAAACyVACzAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAIlSURBVFhH7ZkxS8NAFMf7OTq5ODk5uXTyA7h0UQdFRJAiIgStUEREMEKRDooUqg4lUCmVFjGDFKFFWjJEF8nQYkAJHTo4+An+vrs0aarWJk5R7uBHL/fyWvLj3rtAI6ZpQuAPISsAkWazCcbV/QP/FHzFcRPRO+9gsAVnLhjEcSNk+UDICoCQFQAhKwAjZVWrl5hbS2IsLiE6m0RsW4HS7sf9oSFB+Ym772J/hx9l1SsZkpREPKdBbXdQf9QgFzTUe3H//HdZlo6tBQmTJ7p78+/577L0EmLxFLYagwku1isuTmRMzFJ5koiJTQUXhhPvopzP2DEq3ZmcgkWvrGcD8sEuxmmNx49qUC0nN7wMl3V3RhJkyE+DCQ7F0xSiy1lkH6k82y1kD+l6rQSVxe8VTJLolesWxTooK2ne82xZHRzvSZjKNFBngl5a2JMkTOdbX34jbPxyZ5mQ6QFj50Z/jd9vy60WZERXSyg7MavhKUO7JNluHCCj9b8rpAyXZdFDURlNe4W4+JC1XrF3Gcfbs+z5ys1bP/ePMFwWoRZY+aSwmO+dhk8GlKrBT0M1vz+yDBO3r7wM1UqWrj1luEM7ied20Xzp8lO2OKTcw8SPsnijvjrDDJ2KvFTYe1a6Zr868AafxtS8Hfvc4Iu5XvPnDb6CjdXPDX7fPRzGl9KQdSc3vIyQJfAiZAVAyAqAkBUAISsAriw2EfgjAs9g/2CI8f0wTRMfW/rIIgXd1K8AAAAASUVORK5CYII=" SearchSteps="FuzzySelector, Image" />
+                                </scg:List>
+                              </uix:TargetAnchorable.Anchors>
+                            </uix:TargetAnchorable>
+                          </uix:NTypeInto.Target>
+                        </uix:NTypeInto>
+                      </Sequence>
+                    </ui:CommentOut.Body>
+                  </ui:CommentOut>
+                </Sequence>
+              </If.Then>
+              <If.Else>
+                <Sequence sap2010:WorkflowViewState.IdRef="Sequence_13">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                </Sequence>
+              </If.Else>
+            </If>
+            <If Condition="[IsDBNull(CurrentRow(&quot;Diagnoses5&quot;))]" sap:VirtualizedContainerService.HintSize="943,889" sap2010:WorkflowViewState.IdRef="If_5">
+              <If.Then>
+                <Sequence sap:VirtualizedContainerService.HintSize="498,692" sap2010:WorkflowViewState.IdRef="Sequence_15">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="436,94" sap2010:WorkflowViewState.IdRef="MessageBox_5" Text="[&quot;Diagnoses no is&quot;+CurrentRow(&quot;Diagnoses5&quot;).ToString]" />
+                  <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="436,436" sap2010:WorkflowViewState.IdRef="CommentOut_5">
+                    <ui:CommentOut.Body>
+                      <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="400,348" sap2010:WorkflowViewState.IdRef="Sequence_14">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                        <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Code'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="338,226" sap2010:WorkflowViewState.IdRef="NTypeInto_5" ScopeIdentifier="7c3f8b8c-acb5-460d-8391-f7812536f181" Text="[CurrentRow(&quot;Diagnoses5&quot;).ToString]" Version="V1">
+                          <uix:NTypeInto.Target>
+                            <uix:TargetAnchorable BrowserURL="https://caazeo8ton5ohnbbssapp.ecwcloud.com/mobiledoc/jsp/webemr/index.jsp#/mobiledoc/jsp/webemr/webpm/claimLookup.jsp" DesignTimeRectangle="280, 361, 64, 21" ElementType="InputBox" FriendlyName="'INPUT txtnewIcd16684977…'" FullSelectorArgument="&lt;webctrl id='icdCodesTable1668497717033' tableRow='1' tag='TABLE' /&gt;&lt;webctrl tableRow='2' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl id='icdCodesTable1668497717033' tag='TABLE' /&gt;&lt;webctrl type='text' tag='INPUT' class='input-xs editableTDText1668497717033 claimICDInput1668497717033 ng-pristine ng-valid ng-empty idt-alert-subject ng-touched' aaname='' /&gt;" Guid="00418881-c4c2-4dc0-9c78-e1886189a66a" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAEQAAAAZCAYAAACIA4ibAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAABcSURBVFhH7dIxDcAwEATB58/FKNLGEL4MACO4lC8vhh3pCKyu3u/EzWo9O25W0cUgYBAwCBgEDAIGAYOAQcAgYBAwCBgEDAIGAYOAQcAgYBAwCBgEqrvjZj7kkvyK3BCz9HOqUgAAAABJRU5ErkJggg==" InformativeScreenshot="fd484285ae1a41e3cd17fcbf8bb7ceaa.png" IsResponsive="True" ScopeSelectorArgument="&lt;html app='chrome.exe' title='eCW (Billing, Support 1 ) Production' /&gt;" SearchSteps="FuzzySelector, Image" Visibility="Interactive">
+                              <uix:TargetAnchorable.Anchors>
+                                <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                  <uix:Target DesignTimeRectangle="275, 340, 71, 20" ElementType="Text" FriendlyName="'Code'" FullSelectorArgument="&lt;webctrl aaname='#  Code Name ' parentid='billingClaimTbl4' tableRow='1' tag='TABLE' /&gt;&lt;webctrl aaname='Code' tableRow='1' tag='TH' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='#  Code Name ' parentid='billingClaimTbl4' tag='TABLE' /&gt;&lt;webctrl aaname='Code' type='' tag='TH' class='' check:innerText='Code' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAEsAAAAYCAYAAACyVACzAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAIlSURBVFhH7ZkxS8NAFMf7OTq5ODk5uXTyA7h0UQdFRJAiIgStUEREMEKRDooUqg4lUCmVFjGDFKFFWjJEF8nQYkAJHTo4+An+vrs0aarWJk5R7uBHL/fyWvLj3rtAI6ZpQuAPISsAkWazCcbV/QP/FHzFcRPRO+9gsAVnLhjEcSNk+UDICoCQFQAhKwAjZVWrl5hbS2IsLiE6m0RsW4HS7sf9oSFB+Ym772J/hx9l1SsZkpREPKdBbXdQf9QgFzTUe3H//HdZlo6tBQmTJ7p78+/577L0EmLxFLYagwku1isuTmRMzFJ5koiJTQUXhhPvopzP2DEq3ZmcgkWvrGcD8sEuxmmNx49qUC0nN7wMl3V3RhJkyE+DCQ7F0xSiy1lkH6k82y1kD+l6rQSVxe8VTJLolesWxTooK2ne82xZHRzvSZjKNFBngl5a2JMkTOdbX34jbPxyZ5mQ6QFj50Z/jd9vy60WZERXSyg7MavhKUO7JNluHCCj9b8rpAyXZdFDURlNe4W4+JC1XrF3Gcfbs+z5ys1bP/ePMFwWoRZY+aSwmO+dhk8GlKrBT0M1vz+yDBO3r7wM1UqWrj1luEM7ied20Xzp8lO2OKTcw8SPsnijvjrDDJ2KvFTYe1a6Zr868AafxtS8Hfvc4Iu5XvPnDb6CjdXPDX7fPRzGl9KQdSc3vIyQJfAiZAVAyAqAkBUAISsAriw2EfgjAs9g/2CI8f0wTRMfW/rIIgXd1K8AAAAASUVORK5CYII=" SearchSteps="FuzzySelector, Image" />
+                                </scg:List>
+                              </uix:TargetAnchorable.Anchors>
+                            </uix:TargetAnchorable>
+                          </uix:NTypeInto.Target>
+                        </uix:NTypeInto>
+                      </Sequence>
+                    </ui:CommentOut.Body>
+                  </ui:CommentOut>
+                </Sequence>
+              </If.Then>
+              <If.Else>
+                <Sequence sap2010:WorkflowViewState.IdRef="Sequence_16">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                </Sequence>
+              </If.Else>
+            </If>
+            <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="943,725" sap2010:WorkflowViewState.IdRef="CommentOut_6">
+              <ui:CommentOut.Body>
+                <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="907,637" sap2010:WorkflowViewState.IdRef="Sequence_19">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <If Condition="[IsNumeric(CurrentRow(&quot;CPTCode99453&quot;))]" sap:VirtualizedContainerService.HintSize="845,515" sap2010:WorkflowViewState.IdRef="If_6">
+                    <If.Then>
+                      <Sequence sap:VirtualizedContainerService.HintSize="400,348" sap2010:WorkflowViewState.IdRef="Sequence_17">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                        <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'INPUT billingClaimIpt34'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="338,226" sap2010:WorkflowViewState.IdRef="NTypeInto_6" ScopeIdentifier="7c3f8b8c-acb5-460d-8391-f7812536f181" Text="[CurrentRow(&quot;CPTCode99453&quot;).ToString]" Version="V1">
+                          <uix:NTypeInto.Target>
+                            <uix:TargetAnchorable BrowserURL="https://caazeo8ton5ohnbbssapp.ecwcloud.com/mobiledoc/jsp/webemr/index.jsp#/mobiledoc/jsp/webemr/webpm/claimLookup.jsp" DesignTimeRectangle="249, 527, 50, 21" ElementType="InputBox" FriendlyName="'INPUT billingClaimIpt34'" FullSelectorArgument="&lt;webctrl id='claimCPTCodesTable1668497717033' tableRow='1' tag='TABLE' /&gt;&lt;webctrl tableRow='3' tag='INPUT' type='text' /&gt;" FuzzySelectorArgument="&lt;webctrl id='claimCPTCodesTable1668497717033' tag='TABLE' /&gt;&lt;webctrl class='editableTDText1668497717033 closable1668497717033 ng-pristine ng-untouched ng-valid ng-empty' tag='INPUT' type='text' aaname='' /&gt;" Guid="a45e31b9-192a-4ad8-8a2a-b80f83f51976" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAADYAAAAZCAYAAAB6v90+AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAABHSURBVFhH7dixDQBACMNA9t+RWULz5S/gyCchaouOSanZ3TRO78XermMYjWE0htEYRmMYjWE0htEYRmMYTW/Y78PTMKUXSw5KF9kNhb3hNQAAAABJRU5ErkJggg==" InformativeScreenshot="266f4100141cab7bc62990a7b71d6c67.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='eCW (Billing, Support 1 ) Production' /&gt;" SearchSteps="FuzzySelector, Image" Visibility="Interactive">
+                              <uix:TargetAnchorable.Anchors>
+                                <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                  <uix:Target DesignTimeRectangle="249, 505, 50, 21" ElementType="InputBox" FriendlyName="'00000'" FullSelectorArgument="&lt;webctrl id='claimCPTCodesTable1668497717033' tableRow='1' tag='TABLE' /&gt;&lt;webctrl tableRow='2' tag='INPUT' type='text' /&gt;" FuzzySelectorArgument="&lt;webctrl id='claimCPTCodesTable1668497717033' tag='TABLE' /&gt;&lt;webctrl class='editableTDText1668497717033' tag='INPUT' type='text' aaname='' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAADYAAAAZCAYAAAB6v90+AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAHiSURBVFhH7ZWxS8NAFMbfn5G14FJwsJuugkM7BhwMOIiTOAYHKS5SHCQ4iDhIJiEdhDgIcRB0EeKgXjcdpOkgksEhiEPHz5f21Wqj55CpsR8cJPe75N537+4e3b28oYiN/Ot7FLERCqqJsXHTxNi46T8ZSxDuWigbBJqqwW4+oCsE7w/wNmooEcGYtuBcJwJYGtZ99GBXSyAyUF5yEL4KYOlYHmWMJaeroBkbQSdB3HJhGRU4rT5TuxXQ4gFUnCA6r2OOVuFLIL8zBWeGYB4qxEmEYHMOtOLz8v3F8iljzF8mzB9F8tbF5QZnYEfxs0KDs2hfDPIXwV0gWCcxP2vYbQMG2bgcoCcX82TBTz/TsZzKGEsDNJvDP0fHJmfCQxz7sHibNW4EsMIt3q7bIaBh8YnF26wBHiUKUZexOpZXWWMjP46bYuzZg0kmvGcBrHBbjGnY5/fSnwY/mEPH8ur/ZCxY++GMpcHLQR89R/1F0LCWg0rmHEl2dSynMsaSs3UY325FA/Wr/sxqj2+tbzdfDe5TD2kYm54dufmqLlv/i+VTxliaJbUvdcwow9pXwzrGUwZSq3o17uxrCBrWCaRWEUrVdNGkP5WO5dAPxoqhibFx08TYuKm4xtrtNorYCpox4ANYY2xIWUsj2AAAAABJRU5ErkJggg==" SearchSteps="FuzzySelector, Image" />
+                                </scg:List>
+                              </uix:TargetAnchorable.Anchors>
+                            </uix:TargetAnchorable>
+                          </uix:NTypeInto.Target>
+                        </uix:NTypeInto>
+                      </Sequence>
+                    </If.Then>
+                    <If.Else>
+                      <Sequence sap:VirtualizedContainerService.HintSize="400,348" sap2010:WorkflowViewState.IdRef="Sequence_18">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                        <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'INPUT billingClaimIpt34'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="338,226" sap2010:WorkflowViewState.IdRef="NTypeInto_7" ScopeIdentifier="7c3f8b8c-acb5-460d-8391-f7812536f181" Text="[CurrentRow(&quot;CPTCode99454&quot;).ToString]" Version="V1">
+                          <uix:NTypeInto.Target>
+                            <uix:TargetAnchorable BrowserURL="https://caazeo8ton5ohnbbssapp.ecwcloud.com/mobiledoc/jsp/webemr/index.jsp#/mobiledoc/jsp/webemr/webpm/claimLookup.jsp" DesignTimeRectangle="249, 527, 50, 21" ElementType="InputBox" FriendlyName="'INPUT billingClaimIpt34'" FullSelectorArgument="&lt;webctrl id='claimCPTCodesTable1668497717033' tableRow='1' tag='TABLE' /&gt;&lt;webctrl tableRow='3' tag='INPUT' type='text' /&gt;" FuzzySelectorArgument="&lt;webctrl id='claimCPTCodesTable1668497717033' tag='TABLE' /&gt;&lt;webctrl class='editableTDText1668497717033 closable1668497717033 ng-pristine ng-untouched ng-valid ng-empty' tag='INPUT' type='text' aaname='' /&gt;" Guid="e0c07af4-5b45-4efe-aa64-06dd238fc75d" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAADYAAAAZCAYAAAB6v90+AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAABHSURBVFhH7dixDQBACMNA9t+RWULz5S/gyCchaouOSanZ3TRO78XermMYjWE0htEYRmMYjWE0htEYRmMYTW/Y78PTMKUXSw5KF9kNhb3hNQAAAABJRU5ErkJggg==" InformativeScreenshot="266f4100141cab7bc62990a7b71d6c67.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='eCW (Billing, Support 1 ) Production' /&gt;" SearchSteps="FuzzySelector, Image" Visibility="Interactive">
+                              <uix:TargetAnchorable.Anchors>
+                                <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                  <uix:Target DesignTimeRectangle="249, 505, 50, 21" ElementType="InputBox" FriendlyName="'00000'" FullSelectorArgument="&lt;webctrl id='claimCPTCodesTable1668497717033' tableRow='1' tag='TABLE' /&gt;&lt;webctrl tableRow='2' tag='INPUT' type='text' /&gt;" FuzzySelectorArgument="&lt;webctrl id='claimCPTCodesTable1668497717033' tag='TABLE' /&gt;&lt;webctrl class='editableTDText1668497717033' tag='INPUT' type='text' aaname='' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAADYAAAAZCAYAAAB6v90+AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAHiSURBVFhH7ZWxS8NAFMbfn5G14FJwsJuugkM7BhwMOIiTOAYHKS5SHCQ4iDhIJiEdhDgIcRB0EeKgXjcdpOkgksEhiEPHz5f21Wqj55CpsR8cJPe75N537+4e3b28oYiN/Ot7FLERCqqJsXHTxNi46T8ZSxDuWigbBJqqwW4+oCsE7w/wNmooEcGYtuBcJwJYGtZ99GBXSyAyUF5yEL4KYOlYHmWMJaeroBkbQSdB3HJhGRU4rT5TuxXQ4gFUnCA6r2OOVuFLIL8zBWeGYB4qxEmEYHMOtOLz8v3F8iljzF8mzB9F8tbF5QZnYEfxs0KDs2hfDPIXwV0gWCcxP2vYbQMG2bgcoCcX82TBTz/TsZzKGEsDNJvDP0fHJmfCQxz7sHibNW4EsMIt3q7bIaBh8YnF26wBHiUKUZexOpZXWWMjP46bYuzZg0kmvGcBrHBbjGnY5/fSnwY/mEPH8ur/ZCxY++GMpcHLQR89R/1F0LCWg0rmHEl2dSynMsaSs3UY325FA/Wr/sxqj2+tbzdfDe5TD2kYm54dufmqLlv/i+VTxliaJbUvdcwow9pXwzrGUwZSq3o17uxrCBrWCaRWEUrVdNGkP5WO5dAPxoqhibFx08TYuKm4xtrtNorYCpox4ANYY2xIWUsj2AAAAABJRU5ErkJggg==" SearchSteps="FuzzySelector, Image" />
+                                </scg:List>
+                              </uix:TargetAnchorable.Anchors>
+                            </uix:TargetAnchorable>
+                          </uix:NTypeInto.Target>
+                        </uix:NTypeInto>
+                      </Sequence>
+                    </If.Else>
+                  </If>
+                </Sequence>
+              </ui:CommentOut.Body>
+            </ui:CommentOut>
+          </Sequence>
+        </ActivityAction>
+      </ui:ForEachRow.Body>
+    </ui:ForEachRow>
+  </Sequence>
+</Activity>
