@@ -5,7 +5,7 @@
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>960,5850</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>960,5854</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>Claim_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="84">
@@ -98,7 +98,7 @@
       <AssemblyReference>UiPath.UIAutomationNext.Activities.Design</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Claim" sap:VirtualizedContainerService.HintSize="746,5785" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Claim" sap:VirtualizedContainerService.HintSize="746,5789" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="ui:UiElement" Name="readfile" />
       <Variable x:TypeArguments="ui:UiElement" Name="readfile1" />
@@ -108,13 +108,13 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ueab:ExcelProcessScopeX DisplayAlerts="{x:Null}" ExistingProcessAction="{x:Null}" FileConflictResolution="{x:Null}" LaunchMethod="{x:Null}" LaunchTimeout="{x:Null}" MacroSettings="{x:Null}" ProcessMode="{x:Null}" ShowExcelWindow="{x:Null}" DisplayName="Excel Process Scope" sap:VirtualizedContainerService.HintSize="704,5693" sap2010:WorkflowViewState.IdRef="ExcelProcessScopeX_1">
+    <ueab:ExcelProcessScopeX DisplayAlerts="{x:Null}" ExistingProcessAction="{x:Null}" FileConflictResolution="{x:Null}" LaunchMethod="{x:Null}" LaunchTimeout="{x:Null}" MacroSettings="{x:Null}" ProcessMode="{x:Null}" ShowExcelWindow="{x:Null}" DisplayName="Excel Process Scope" sap:VirtualizedContainerService.HintSize="704,5697" sap2010:WorkflowViewState.IdRef="ExcelProcessScopeX_1">
       <ueab:ExcelProcessScopeX.Body>
         <ActivityAction x:TypeArguments="ui:IExcelProcess">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="ui:IExcelProcess" Name="ExcelProcessScopeTag" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="670,5607" sap2010:WorkflowViewState.IdRef="Sequence_10">
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="670,5611" sap2010:WorkflowViewState.IdRef="Sequence_10">
             <Sequence.Variables>
               <Variable x:TypeArguments="x:String" Name="output_data" />
               <Variable x:TypeArguments="sd:DataTable" Name="inputdata" />
@@ -134,13 +134,13 @@
                 </InArgument>
               </ui:ReadRange.Range>
             </ui:ReadRange>
-            <uix:NApplicationCard WebDriverMode="{x:Null}" AttachMode="ByInstance" CloseMode="Never" DisplayName="Use Browser Chrome: eCW (Billing, Support 2 ) Production" sap:VirtualizedContainerService.HintSize="628,5209" sap2010:WorkflowViewState.IdRef="NApplicationCard_3" InteractionMode="DebuggerApi" OpenMode="Always" ScopeGuid="d356ee1e-5f75-42fb-ad46-a1cfd9420c3f" Timeout="5000" Version="V2" WindowResize="Maximize">
+            <uix:NApplicationCard WebDriverMode="{x:Null}" AttachMode="ByInstance" CloseMode="Never" DisplayName="Use Browser Chrome: eCW (Billing, Support 2 ) Production" sap:VirtualizedContainerService.HintSize="628,5213" sap2010:WorkflowViewState.IdRef="NApplicationCard_3" InteractionMode="DebuggerApi" OpenMode="Always" ScopeGuid="d356ee1e-5f75-42fb-ad46-a1cfd9420c3f" Timeout="5000" Version="V2" WindowResize="Maximize">
               <uix:NApplicationCard.Body>
                 <ActivityAction x:TypeArguments="x:Object">
                   <ActivityAction.Argument>
                     <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
                   </ActivityAction.Argument>
-                  <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="594,4992" sap2010:WorkflowViewState.IdRef="Sequence_16">
+                  <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="594,4996" sap2010:WorkflowViewState.IdRef="Sequence_16">
                     <Sequence.Variables>
                       <Variable x:TypeArguments="x:Int32" Name="inputdata1" />
                     </Sequence.Variables>
@@ -150,7 +150,7 @@
                         <x:Boolean x:Key="IsPinned">False</x:Boolean>
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
-                    <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="552,4899" sap2010:WorkflowViewState.IdRef="Sequence_63">
+                    <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="552,4902" sap2010:WorkflowViewState.IdRef="Sequence_63">
                       <Sequence.Variables>
                         <Variable x:TypeArguments="ui:PasswordCredentials" Name="credendials" />
                       </Sequence.Variables>
@@ -271,19 +271,19 @@
                           <uix:TargetAnchorable BrowserURL="https://caazeo8ton5ohnbbssapp.ecwcloud.com/mobiledoc/jsp/webemr/index.jsp#/mobiledoc/jsp/webemr/webpm/claimLookup.jsp" DesignTimeRectangle="80, 446, 131, 22" ElementType="Button" FriendlyName="'Create New Claim'" FullSelectorArgument="&lt;webctrl id='claimLookupBtn11' tag='BUTTON' /&gt;" FuzzySelectorArgument="&lt;webctrl id='claimLookupBtn11' tag='BUTTON' type='' class='' aaname='Create New Claim' check:innerText='Create New Claim' /&gt;" Guid="cb39bcae-8026-4a66-a3df-8ec5128915d3" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAIcAAAAaCAYAAACdH0+XAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAKxSURBVGhD7ZZZjhQxDIZzFp64Td44AmfgBnnjAMM28FKvDDRihmF62KR6B1osQmIRUOIUJk5cibN1F1IVs8ifFKmdcjmx/Sdd6ur1m3Dl2g0QhBy12WxgtVqRKQgR9fLLH3hw9IZMQYio088D3D98TaYgRNT602/Yf/qKTEGIqPXHX3DvyQsyBSGiTj78hLurUzIFIaKONz+sONZkCkJEPXv/He48FnEIJU4ctx+dkDk/vVGgVBy6G+jJ/2fotN2DgZ5sx9CBNsnMLNTz7sHoDrZWAPeT7/GMsOL4BrcOlhGHK9AChXf0Bv41NIpDazu4QBcQRzvvCeI4R6ijdwuJY+sJsEWyxRtPl6+jnQsnTUPon4szzpNvMjf6DtDpzC8DxWF69MviM2d/u1Acv5j1j3m456HBWSxkV97Ju3G/UUzMx8YynR2jD87bQ1G+swxOHHsHz8mcEUyiuXkvhPi40rDaCWON9I12Px0otGhj/LJB7ubARXh8FjPf8xgzxvZCMWaMzZtN7Mq7lhfFLWLi3lge7jCF9yvCnJmzE0dSJGwmnYYwqCiuQGyeYqbiyE6hG2Xhgjj470xwaQz6VrC5cN+wdi3HyXnne26Ig8Xi+0d6c1HFkak+pSaOmi/OZzcKFSs0yDHtFKXFpdh9GpMXP4Dr2v3245q5SDgT88ZbIK615eZgC1wecVjcNVhUD2EFcPhTVDYGGxgLjcXhN0daqNZakaL5eMqtqEID0K421jcv/p14MWr2LcKZkjf6BJdEUOdIHIdvv8Lew2My58cVil3TPtdcHAgKgflSUZwgaE7jx9lYLFdQnB8L5AUW3i/il8VF8kby9fhfk5tnMXM7Z2feYf922Lmu9h1z2cUhXFxEHEITEYfQRMQhNBFxCE1EHEITEYfQRMQhNBFxCA0A/gLwRn76jJtvBwAAAABJRU5ErkJggg==" InformativeScreenshot="8b805bcb44dbf85800bddb0202d5d794.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='eCW (Billing, Support 2 ) Production' /&gt;" SearchSteps="FuzzySelector, Image" Visibility="Interactive" />
                         </uix:NClick.Target>
                       </uix:NClick>
-                      <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[dt_sheet1]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="510,3317" sap2010:WorkflowViewState.IdRef="ForEachRow_5">
+                      <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[dt_sheet1]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="510,3319" sap2010:WorkflowViewState.IdRef="ForEachRow_5">
                         <ui:ForEachRow.Body>
                           <ActivityAction x:TypeArguments="sd:DataRow">
                             <ActivityAction.Argument>
                               <DelegateInArgument x:TypeArguments="sd:DataRow" Name="CurrentRow" />
                             </ActivityAction.Argument>
-                            <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="476,3200" sap2010:WorkflowViewState.IdRef="Sequence_84">
+                            <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="476,3202" sap2010:WorkflowViewState.IdRef="Sequence_84">
                               <sap:WorkflowViewStateService.ViewState>
                                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                 </scg:Dictionary>
                               </sap:WorkflowViewStateService.ViewState>
-                              <Sequence sap:VirtualizedContainerService.HintSize="434,1334" sap2010:WorkflowViewState.IdRef="Sequence_81">
+                              <Sequence DisplayName="Create Claim" sap:VirtualizedContainerService.HintSize="434,1335" sap2010:WorkflowViewState.IdRef="Sequence_81">
                                 <sap:WorkflowViewStateService.ViewState>
                                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
