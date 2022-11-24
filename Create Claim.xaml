@@ -13,7 +13,7 @@
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>673,2630</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>679,2630</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>Creating_New_Claims_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="86">
