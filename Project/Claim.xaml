@@ -13,7 +13,7 @@
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>679,2297</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>742,9786</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>Claim_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="38">
@@ -94,34 +94,34 @@
       <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Claim" sap:VirtualizedContainerService.HintSize="580,2232" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Claim" sap:VirtualizedContainerService.HintSize="730,9721" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="538,91" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;Claim Workflow Execution  Started&quot;]" />
-    <uix:NApplicationCard WebDriverMode="{x:Null}" AttachMode="ByInstance" DisplayName="Use Application/Browser" sap:VirtualizedContainerService.HintSize="538,1878" sap2010:WorkflowViewState.IdRef="NApplicationCard_3" InUiElement="[In_Claim_Browser]" ScopeGuid="bfd53c9d-324e-43d2-a41a-119fec958b1e" Version="V2">
+    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="688,91" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;Claim Workflow Execution  Started&quot;]" />
+    <uix:NApplicationCard WebDriverMode="{x:Null}" AttachMode="ByInstance" DisplayName="Use Application/Browser" sap:VirtualizedContainerService.HintSize="688,9367" sap2010:WorkflowViewState.IdRef="NApplicationCard_3" InUiElement="[In_Claim_Browser]" ScopeGuid="bfd53c9d-324e-43d2-a41a-119fec958b1e" Version="V2">
       <uix:NApplicationCard.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="504,1742" sap2010:WorkflowViewState.IdRef="Sequence_20">
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="654,9231" sap2010:WorkflowViewState.IdRef="Sequence_20">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <uix:NCheckState Exists="{x:Null}" DisplayName="Check App State 'ICD &amp; CPT'" EnableIfNotExists="False" sap:VirtualizedContainerService.HintSize="462,1648" sap2010:WorkflowViewState.IdRef="NCheckState_1" ScopeIdentifier="bfd53c9d-324e-43d2-a41a-119fec958b1e" Version="V1">
+            <uix:NCheckState Exists="{x:Null}" DisplayName="Check App State 'ICD &amp; CPT'" EnableIfNotExists="False" sap:VirtualizedContainerService.HintSize="612,9137" sap2010:WorkflowViewState.IdRef="NCheckState_1" ScopeIdentifier="bfd53c9d-324e-43d2-a41a-119fec958b1e" Version="V1">
               <uix:NCheckState.IfExists>
-                <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="418,1432" sap2010:WorkflowViewState.IdRef="Sequence_64">
+                <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="568,8921" sap2010:WorkflowViewState.IdRef="Sequence_64">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                  <Sequence DisplayName="Temporary Sequence to delete and check ICD COdes" sap:VirtualizedContainerService.HintSize="376,66" sap2010:WorkflowViewState.IdRef="Sequence_21">
+                  <Sequence DisplayName="Temporary Sequence to delete and check ICD COdes" sap:VirtualizedContainerService.HintSize="526,66" sap2010:WorkflowViewState.IdRef="Sequence_21">
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                         <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -171,7 +171,7 @@
                       </uix:NClick.Target>
                     </uix:NClick>
                   </Sequence>
-                  <uix:NClick ClickType="Single" DisplayName="Click 'ICD Codes (0)'" sap:VirtualizedContainerService.HintSize="376,51" sap2010:WorkflowViewState.IdRef="NClick_9" InteractionMode="DebuggerApi" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="bfd53c9d-324e-43d2-a41a-119fec958b1e" Version="V1">
+                  <uix:NClick ClickType="Single" DisplayName="Click 'ICD Codes (0)'" sap:VirtualizedContainerService.HintSize="526,51" sap2010:WorkflowViewState.IdRef="NClick_9" InteractionMode="DebuggerApi" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="bfd53c9d-324e-43d2-a41a-119fec958b1e" Version="V1">
                     <uix:NClick.Target>
                       <uix:TargetAnchorable BrowserURL="https://caazeo8ton5ohnbbssapp.ecwcloud.com/mobiledoc/jsp/webemr/index.jsp#/mobiledoc/jsp/webemr/webpm/claimLookup.jsp" DesignTimeRectangle="198, 286, 18, 18" FriendlyName="'DIV'" FullSelectorArgument="&lt;webctrl css-selector='body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div' isleaf='1' parentid='icd1669286164162' tag='DIV' /&gt;" FuzzySelectorArgument="&lt;webctrl type='' isleaf='1' parentid='icd1669286164162' tag='DIV' class='billingclaim-notch-new billingNotch1' aaname='' /&gt;" Guid="6cb6a058-33c8-4a5b-8ed2-eab3bec94e40" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAABYAAAAWCAYAAADEtGw7AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAADDSURBVEhL3ZQhDoQwEEX3ZiBI71HRWs7AAcoNqlAoLgAOjeoiMIQ7gP6bESQkjNg2TLJZ8dSfeZ00k3kdxw4J5MXz/EbbtmiaJgnqJcdNTEEIAdu2JUG95LiJ6VWuIQZy/Ia4rmt479nsSrS4qipkWYau69j8JFq8rivKskRRFBiGga0hosXEsiwwxkAphXEc2ZokMTFNE/I8h9aazZMnttY+O/H1j/u+Z2uIaLHYVjjnZPb4W/5ELHY2xQ790wiJd3wAWse3bghXqfgAAAAASUVORK5CYII=" InformativeScreenshot="16365403d1549ab2898de8cceef9048c.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='eCW (Billing, Support 1 ) Production' /&gt;" SearchSteps="FuzzySelector, Image" Visibility="Interactive">
                         <uix:TargetAnchorable.Anchors>
@@ -188,7 +188,7 @@
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
                   </uix:NClick>
-                  <Sequence DisplayName="Sequence for entering ICD/Diagnoses Code" sap:VirtualizedContainerService.HintSize="376,66" sap2010:WorkflowViewState.IdRef="Sequence_62">
+                  <Sequence DisplayName="Sequence for entering ICD/Diagnoses Code" sap:VirtualizedContainerService.HintSize="526,66" sap2010:WorkflowViewState.IdRef="Sequence_62">
                     <Sequence.Variables>
                       <Variable x:TypeArguments="x:String" Default="*" Name="aaname" />
                     </Sequence.Variables>
@@ -388,7 +388,7 @@
                       </If.Else>
                     </If>
                   </Sequence>
-                  <uix:NClick ClickType="Single" DisplayName="Click 'ICD Codes (0)'" sap:VirtualizedContainerService.HintSize="376,51" sap2010:WorkflowViewState.IdRef="NClick_10" InteractionMode="DebuggerApi" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="bfd53c9d-324e-43d2-a41a-119fec958b1e" Version="V1">
+                  <uix:NClick ClickType="Single" DisplayName="Click 'ICD Codes (0)'" sap:VirtualizedContainerService.HintSize="526,51" sap2010:WorkflowViewState.IdRef="NClick_10" InteractionMode="DebuggerApi" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="bfd53c9d-324e-43d2-a41a-119fec958b1e" Version="V1">
                     <uix:NClick.Target>
                       <uix:TargetAnchorable BrowserURL="https://caazeo8ton5ohnbbssapp.ecwcloud.com/mobiledoc/jsp/webemr/index.jsp#/mobiledoc/jsp/webemr/webpm/claimLookup.jsp" DesignTimeRectangle="198, 286, 18, 18" FriendlyName="'DIV'" FullSelectorArgument="&lt;webctrl css-selector='body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div' isleaf='1' parentid='icd1669286164162' tag='DIV' /&gt;" FuzzySelectorArgument="&lt;webctrl type='' isleaf='1' parentid='icd1669286164162' tag='DIV' class='billingclaim-notch-new billingNotch1' aaname='' /&gt;" Guid="6cb6a058-33c8-4a5b-8ed2-eab3bec94e40" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAABYAAAAWCAYAAADEtGw7AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAADDSURBVEhL3ZQhDoQwEEX3ZiBI71HRWs7AAcoNqlAoLgAOjeoiMIQ7gP6bESQkjNg2TLJZ8dSfeZ00k3kdxw4J5MXz/EbbtmiaJgnqJcdNTEEIAdu2JUG95LiJ6VWuIQZy/Ia4rmt479nsSrS4qipkWYau69j8JFq8rivKskRRFBiGga0hosXEsiwwxkAphXEc2ZokMTFNE/I8h9aazZMnttY+O/H1j/u+Z2uIaLHYVjjnZPb4W/5ELHY2xQ790wiJd3wAWse3bghXqfgAAAAASUVORK5CYII=" InformativeScreenshot="16365403d1549ab2898de8cceef9048c.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='eCW (Billing, Support 1 ) Production' /&gt;" SearchSteps="FuzzySelector, Image" Visibility="Interactive">
                         <uix:TargetAnchorable.Anchors>
@@ -405,22 +405,22 @@
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
                   </uix:NClick>
-                  <Sequence DisplayName="Sequence for Entering CPT Codes" sap:VirtualizedContainerService.HintSize="376,66" sap2010:WorkflowViewState.IdRef="Sequence_45">
+                  <Sequence DisplayName="Sequence for Entering CPT Codes" sap:VirtualizedContainerService.HintSize="526,7518" sap2010:WorkflowViewState.IdRef="Sequence_45">
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                        <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                         <x:Boolean x:Key="IsPinned">False</x:Boolean>
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
-                    <If Condition="[IsNumeric(In_CurrentRow_For_Claim(&quot;CPT Code 99453&quot;))]" DisplayName="If CPT Code 99453 is found" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="If_16">
+                    <If Condition="[IsNumeric(In_CurrentRow_For_Claim(&quot;CPT Code 99453&quot;))]" DisplayName="If CPT Code 99453 is found" sap:VirtualizedContainerService.HintSize="484,1698" sap2010:WorkflowViewState.IdRef="If_16">
                       <sap:WorkflowViewStateService.ViewState>
                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                           <x:Boolean x:Key="IsPinned">False</x:Boolean>
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
                       <If.Then>
-                        <Sequence sap:VirtualizedContainerService.HintSize="376,1516" sap2010:WorkflowViewState.IdRef="Sequence_35">
+                        <Sequence sap:VirtualizedContainerService.HintSize="376,1510" sap2010:WorkflowViewState.IdRef="Sequence_35">
                           <sap:WorkflowViewStateService.ViewState>
                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
                               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -440,7 +440,7 @@
                               </uix:TargetAnchorable>
                             </uix:NTypeInto.Target>
                           </uix:NTypeInto>
-                          <ui:SendHotkey ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" Activate="True" ContinueOnError="True" DisplayName="Send Hotkey" sap:VirtualizedContainerService.HintSize="334,136" sap2010:WorkflowViewState.IdRef="SendHotkey_16" Key="enter" KeyModifiers="None" SpecialKey="True">
+                          <ui:SendHotkey ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" Activate="True" ContinueOnError="True" DelayMS="500" DisplayName="Send Hotkey" sap:VirtualizedContainerService.HintSize="334,136" sap2010:WorkflowViewState.IdRef="SendHotkey_16" Key="enter" KeyModifiers="None" SpecialKey="True">
                             <ui:SendHotkey.Target>
                               <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}" Id="aa2e19e8-dcc8-4e1d-b411-16659edbe722">
                                 <ui:Target.TimeoutMS>
@@ -452,7 +452,7 @@
                               </ui:Target>
                             </ui:SendHotkey.Target>
                           </ui:SendHotkey>
-                          <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'INPUT  TOS" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="334,216" sap2010:WorkflowViewState.IdRef="NTypeInto_33" InteractionMode="DebuggerApi" ScopeIdentifier="bfd53c9d-324e-43d2-a41a-119fec958b1e" Text="1" Version="V1">
+                          <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DelayBefore="0.5" DisplayName="Type Into 'INPUT  TOS" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="334,216" sap2010:WorkflowViewState.IdRef="NTypeInto_33" InteractionMode="DebuggerApi" ScopeIdentifier="bfd53c9d-324e-43d2-a41a-119fec958b1e" Text="1" Version="V1">
                             <uix:NTypeInto.Target>
                               <uix:TargetAnchorable BrowserURL="https://caazeo8ton5ohnbbssapp.ecwcloud.com/mobiledoc/jsp/webemr/index.jsp#/mobiledoc/jsp/webemr/webpm/claimLookup.jsp" DesignTimeRectangle="352, 473, 31, 21" ElementType="InputBox" FriendlyName="'1'" FullSelectorArgument="&lt;webctrl id='claimCPTCodesTable16690*' tableRow='1' tag='TABLE' /&gt;&lt;webctrl id='billingClaimIpt5ngR0' tableRow='2' tag='INPUT' type='text' /&gt;" FuzzyAccuracy="0.67" FuzzySelectorArgument="&lt;webctrl id='claimCPTCodesTable16690*' tag='TABLE' /&gt;&lt;webctrl id='billingClaimIpt5ngR0' class='editableTDText1669020587409 ng-valid ng-dirty ng-valid-parse ng-touched ng-not-empty' tag='INPUT' type='text' aaname='' /&gt;" Guid="8fd6b220-3941-49b3-8de1-abb11a3e2b48" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAACMAAAAZCAYAAAC7OJeSAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAAwSURBVEhL7c4xAQAgAAQh+5d+C3i7AyTg7CMyRabIFJkiU2SKTJEpMkWmyBSZt+0CGc+fGLkfneAAAAAASUVORK5CYII=" InformativeScreenshot="81fd8d1f3a87671a1c94b81c80efe81f.png" IsResponsive="True" ScopeSelectorArgument="&lt;html app='chrome.exe' title='eCW (Billing, Support 1 ) Production' /&gt;" SearchSteps="FuzzySelector" Visibility="Interactive">
                                 <uix:TargetAnchorable.Anchors>
@@ -467,7 +467,7 @@
                               </uix:TargetAnchorable>
                             </uix:NTypeInto.Target>
                           </uix:NTypeInto>
-                          <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'SDOS'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="334,218" sap2010:WorkflowViewState.IdRef="NTypeInto_34" InteractionMode="DebuggerApi" ScopeIdentifier="bfd53c9d-324e-43d2-a41a-119fec958b1e" Text="[In_CurrentRow_For_Claim(&quot;CPT Code 99453 Date&quot;).ToString]" Version="V1">
+                          <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'SDOS'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="334,216" sap2010:WorkflowViewState.IdRef="NTypeInto_34" InteractionMode="DebuggerApi" ScopeIdentifier="bfd53c9d-324e-43d2-a41a-119fec958b1e" Text="[In_CurrentRow_For_Claim(&quot;CPT Code 99453 Date&quot;).ToString]" Version="V1">
                             <uix:NTypeInto.Target>
                               <uix:TargetAnchorable BrowserURL="https://caazeo8ton5ohnbbssapp.ecwcloud.com/mobiledoc/jsp/webemr/index.jsp#/mobiledoc/jsp/webemr/webpm/claimLookup.jsp" DesignTimeRectangle="390, 473, 75, 21" ElementType="InputBox" FriendlyName="'10/27/2022'" FullSelectorArgument="&lt;webctrl id='claimCPTCodesTable16690*' tableRow='1' tag='TABLE' /&gt;&lt;webctrl id='billingClaimIpt6ngR0' tableRow='2' tag='INPUT' type='text' /&gt;" FuzzyAccuracy="0.66" FuzzySelectorArgument="&lt;webctrl id='claimCPTCodesTable16690*' tag='TABLE' /&gt;&lt;webctrl id='billingClaimIpt6ngR0' class='editableTDText1669020587409 dateTd1669020587409 ng-valid ng-not-empty ng-dirty ng-valid-parse ng-touched' tag='INPUT' type='text' aaname='' /&gt;" Guid="ea0584a1-0694-487a-800c-908bd10e69c3" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAE8AAAAZCAYAAABw43NsAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAOcSURBVFhH7ZbPSxtBFMfnf1jYgBdzKFpQECoEcrEiuCcjBZXgJYhQwcOeJGBAQRDtRYWiHhoMLFTqoVt6WOhhiRAJiqDFQw6CQaEEL7m1/8C3b2Y22c3mR9dsjxv4QHbezLyZ77z3Ztjt829E9Af7Vv6JiP5gV89/ENEfkXghiMQLQSReCCLxQhCJF4J28a4LSMUZWLbY0l66KGBxahCMxRB/t4N8xTOG82RhSX2L3CX9v7OgpxMYYDSPOgxtu4wS73NbwCRv8+PzZR5oYKsWSr+qONzIYJSvR/jdg/Hg9rO/70B7HSPbIJKrBXxp2Lr552POaR/Tw1C4La5h0ag053spLeLZZ1mMxwcxoPo3VIY+wjD5oQzrvoJ9PQGWPoXtGVs608EmjmA+12Gsa0htF2He12DZeyRYDHOfa9SvDpvaXIrQEwzJA+8GKshNMCye1VH6sYlkeg/5a+p7V8baDIOybEq/lVOk2JjYPLfl5mMY2igLH939V7Gb1rB0ckP7qME0dAyxBNbO3X28BI94Ney/zyB3cYMtWmSLeLQJhek4fHK+L48wzhawe+d887EZvwgNqmK+yeNqu83ewZCadeft1uZgHc+CzRRg8f+fFpzDkjZxeOomDOfbpYf/5yJWKAJXLH97MDrUPOnMK55YKNtEvtmniCWvUxEFmkzZZh+HBwuLagxLX+s+W42igDnR4rYbG2NQdEpZT5ukjsPVWNNmrFO6OkIKO5WbSTaLrVvvGKKrf4KCINlt3QEIJp7nxGVb64nZJxmfvUEd+WwCyvxpu63jwnl5iHWMhJK1iVGVot0RJ5/1ZYeop37xevin8rBFqT667tbDl/IfIk/2T53wmtKwc+TC2Rsa5ynyDXiE+evmFQmkjOy0pZ4QjmrTiuVGz78jr5d/KZwyX2imfT8EEk/Uobaa5yxURFAGuy23LxXtLQ1KF+HkzexPJUpLvVH03b4l8p1UW4Xj2MZKx5onD7iXf7rwlnk0hhOOE0w8nk5vfLftlFy4eFZknBvQwfy4AOWVjn1+SzZvVnfzYow/woSgY9BtTxtFk0ZPDXGjNuepyTSrmJij/t7btlEPu/uvyWicpidPxWPrdMABCCgecW067zyGgSm+MN7uPivcvrIetr3lmikmnz3+m9l96rhtoq61zeWmZomeIfKd530D9vAf8J0ZlA7iRQQlEi8EkXghiMQLQSReCCLxQsAeHx8R0R8M0a/PH/AX3fYpF1FSxqQAAAAASUVORK5CYII=" InformativeScreenshot="66ae76deb0b285b32379a0d4ffc2129f.png" IsResponsive="True" ScopeSelectorArgument="&lt;html app='chrome.exe' title='eCW (Billing, Support 1 ) Production' /&gt;" SearchSteps="FuzzySelector" Visibility="Interactive">
                                 <uix:TargetAnchorable.Anchors>
@@ -479,7 +479,7 @@
                               </uix:TargetAnchorable>
                             </uix:NTypeInto.Target>
                           </uix:NTypeInto>
-                          <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'EDOS'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="334,218" sap2010:WorkflowViewState.IdRef="NTypeInto_35" InteractionMode="DebuggerApi" ScopeIdentifier="bfd53c9d-324e-43d2-a41a-119fec958b1e" Text="[In_CurrentRow_For_Claim(&quot;CPT Code 99453 Date&quot;).ToString]" Version="V1">
+                          <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'EDOS'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="334,216" sap2010:WorkflowViewState.IdRef="NTypeInto_35" InteractionMode="DebuggerApi" ScopeIdentifier="bfd53c9d-324e-43d2-a41a-119fec958b1e" Text="[In_CurrentRow_For_Claim(&quot;CPT Code 99453 Date&quot;).ToString]" Version="V1">
                             <uix:NTypeInto.Target>
                               <uix:TargetAnchorable BrowserURL="https://caazeo8ton5ohnbbssapp.ecwcloud.com/mobiledoc/jsp/webemr/index.jsp#/mobiledoc/jsp/webemr/webpm/claimLookup.jsp" DesignTimeRectangle="476, 473, 75, 21" ElementType="InputBox" FriendlyName="'10/31/2022'" FullSelectorArgument="&lt;webctrl id='claimCPTCodesTable16690*' tableRow='1' tag='TABLE' /&gt;&lt;webctrl id='billingClaimIpt7ngR0' tableRow='2' tag='INPUT' type='text' /&gt;" FuzzyAccuracy="0.67" FuzzySelectorArgument="&lt;webctrl id='claimCPTCodesTable16690*' tag='TABLE' /&gt;&lt;webctrl id='billingClaimIpt7ngR0' class='editableTDText1669020587409 dateTd1669020587409 ng-valid ng-not-empty ng-dirty ng-valid-parse ng-touched' tag='INPUT' type='text' aaname='' /&gt;" Guid="df028932-eedd-431c-a195-01cdb8c3beb3" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAE8AAAAZCAYAAABw43NsAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAOgSURBVFhH7Za/SyNBFMfnf1hIwMYUhwoKgkIgFioWWxk5UBGbIAcnWGwlgoEEBInXqHCohcHAwokW5rhi4YolRSQogh4WWwiKgohNuvMf+N6b2U32R9ZkzV65gS9k583Mm/3sm/ceu3n9i0jdif2s/UGk7sQuX98QqTtF8EIoghdCEbwQiuCFUAQvhFrhXZWQTjCwtYprvHpewuJULxiLI/G5gKLhWMP1pGEpNoHsxRu0swLSY/2QGO2TSCKdq0B3zn02sLHA98qj6By3VN6VwVY0VJ8fsJfLYIifR/jdhnpvz9N/FSAPxMnWi9RKCScN260GZSGJHu4/1g95s4aqtaat7YNywdNP1zCa6EVPzAuvBmWQYfJbDdqdgR0lCbZw7AJSPVXAxvdRpv9ltYDVMwP63Qs0fRuT9OKzP17MuQZBHiMfCf7SfvAMZMcZFk/rqP7OI7WwjeLVC/TbGlanGaQvZdOvcYw0G8aiSn7Ilp2Loy9Xo/V1qOsy0psVlFv8t7N5z9FZDngv2PmaQfb8Ght0SBc8egmJKdh7sp4v9jHK5rF1az3ztRmG1K5hr2nqQew3efAgnnVVQXr3GicHM/7w9AL6Ymu2L4c0vma6BI3/P5xvfixuEx8vlodqPdty+w9u6yyfnGdu6IQnDup60QqWKOyXNetZRIEsrmxjTUP6WR5DMQJ94x4XIHzgqblhSApdWc84j5q9lXjTpq5T5FoghZ3SzSSbwYbHz+W9hsVYHEtndfd4J1sABYPn+OLmWAXLDnj6UcZjf0NxjfbgeWVsGVmt9Vr4w+PpIW5/FIeqmvsjiP2dt+PGD16d5iUhzR27ztbZFkz/IfLM+ekjD6B7ylMir5QwS0DkQ/fV8IVHgKTBQsvVE+BYkvzZEdI58kw4bIR8OIpMZ1twBYIn8lBLzrMOSv9TLIMtb/V1SESJJzJb4dG1VBpJ355XJd+pmBscl64u++Y8cz8qDBsypHfAvW/7mILB49dpxFNtp6zKytuKjFUBhQwUj2qimpmRtw+ZqvfQ5rVjPx94otUZhqLbc3g0ydROiIpq7ccl8qFRxizNd1bbRj4sf5+H9EnBDq/SzXUm/Ha2jyogPNJV2erzGHqmuHM+brcV9lzew00gwdsdmisNTLT2eSQvPGer05jTzJsu2VezSq2G2ec5e0AzH7esE5Hfzmb7DSofeJGCKoIXQhG8EIrghVAEL4QieCHEHh8fEak7MUS/Ln/AP5OeLKK6W+p5AAAAAElFTkSuQmCC" InformativeScreenshot="750978f99e592fb07c8d028bdff43987.png" IsResponsive="True" ScopeSelectorArgument="&lt;html app='chrome.exe' title='eCW (Billing, Support 1 ) Production' /&gt;" SearchSteps="FuzzySelector" Visibility="Interactive">
                                 <uix:TargetAnchorable.Anchors>
@@ -491,7 +491,7 @@
                               </uix:TargetAnchorable>
                             </uix:NTypeInto.Target>
                           </uix:NTypeInto>
-                          <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'M1'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="334,218" sap2010:WorkflowViewState.IdRef="NTypeInto_51" InteractionMode="DebuggerApi" ScopeIdentifier="bfd53c9d-324e-43d2-a41a-119fec958b1e" Text="[In_CurrentRow_For_Claim(&quot;Modifier&quot;).ToString]" Version="V1">
+                          <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'M1'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="334,216" sap2010:WorkflowViewState.IdRef="NTypeInto_51" InteractionMode="DebuggerApi" ScopeIdentifier="bfd53c9d-324e-43d2-a41a-119fec958b1e" Text="[In_CurrentRow_For_Claim(&quot;Modifier&quot;).ToString]" Version="V1">
                             <uix:NTypeInto.Target>
                               <uix:TargetAnchorable BrowserURL="https://caazeo8ton5ohnbbssapp.ecwcloud.com/mobiledoc/jsp/webemr/index.jsp#/mobiledoc/jsp/webemr/webpm/claimLookup.jsp" DesignTimeRectangle="562, 473, 41, 21" ElementType="InputBox" FriendlyName="'INPUT billingClaimIpt8n…'" FullSelectorArgument="&lt;webctrl id='claimCPTCodesTable16690*' tableRow='1' tag='TABLE' /&gt;&lt;webctrl id='billingClaimIpt8ngR0' tableRow='2' tag='INPUT' type='text' /&gt;" FuzzyAccuracy="0.76" FuzzySelectorArgument="&lt;webctrl id='claimCPTCodesTable16690*' tag='TABLE' /&gt;&lt;webctrl id='billingClaimIpt8ngR0' class='editableTDText1669020587409 modTd1669020587409 ng-pristine ng-valid ng-empty ng-touched' tag='INPUT' type='text' aaname='' /&gt;" Guid="e7af0603-0f94-4374-82b4-3347731119c1" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAC0AAAAZCAYAAACl8achAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAABNSURBVFhH7c5BCcBAFAPR+PdSFYWethL+cQV0DaQuAoEZePfR2p/b6Lpft9Gzj9swncJ0CtMpTKcwncJ0CtMpTKcwncJ0imbGbeS67B8T0N1BvoV13AAAAABJRU5ErkJggg==" InformativeScreenshot="1907c72a5a7930f11de8bfd06b657d2f.png" IsResponsive="True" ScopeSelectorArgument="&lt;html app='chrome.exe' title='eCW (Billing, Support 1 ) Production' /&gt;" SearchSteps="FuzzySelector, Image" Visibility="Interactive">
                                 <uix:TargetAnchorable.Anchors>
@@ -515,15 +515,15 @@
                         </Sequence>
                       </If.Else>
                     </If>
-                    <If Condition="[IsNumeric(In_CurrentRow_For_Claim(&quot;CPT Code 99454&quot;))]" DisplayName="If CPT Code 99454 is found" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="If_17">
+                    <If Condition="[IsNumeric(In_CurrentRow_For_Claim(&quot;CPT Code 99454&quot;))]" DisplayName="If CPT Code 99454 is found" sap:VirtualizedContainerService.HintSize="484,1698" sap2010:WorkflowViewState.IdRef="If_17">
                       <sap:WorkflowViewStateService.ViewState>
                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                           <x:Boolean x:Key="IsPinned">False</x:Boolean>
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
                       <If.Then>
-                        <Sequence sap:VirtualizedContainerService.HintSize="376,1504" sap2010:WorkflowViewState.IdRef="Sequence_37">
+                        <Sequence sap:VirtualizedContainerService.HintSize="376,1510" sap2010:WorkflowViewState.IdRef="Sequence_37">
                           <sap:WorkflowViewStateService.ViewState>
                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
                               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -545,7 +545,7 @@
                               </uix:TargetAnchorable>
                             </uix:NTypeInto.Target>
                           </uix:NTypeInto>
-                          <ui:SendHotkey ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" Activate="True" ContinueOnError="True" DisplayName="Send Hotkey" sap:VirtualizedContainerService.HintSize="334,132" sap2010:WorkflowViewState.IdRef="SendHotkey_17" Key="enter" KeyModifiers="None" SpecialKey="True">
+                          <ui:SendHotkey ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" Activate="True" ContinueOnError="True" DelayMS="500" DisplayName="Send Hotkey" sap:VirtualizedContainerService.HintSize="334,136" sap2010:WorkflowViewState.IdRef="SendHotkey_17" Key="enter" KeyModifiers="None" SpecialKey="True">
                             <ui:SendHotkey.Target>
                               <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}" Id="ac5b6b42-d8ed-4716-adad-44bee51fe25a">
                                 <ui:Target.TimeoutMS>
@@ -557,7 +557,7 @@
                               </ui:Target>
                             </ui:SendHotkey.Target>
                           </ui:SendHotkey>
-                          <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'INPUT billingClaimIpt5n…'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="334,216" sap2010:WorkflowViewState.IdRef="NTypeInto_42" InteractionMode="DebuggerApi" ScopeIdentifier="bfd53c9d-324e-43d2-a41a-119fec958b1e" Text="1" Version="V1">
+                          <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DelayBefore="0.5" DisplayName="Type Into 'INPUT billingClaimIpt5n…'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="334,216" sap2010:WorkflowViewState.IdRef="NTypeInto_42" InteractionMode="DebuggerApi" ScopeIdentifier="bfd53c9d-324e-43d2-a41a-119fec958b1e" Text="1" Version="V1">
                             <uix:NTypeInto.Target>
                               <uix:TargetAnchorable BrowserURL="https://caazeo8ton5ohnbbssapp.ecwcloud.com/mobiledoc/jsp/webemr/index.jsp#/mobiledoc/jsp/webemr/webpm/claimLookup.jsp" DesignTimeRectangle="352, 445, 31, 21" ElementType="InputBox" FriendlyName="'INPUT billingClaimIpt5n…'" FullSelectorArgument="&lt;webctrl id='claimCPTCodesTable1669100747855' tableRow='1' tag='TABLE' /&gt;&lt;webctrl id='billingClaimIpt5ngR0' tableRow='2' tag='INPUT' type='text' /&gt;" FuzzySelectorArgument="&lt;webctrl id='claimCPTCodesTable1669100747855' tag='TABLE' /&gt;&lt;webctrl id='billingClaimIpt5ngR0' class='editableTDText1669100747855 ng-pristine ng-untouched ng-valid ng-empty' tag='INPUT' type='text' aaname='' /&gt;" Guid="95f25408-ca85-44fa-b740-09873f8813f3" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAACMAAAAZCAYAAAC7OJeSAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAABLSURBVEhL7c4xDcAwFANR8+dSFJU6pRD+GAANAReBdw930ttPa39uoet+3ULPPm7BTMJMwkzCTMJMwkzCTMJMwkzCTKKZcQu5JvsHl3hWxnnJ0OgAAAAASUVORK5CYII=" InformativeScreenshot="2c7b3d57adfdf577ada0d3d1c1f17095.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='eCW (Billing, Support 1 ) Production' /&gt;" SearchSteps="FuzzySelector, Image" Visibility="Interactive">
                                 <uix:TargetAnchorable.Anchors>
@@ -618,15 +618,15 @@
                         </Sequence>
                       </If.Else>
                     </If>
-                    <If Condition="[CDbl(In_CurrentRow_For_Claim(&quot;99457 Units&quot;))&gt;0]" DisplayName="If CPT Code 99457 is found" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="If_18">
+                    <If Condition="[CDbl(In_CurrentRow_For_Claim(&quot;99457 Units&quot;))&gt;0]" DisplayName="If CPT Code 99457 is found" sap:VirtualizedContainerService.HintSize="484,1954" sap2010:WorkflowViewState.IdRef="If_18">
                       <sap:WorkflowViewStateService.ViewState>
                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                           <x:Boolean x:Key="IsPinned">False</x:Boolean>
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
                       <If.Then>
-                        <Sequence sap:VirtualizedContainerService.HintSize="376,1510" sap2010:WorkflowViewState.IdRef="Sequence_39">
+                        <Sequence sap:VirtualizedContainerService.HintSize="376,1766" sap2010:WorkflowViewState.IdRef="Sequence_39">
                           <sap:WorkflowViewStateService.ViewState>
                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
                               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -645,7 +645,7 @@
                               </uix:TargetAnchorable>
                             </uix:NTypeInto.Target>
                           </uix:NTypeInto>
-                          <ui:SendHotkey ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" Activate="True" ContinueOnError="True" DisplayName="Send Hotkey" sap:VirtualizedContainerService.HintSize="334,136" sap2010:WorkflowViewState.IdRef="SendHotkey_18" Key="enter" KeyModifiers="None" SpecialKey="True">
+                          <ui:SendHotkey ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" Activate="True" ContinueOnError="True" DelayMS="500" DisplayName="Send Hotkey" sap:VirtualizedContainerService.HintSize="334,136" sap2010:WorkflowViewState.IdRef="SendHotkey_18" Key="enter" KeyModifiers="None" SpecialKey="True">
                             <ui:SendHotkey.Target>
                               <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}" Id="ccc9d561-c26b-4dee-b504-bde906cbc570">
                                 <ui:Target.TimeoutMS>
@@ -657,7 +657,7 @@
                               </ui:Target>
                             </ui:SendHotkey.Target>
                           </ui:SendHotkey>
-                          <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'TOS'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="334,216" sap2010:WorkflowViewState.IdRef="NTypeInto_45" InteractionMode="DebuggerApi" ScopeIdentifier="bfd53c9d-324e-43d2-a41a-119fec958b1e" Text="1" Version="V1">
+                          <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DelayBefore="0.5" DisplayName="Type Into 'TOS'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="334,216" sap2010:WorkflowViewState.IdRef="NTypeInto_45" InteractionMode="DebuggerApi" ScopeIdentifier="bfd53c9d-324e-43d2-a41a-119fec958b1e" Text="1" Version="V1">
                             <uix:NTypeInto.Target>
                               <uix:TargetAnchorable BrowserURL="https://caazeo8ton5ohnbbssapp.ecwcloud.com/mobiledoc/jsp/webemr/index.jsp#/mobiledoc/jsp/webemr/webpm/claimLookup.jsp" DesignTimeRectangle="352, 489, 31, 21" ElementType="InputBox" FriendlyName="'INPUT billingClaimIpt5n…'" FullSelectorArgument="&lt;webctrl id='claimCPTCodesTable1669023154872' tableRow='1' tag='TABLE' /&gt;&lt;webctrl id='billingClaimIpt5ngR2' tableRow='4' tag='INPUT' type='text' /&gt;" FuzzySelectorArgument="&lt;webctrl id='claimCPTCodesTable1669023154872' tag='TABLE' /&gt;&lt;webctrl id='billingClaimIpt5ngR2' class='editableTDText1669023154872 ng-pristine ng-untouched ng-valid ng-empty' tag='INPUT' type='text' aaname='' /&gt;" Guid="cc6c43f6-6cb4-4f67-b2cf-47841996f5c8" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAACMAAAAZCAYAAAC7OJeSAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAABFSURBVEhL7dehEQAxEMPA67+wdHHwG/gGHBIqbiDPLBf1pGizu2kx5/vTwhhiDDGGGEOMIcYQY4gxxBhiDOl6B++yFCy55ttvhd4yUioAAAAASUVORK5CYII=" InformativeScreenshot="80858b3e9fdf5912a09e9c6659f17a9e.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='eCW (Billing, Support 1 ) Production' /&gt;" SearchSteps="FuzzySelector" Visibility="Interactive">
                                 <uix:TargetAnchorable.Anchors>
@@ -705,6 +705,18 @@
                               </uix:TargetAnchorable>
                             </uix:NTypeInto.Target>
                           </uix:NTypeInto>
+                          <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into '1'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="334,216" sap2010:WorkflowViewState.IdRef="NTypeInto_63" InteractionMode="DebuggerApi" ScopeIdentifier="bfd53c9d-324e-43d2-a41a-119fec958b1e" Text="[In_CurrentRow_For_Claim(&quot;99457 Units&quot;).ToString]" Version="V1">
+                            <uix:NTypeInto.Target>
+                              <uix:TargetAnchorable BrowserURL="https://caazeo8ton5ohnbbssapp.ecwcloud.com/mobiledoc/jsp/webemr/index.jsp#/mobiledoc/jsp/webemr/webpm/claimLookup.jsp" DesignTimeRectangle="906, 473, 31, 21" ElementType="InputBox" FriendlyName="'1'" FullSelectorArgument="&lt;webctrl id='claimCPTCodesTable1669631611604' tableRow='1' tag='TABLE' /&gt;&lt;webctrl id='billingClaimIpt16ngR0' tableRow='2' tag='INPUT' type='text' /&gt;" FuzzySelectorArgument="&lt;webctrl id='claimCPTCodesTable1669631611604' tag='TABLE' /&gt;&lt;webctrl id='billingClaimIpt16ngR0' class='editableTDText1669631611604 closable1669631611604 text-center ng-pristine ng-untouched ng-valid ng-not-empty' tag='INPUT' type='text' aaname='' /&gt;" Guid="bb5e04a2-0e35-4058-949f-dc30f1adc8f5" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAACMAAAAZCAYAAAC7OJeSAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAACCSURBVEhLYzjz9OP/wYIZ1h4++3+wYIb/gwiMOgYXGHUMLjDMHPP73v+liYr/GRha/h+DCpELKHPM673/qx0V/yuqSAy8Y95vKv6fPO/a/2vLggZByEDB81HH4ACjjsEFRh1DazDqGFxg1DG4wOByzN27d/8PFsxw7Omn/4MDf/oPAD2UNBDSM1z9AAAAAElFTkSuQmCC" InformativeScreenshot="0709225fbcc3d7ea7f98f1a5821b5dfd.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='eCW (Billing, Support 1 ) Production' /&gt;" SearchSteps="FuzzySelector, Image" Visibility="Interactive">
+                                <uix:TargetAnchorable.Anchors>
+                                  <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                                    <uix:Target DesignTimeRectangle="257, 473, 50, 21" ElementType="InputBox" FriendlyName="'99457'" FullSelectorArgument="&lt;webctrl id='claimCPTCodesTable1669631611604' tableRow='1' tag='TABLE' /&gt;&lt;webctrl tableRow='2' tag='INPUT' type='text' /&gt;" FuzzyAccuracy="0.87" FuzzySelectorArgument="&lt;webctrl id='claimCPTCodesTable1669631611604' tag='TABLE' /&gt;&lt;webctrl class='editableTDText1669631611604 idt-alert-subject' tag='INPUT' type='text' aaname='' check:text='99457' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAADYAAAAZCAYAAAB6v90+AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAKYSURBVFhH7VW/a9tAGL0/41ZDFkOGeovGBjpE0CGCDNUWPIWMwkMxWYzIYDxqKiKbPBiUweBu9hKQh7byUHCHYGUIQUOGo+mgIcPrp5+WbZmUOItVP/hAd6fTvfd9T9+x7w+/UcZg9s0PlDEYSoqdsG3DTti24f8SJm46UPc5GOOofjLgimQBAaZdDfIeo7UK5IYN7zlZyiEY65AYgz5OJmjMaDwPBdZ9uOBAX5hP4sSCH218PVaF3VtQWA1a34MQHgaNWnZQSLhGpIyJD+G7ME4Yai2H5OYQuNDfc3AimArzeyrYsYmpEPTNONI9QW5OCB/2GQP/PFz85iuwIiwi8cGEl4xjoZThO8C9pCo2coeSUM6alPcUAb0jQelaUSUyYV0F7GyArPDr8GijzmSYt8l4A6wKC0kcW3NhwRBaQtJpkU0u5jJwa+IwsxVh0oF0FCYltlgqLEoIj6vIeBVq2ykU6bbJHaf2ywn4B6xakcjVmAR9RHb5I+C05cj3IUnRPydiKqxfAa1NyTZEJBPmwTyS0JmEz4vC8Czg+7HdvLEBlTPIV1nqYlACmyS+OdrUhDEKmgc1iKs6qnQ425OhXZtossPEHgLDlowKkeb7KoyeQTbVMCQu3hcZ0qWb2HRJ2BKcC/r2kjXFdR3sXQduMt4UBcKWEFZwzYERmcg6a7obhdJd7W+RsLylo2oXVHEDFApLO5U/sXB+wKH25uTSNW+kQ+Zk2W9xjRa724CqzND8Ss8Bye7bcO9y++gayVsuGDXp/6vDfkwm3gAFwnxY1MbDbFcO6uiM8hlPK0P320cN1s91v3neiqF9FUjR3RdaOLR3vjIC9unbtPg8XrbilmInbNuwE7ZtKK+w2WyGMgZzHp5QvnjCX+uFd3g8/9ptAAAAAElFTkSuQmCC" SearchSteps="FuzzySelector, Image" />
+                                    <uix:Target DesignTimeRectangle="902, 452, 38, 20" ElementType="Text" FriendlyName="'Units'" FullSelectorArgument="&lt;webctrl aaname='#  Code POS TOS SDOS EDOS M1 M2 M3 M4 ICD1 ICD2 ICD3 ICD4 Units *' parentid='billingClaimTbl7' tableRow='1' tag='TABLE' /&gt;&lt;webctrl aaname='Units' tableRow='1' tag='TH' /&gt;" FuzzyAccuracy="0.84" FuzzySelectorArgument="&lt;webctrl aaname='#  Code POS TOS SDOS EDOS M1 M2 M3 M4 ICD1 ICD2 ICD3 ICD4 Units *' parentid='billingClaimTbl7' tag='TABLE' /&gt;&lt;webctrl aaname='Units' type='' tag='TH' class='' check:innerText='Units' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAACoAAAAYCAYAAACMcW/9AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAHCSURBVFhH7Zc9a8JAGMf9HJlcnJw6denkB3BxsQ4upUuQQjnUQYtDhxscpFRKhmpBBK0olqJDEUERUikWChLEQrpIBgeHfoJ/L77E8x3bDEo9+HHJPc/d/e6FQCyqqmIf2B9RWZZRaLxDr3cN3svS0r6HDXq9a/BeB1EzOIiazRrRJkQXgTOjGgk6lQyFQEqocG2rqD/HYfXlUV4S25apF/s8zTb8I9FZNNxeEYjVZbHN/FFUz7lG+DELp5dAYPl23z2SnfncLuhlcBgfQUHbbMeraaOf4AnBlVIgc3PxmCBKYPXnkWtrqLdrENnER3cfK3OnO6ogfEbgSCjseQC5raCoTGKLmCJ6XhoY8XSM7U6suTKXP/piisLmCsIRyUJ604z2ZawRVUEvCE6GK552yMVDEPyrJ99GdEhHQTIlweEhOL5p/eboxxO5owhUu6h/aii/PMDhJjh9mqx+e1Enu4f6WHJPQ7GmoPLFTqM3QE6KcBuwyFrRltZHMcNWO77wVi+FWOAv/DaiTCZBYWcLFdxBBBoapGiIHf1obJsogb72jXHm2SC6O/BeB1EzOIiazYyo/rIPWDAu+p/eLpaRF/AD/P+a90T2M+MAAAAASUVORK5CYII=" SearchSteps="FuzzySelector, Image" />
+                                  </scg:List>
+                                </uix:TargetAnchorable.Anchors>
+                              </uix:TargetAnchorable>
+                            </uix:NTypeInto.Target>
+                          </uix:NTypeInto>
                         </Sequence>
                       </If.Then>
                       <If.Else>
@@ -717,15 +729,15 @@
                         </Sequence>
                       </If.Else>
                     </If>
-                    <If Condition="[CDbl(In_CurrentRow_For_Claim(&quot;99458 Units&quot;))&gt;0]" DisplayName="If CPT Code 99458 is found" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="If_19">
+                    <If Condition="[CDbl(In_CurrentRow_For_Claim(&quot;99458 Units&quot;))&gt;0]" DisplayName="If CPT Code 99458 is found" sap:VirtualizedContainerService.HintSize="484,1954" sap2010:WorkflowViewState.IdRef="If_19">
                       <sap:WorkflowViewStateService.ViewState>
                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                           <x:Boolean x:Key="IsPinned">False</x:Boolean>
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
                       <If.Then>
-                        <Sequence sap:VirtualizedContainerService.HintSize="376,1510" sap2010:WorkflowViewState.IdRef="Sequence_41">
+                        <Sequence sap:VirtualizedContainerService.HintSize="376,1766" sap2010:WorkflowViewState.IdRef="Sequence_41">
                           <sap:WorkflowViewStateService.ViewState>
                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
                               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -744,7 +756,7 @@
                               </uix:TargetAnchorable>
                             </uix:NTypeInto.Target>
                           </uix:NTypeInto>
-                          <ui:SendHotkey ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" Activate="True" ContinueOnError="True" DisplayName="Send Hotkey" sap:VirtualizedContainerService.HintSize="334,136" sap2010:WorkflowViewState.IdRef="SendHotkey_19" Key="enter" KeyModifiers="None" SpecialKey="True">
+                          <ui:SendHotkey ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" Activate="True" ContinueOnError="True" DelayMS="500" DisplayName="Send Hotkey" sap:VirtualizedContainerService.HintSize="334,136" sap2010:WorkflowViewState.IdRef="SendHotkey_19" Key="enter" KeyModifiers="None" SpecialKey="True">
                             <ui:SendHotkey.Target>
                               <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}" Id="296d7d2f-e47e-4624-82b4-d12ecf734e4c">
                                 <ui:Target.TimeoutMS>
@@ -756,7 +768,7 @@
                               </ui:Target>
                             </ui:SendHotkey.Target>
                           </ui:SendHotkey>
-                          <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'INPUT billingClaimIpt5n…'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="334,216" sap2010:WorkflowViewState.IdRef="NTypeInto_48" InteractionMode="DebuggerApi" ScopeIdentifier="bfd53c9d-324e-43d2-a41a-119fec958b1e" Text="1" Version="V1">
+                          <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DelayBefore="0.5" DisplayName="Type Into 'INPUT billingClaimIpt5n…'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="334,216" sap2010:WorkflowViewState.IdRef="NTypeInto_48" InteractionMode="DebuggerApi" ScopeIdentifier="bfd53c9d-324e-43d2-a41a-119fec958b1e" Text="1" Version="V1">
                             <uix:NTypeInto.Target>
                               <uix:TargetAnchorable BrowserURL="https://caazeo8ton5ohnbbssapp.ecwcloud.com/mobiledoc/jsp/webemr/index.jsp#/mobiledoc/jsp/webemr/webpm/claimLookup.jsp" DesignTimeRectangle="352, 511, 31, 21" ElementType="InputBox" FriendlyName="'INPUT billingClaimIpt5n…'" FullSelectorArgument="&lt;webctrl id='claimCPTCodesTable1669022181910' tableRow='1' tag='TABLE' /&gt;&lt;webctrl id='billingClaimIpt5ngR3' tableRow='5' tag='INPUT' type='text' /&gt;" FuzzyAccuracy="0.94" FuzzyMatches="10000" FuzzySelectorArgument="&lt;webctrl id='claimCPTCodesTable1669022181910' tag='TABLE' /&gt;&lt;webctrl id='billingClaimIpt5ngR3' class='editableTDText1669022181910 ng-pristine ng-untouched ng-valid ng-empty' tag='INPUT' type='text' aaname='' /&gt;" Guid="f23c414e-288a-4a87-a932-07f59290a032" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAACMAAAAZCAYAAAC7OJeSAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAABESURBVEhL7dahDQAwDMTA7L9jZvmSwhr3gU+KQq2gTIrM7qZlui5zdwVjiDHEGGIMMYYYQ4whxhBjSFfM60v/NUWXSQ77VIM0DiBq9wAAAABJRU5ErkJggg==" InformativeScreenshot="468f7e688b16cc943b04f0faf964773e.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='eCW (Billing, Support 1 ) Production' /&gt;" SearchSteps="FuzzySelector" Visibility="Interactive">
                                 <uix:TargetAnchorable.Anchors>
@@ -804,6 +816,18 @@
                               </uix:TargetAnchorable>
                             </uix:NTypeInto.Target>
                           </uix:NTypeInto>
+                          <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into '1'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="334,216" sap2010:WorkflowViewState.IdRef="NTypeInto_64" InteractionMode="DebuggerApi" ScopeIdentifier="bfd53c9d-324e-43d2-a41a-119fec958b1e" Text="[In_CurrentRow_For_Claim(&quot;99458 Units&quot;).ToString]" Version="V1">
+                            <uix:NTypeInto.Target>
+                              <uix:TargetAnchorable BrowserURL="https://caazeo8ton5ohnbbssapp.ecwcloud.com/mobiledoc/jsp/webemr/index.jsp#/mobiledoc/jsp/webemr/webpm/claimLookup.jsp" DesignTimeRectangle="906, 539, 31, 21" ElementType="InputBox" FriendlyName="'1'" FullSelectorArgument="&lt;webctrl id='claimCPTCodesTable1669633345215' tableRow='1' tag='TABLE' /&gt;&lt;webctrl id='billingClaimIpt16ngR3' tableRow='5' tag='INPUT' type='text' /&gt;" FuzzySelectorArgument="&lt;webctrl id='claimCPTCodesTable1669633345215' tag='TABLE' /&gt;&lt;webctrl id='billingClaimIpt16ngR3' class='editableTDText1669633345215 closable1669633345215 text-center ng-pristine ng-untouched ng-valid ng-not-empty' tag='INPUT' type='text' aaname='' /&gt;" Guid="52e5201f-2700-4fcd-9c56-ae454b38deb5" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAACMAAAAZCAYAAAC7OJeSAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAB8SURBVEhLY/g/iADD3bt3/w8WzHDs6af/gwWPOgYXHnUMLjzMHPPw8v+GcPn/DAy1/2dhkycBU+aYy5v/J1jJ/5dSEB94x+xakPvft+/0/2VT/QZByEDx5lHH4MCjjsGFRx1DazzqGFx41DG48OByDLZW+kDhQdRv+v8fAKyTS4M8I/FuAAAAAElFTkSuQmCC" InformativeScreenshot="110178490836efc33344fc7d3317905a.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='eCW (Billing, Support 1 ) Production' /&gt;" SearchSteps="FuzzySelector, Image" Visibility="Interactive">
+                                <uix:TargetAnchorable.Anchors>
+                                  <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                                    <uix:Target DesignTimeRectangle="257, 539, 50, 21" ElementType="InputBox" FriendlyName="'99458'" FullSelectorArgument="&lt;webctrl id='claimCPTCodesTable1669633345215' tableRow='1' tag='TABLE' /&gt;&lt;webctrl tableRow='5' tag='INPUT' type='text' /&gt;" FuzzyAccuracy="0.82" FuzzySelectorArgument="&lt;webctrl id='claimCPTCodesTable1669633345215' tag='TABLE' /&gt;&lt;webctrl class='editableTDText1669633345215' tag='INPUT' type='text' aaname='' check:text='99458' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAADYAAAAZCAYAAAB6v90+AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAL2SURBVFhH7VjPaxpREH7/g6CQSz2ZQISAAcEemhDoQiBIIJHiRTwteFgIBCGBBPZiD8UKJXqIRFioJAcXcljoYbFgkYiQQA4eAgkRgvTiMf/A13n7w93VhRJ70ip84NvZeW++mW/mwTLM6Y89Pz9jHsE6v18xj1gQmzUsiM0a/i9i+nUBwkoIjIUQ3i1CebBtQ1xWJCTCjGzvkMjVob54fTla2imijEHUrGe0ZrR2kIR8Z9kebyHnBCzx58FlCCdN6K69psUksbsaNtka0koP+kMPX3NrYDs1aGTjAUcoqEP9Cfp9G4c7DJF8Ey23f78N8X0IARcx7TwFtl3G5cOA9jRh+ygy379INlr3NGRXGfaUgbPflJggZgTxoQzVfmYQpQx3KYgjqmJOc4gQ0QDLo2qvqaLKURyblRpEN7FKEiyj+laimqdKUXLM9RNkStZm5cnzzjSYJMaD2K45xPoa0laQRhAHdhCEmzLW3bLSC4hu8aQ0PcSMhATNKo7LrdXIIxBM4fgnVfKaJEz/eRJHZ0yJSSlScBEWh9gguTwOUD0RjL7gQeqKSIHRwb+GZLvF5wzJaESsh+OtOCSd//cS67wMoN2bElS1IoQgQ6LUG52pyHGr95aR/v7vMuTwGR40IEoZhOlwFhaQvigjyzZwfMNtA5zlzUYPrKRweF4kmUo4679C/SIgetS2ZDpGbAzVA9rbkqZaSSEQEyHrt6iWJKyHN8hv6Ov3FvgQGwOv4GoBio9Nv8iAfapTgCYR7+Qz4dcvBjFD0jRoKIHpK4eI+o1aYb9uDCu3z1vhS6xlTS5Nr2EvFoJw7gRn29TGKRJBkuwPMyj7uQmVqsyQJVnpfZKzUofSdfnRNZJtcD8uX4ZoXqP3aH8++vepFyXXgJoSPsTMycSzvRTLQGq4M25Xhu63jxJkanivr/c9U4pcvklEjbuPS5jL2+mvTleDuLtsDhZ+N2bKUB7tfabH36U4o1gQmzUsiM0a5peY3xeeecCcflcE/gDROxdQz6YwhwAAAABJRU5ErkJggg==" SearchSteps="FuzzySelector, Image" />
+                                    <uix:Target DesignTimeRectangle="902, 452, 38, 20" ElementType="Text" FriendlyName="'Units'" FullSelectorArgument="&lt;webctrl aaname='#  Code POS TOS SDOS EDOS M1 M2 M3 M4 ICD1 ICD2 ICD3 ICD4 Units *' parentid='billingClaimTbl7' tableRow='1' tag='TABLE' /&gt;&lt;webctrl aaname='Units' tableRow='1' tag='TH' /&gt;" FuzzyAccuracy="0.82" FuzzySelectorArgument="&lt;webctrl aaname='#  Code POS TOS SDOS EDOS M1 M2 M3 M4 ICD1 ICD2 ICD3 ICD4 Units *' parentid='billingClaimTbl7' tag='TABLE' /&gt;&lt;webctrl aaname='Units' type='' tag='TH' class='' check:innerText='Units' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAACoAAAAYCAYAAACMcW/9AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAHCSURBVFhH7Zc9a8JAGMf9HJlcnJw6denkB3BxsQ4upUuQQjnUQYtDhxscpFRKhmpBBK0olqJDEUERUikWChLEQrpIBgeHfoJ/L77E8x3bDEo9+HHJPc/d/e6FQCyqqmIf2B9RWZZRaLxDr3cN3svS0r6HDXq9a/BeB1EzOIiazRrRJkQXgTOjGgk6lQyFQEqocG2rqD/HYfXlUV4S25apF/s8zTb8I9FZNNxeEYjVZbHN/FFUz7lG+DELp5dAYPl23z2SnfncLuhlcBgfQUHbbMeraaOf4AnBlVIgc3PxmCBKYPXnkWtrqLdrENnER3cfK3OnO6ogfEbgSCjseQC5raCoTGKLmCJ6XhoY8XSM7U6suTKXP/piisLmCsIRyUJ604z2ZawRVUEvCE6GK552yMVDEPyrJ99GdEhHQTIlweEhOL5p/eboxxO5owhUu6h/aii/PMDhJjh9mqx+e1Enu4f6WHJPQ7GmoPLFTqM3QE6KcBuwyFrRltZHMcNWO77wVi+FWOAv/DaiTCZBYWcLFdxBBBoapGiIHf1obJsogb72jXHm2SC6O/BeB1EzOIiazYyo/rIPWDAu+p/eLpaRF/AD/P+a90T2M+MAAAAASUVORK5CYII=" SearchSteps="FuzzySelector, Image" />
+                                  </scg:List>
+                                </uix:TargetAnchorable.Anchors>
+                              </uix:TargetAnchorable>
+                            </uix:NTypeInto.Target>
+                          </uix:NTypeInto>
                         </Sequence>
                       </If.Then>
                       <If.Else>
@@ -817,7 +841,7 @@
                       </If.Else>
                     </If>
                   </Sequence>
-                  <Sequence DisplayName="Sequence For New Data" sap:VirtualizedContainerService.HintSize="376,838" sap2010:WorkflowViewState.IdRef="Sequence_26">
+                  <Sequence DisplayName="Sequence For New Data" sap:VirtualizedContainerService.HintSize="526,875" sap2010:WorkflowViewState.IdRef="Sequence_26">
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -834,10 +858,26 @@
                         <uix:TargetAnchorable BrowserURL="https://caazeo8ton5ohnbbssapp.ecwcloud.com/mobiledoc/jsp/webemr/index.jsp#/mobiledoc/jsp/webemr/webpm/claimLookup.jsp" DesignTimeRectangle="975, 137, 81, 24" ElementType="Button" FriendlyName="'Don't Save'" FullSelectorArgument="&lt;webctrl id='savePrompt-tplBtn4' tag='BUTTON' /&gt;" FuzzySelectorArgument="&lt;webctrl id='savePrompt-tplBtn4' tag='BUTTON' type='' class='close-yel btn btn-xs btn-default' aaname='Don&amp;apos;t Save' check:innerText='Don&amp;apos;t Save' /&gt;" Guid="67cd061f-32fe-4008-a7a7-28c52e2e99be" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAFUAAAAcCAYAAAAQovP+AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAIdSURBVGhD7Zq/TgJBEIfvnXgN3gE0Rq14AR6Anncw1NS8gQEtbIDijB0dhRpiiK75NgyZW068P7vRYn7JhL2d2dm5j7lt7rKv9YVz675ZRMs+15elDrPmln2srpx068vTnXt8uHfz+dyshsEMdkeo76trD5XJ53zp9vu9M9UTzGAnYLO35Y2HCm0D2lywg6GH+rq89VBpY1M7eYYGNa4MagIZ1ARqDXWxWLhOp1Ow6XR68LYTucfj8eHqvNhT11B1XQpFgapvYLfbueFwGOWmqkIljj3Z+z8oOlS03W7dYDBweZ4fZpqJ9bPZ7GQcii79y84MlQQqYk6OAeleeTR1VxEzmUxct9s9+smpBVDtD48X8YfrUNla9h6NRt4nYswcPr2GXx1XRcmgUrzcvAaMuJY1zPd6Pd/diHxljzLzOkco/cf9FMcexPAb1s2YOR2DwusqSt6pZUXpriBGQyCOtXWharFeatJdh8kfqOvSY/aRWLG63ZoEKsXJmaoLFqWGKvk3m03hbA9rIR95de6y+6mr6FApmG7Qc4w1EK7Fz7z2nYOqc54T+YgFJlAFIjn0UYMfyJgGTwyxTRUFavi4aEgIQBQufsYCrSpUudmy/FxL7rL8Mk/3klugSl06HgFYHxmh/ze1hmo6lUFNIIOaQAY1gQxqAh2h2uuUOCq8TrEXf+0Fs8KLP3tF3d5gJkA9VPuYIr7ZZz/Rre++AbVdQAUwoaoeAAAAAElFTkSuQmCC" InformativeScreenshot="cb2bab60105389f16f74ab7a7154ed55.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='eCW (Billing, Support 1 ) Production' /&gt;" SearchSteps="FuzzySelector, Image" Visibility="Interactive" />
                       </uix:NClick.Target>
                     </uix:NClick>
-                    <uix:NClick ClickType="Single" DelayAfter="1" DisplayName="Click 'Claims'" sap:VirtualizedContainerService.HintSize="334,156" sap2010:WorkflowViewState.IdRef="NClick_4" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="bfd53c9d-324e-43d2-a41a-119fec958b1e" Version="V1">
+                    <uix:NClick ClickType="Single" DelayAfter="1" DisplayName="Click 'Claims'" sap:VirtualizedContainerService.HintSize="334,193" sap2010:WorkflowViewState.IdRef="NClick_4" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="bfd53c9d-324e-43d2-a41a-119fec958b1e" Version="V1">
                       <uix:NClick.Target>
                         <uix:TargetAnchorable BrowserURL="https://caazeo8ton5ohnbbssapp.ecwcloud.com/mobiledoc/jsp/webemr/index.jsp#/mobiledoc/jsp/webemr/webpm/claimLookup.jsp" DesignTimeRectangle="79, 342, 70, 24" ElementType="Button" FriendlyName="'Claims'" FullSelectorArgument="&lt;webctrl id='claimLookupBtn10' tag='BUTTON' type='button' /&gt;" FuzzySelectorArgument="&lt;webctrl id='claimLookupBtn10' tag='BUTTON' type='button' class='btn btn-default btn-xs btn-aquagrey dropdown-toggle' aaname='Claims                                 ' check:innerText='Claims' /&gt;" Guid="78652749-8a3c-40d6-80db-670193d43548" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAEoAAAAcCAYAAADGBymbAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAGuSURBVGhD7dmxSsNAHMfxTr6Asw/T3dcodPUBHEXIlheoUOpSCoU6CIUs0rFUuopLnuRvfkku97/0Tv/1TlDzH76QNrlr+sklQzu6muakfZ1CCXOgLm8f6OL+kUZ3i0EHA1hwmw4KO67nz/T69k5lWQ46GMCCY3VQUFQkGyxgcgKFJecbMORgolCCFEqYQglLB1Vs6nG2JWWHkvarJY1XR/+YP1QaqBqpgenvk0KtZ4tfDZoAakeTABLSFWU6bGmcb2nv21flQgGV3Z6zXXccVtSkMNsVfFHNa47D/PicbuyG1u24/i3/UxcFc8dB4UTFULwjZbldiS5Ui9Me63vdzIk5GJqnm6cXB5KHfb4xvnB8HFTMimK3bB/KbJ/O4b7GNubyX4wmH9Y5SAhj4qDEzyhcfQ7w+YqSQvH3cN4hMI51LhJKAGVO0n8L2C/VA62fOemg6jAne+71A9B3kFASKGSuaFd7Ozpfij94q/0ZHtpRUM0qtZ8bXtmxYf4kUP89hRKmUMIUSphCCfNC6U/BbsGfgvXPBRsMgn8uGCwoYskNORhwJORAaeEUSlROH4emYN5q18bqAAAAAElFTkSuQmCC" InformativeScreenshot="f9d512b89e4e483146e0fafe2ae6bb87.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='eCW (Billing, Support 1 ) Production' /&gt;" SearchSteps="FuzzySelector, Image" Visibility="Interactive" />
                       </uix:NClick.Target>
+                      <uix:NClick.VerifyOptions>
+                        <uix:VerifyExecutionOptions DisplayName="Button 'Create New Claim'" Mode="Appears" Retry="True">
+                          <uix:VerifyExecutionOptions.Target>
+                            <uix:TargetAnchorable BrowserURL="https://caazeo8ton5ohnbbssapp.ecwcloud.com/mobiledoc/jsp/webemr/index.jsp#/mobiledoc/jsp/webemr/webpm/claimLookup.jsp" DesignTimeRectangle="80, 355, 131, 22" ElementType="Button" FriendlyName="'Create New Claim'" FullSelectorArgument="&lt;webctrl id='claimLookupBtn11' tag='BUTTON' /&gt;" FuzzySelectorArgument="&lt;webctrl id='claimLookupBtn11' tag='BUTTON' type='' class='' aaname='Create New Claim' check:innerText='Create New Claim' /&gt;" Guid="ac6db487-921e-404b-88b3-ac94bb71e579" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAIcAAAAaCAYAAACdH0+XAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAALFSURBVGhD7ZbNbhMxEMf9GBx4qpXyCDwD92iv3KGlIA6bM21D06YfVEVs7kD4EuIroPAWg8eetcdeO9nDLi3V/CRLOxPv2DPzt7Pq7r0HcGd0HwQhRi2XS5hOp2QKgkddfPkDz+avyRQEjzr/vIanJ6/IFASPOvv0G57MrsgUBI86/fgL9o4uyRQEj5p/WMHei5dkCoJHnbz/CY+nIg6hjTpe/oDd6QWZguBRx+++w+7hOZn9U48VKOVHMVnTL/+e9aTQeyihJtuwqqAYB55eSOddQzmqYGMFcD/xHq8JNdPi2Dk8I7NfTIEGKLxhUUK5oOeOoDiKkR5coAOII593B3HcINTs7TfYORhAHBtPgC6SLl5zumyTtc+dtAKqlZlIcRo/zQ18zdw1VKNoXgSKo1zgvCg+a6S9XSiO8eN8n4f53TU4ioVsyzt41+/Xi4nN0bHKiR7NHPTrQ9F+ZxjUkRbHo4NTMnsEk8hu3grBNzDRsNQJY420jTaPBhSatzF+u0Hm5sBbg8dnMeM9NzF9bCuUctzE5s0mtuWdyovitmLi3lge5jC59xPC7Bkrjv1rEEdQJGwmnQY3qCimQMyfFEd0Cs1oF86Jgz9Hggtj0LeCzoXPdWuncuycd7znjDhYLL5/pB4PLY43X4cRR6T6kJQ4UnPRH90orJGhOLYXKiwuxV6EMXnxHbiu3m/drBmLhNMxb7wF/Fobbo5bKQ6NuQZZch5WAIM9Re3GYAN9obE4/OYIC5Vby9NqPp5yLSrXALSTjbXN838nVowF+xbhdMkb5zhhBYK6YeJ4uD8ns39Modg1bQsSiwNBIbC5TASNr8CPs6ZYpqDobwpkBebeb8VvFxeJG8nX439Nxs9ixnbM1rzd/vXQvir1HXPbxSH8v4g4hCxWHM9FHEIbEYeQRcQhZBFxCFlEHEIWEYeQRcQhZAD4C0AAfIgIJ1eTAAAAAElFTkSuQmCC" InformativeScreenshot="6ad11c3a2f886b2197ce809390088f51.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='eCW (Billing, Support 1 ) Production' /&gt;" SearchSteps="FuzzySelector, Image" Visibility="Interactive">
+                              <uix:TargetAnchorable.Anchors>
+                                <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                  <uix:Target DesignTimeRectangle="80, 377, 179, 22" ElementType="Button" FriendlyName="'Create Claim'" FullSelectorArgument="&lt;webctrl id='claimLookupBtn12' tag='BUTTON' /&gt;" FuzzySelectorArgument="&lt;webctrl id='claimLookupBtn12' tag='BUTTON' type='' class='disabled' aaname='Create Claim for Encounter' check:innerText='Create Claim for Encounter' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAALcAAAAaCAYAAAD17M2vAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAALuSURBVHhe7ZexbtswEIbz5n2IAkU1dAqgsS0guEPGQFo7dNHWB7AfguUdSem/EynHiaTE7H2AAJsmj8fjRwp++PXnr/v688kZRi2Qz+S1yW1Uh8ltVIvJbVSLyW1Ui8ltVIvJbVSLyW1Ui8ltVMthco+nxjXN/LTDJf7yTpx710I+TdO50TePp9b159Alz8X1beM66vxaxi7OeW2uFRb5vzGnCjlEbhb7tFPlvSg3byqLkRfrutxvhQ7HBnPQGtreR/to+PWdPkZe+8vNIoVbccnoOi99utWDpL5tuo1AAnVTcV/RlvqGm1X0U9B8pTeHkHu6YTE+9qH8e5jPrxNzWsgnc0sH/jK0cxuMuQyd68cYT8cqyq1zkjUQc6ULR6xz3iuqkx6bvo8nn1smlnhD5+JDzhRjTL+lvhuyv9yUfDHxIPJcQHWrlTaQ2mNMLDghN4Ti64O1fnMWb26/jnQghNwgfRCnLEdAzU/1EUK30zwcLyuwRxxsevI5iRqquRiOAzWC/VqXGy8IXJOfH+dQe4jr44Owg9SJ95dbFJs2BjeMnlh4vZlZudXNyA9sNHOD3JQ7xMrKjfmrtcrcEnL+RR+QIT8+oqSZydR0LZ7PeZaUoD0INV+XW9ZwtSZQQ36mwyNjbM3+cuubQZDZiGxfaodCUMyi3NcLJm8dyVRwnTdI8L/Kjd9vkhtqgty/3J7y60dvRLh5l+LNBSdok1I8+oz9y3MBLG6+sEJuyA0PxJZy8xiIgevJj4+8Qm49F8O1kIc4X1vagxfKjfFeUuudOERugqWDV1Mokt4IIhRRv8Ko0KmtHXr+I8pw8ag9FSockGl8VgDPNE72w4Jjzh3NuYfcHlybFn1V7jQmPvmayu9irpQr5T3FATHFXoQ/kNflps9xTDZ++YBszWFyG8bRTHJ/+fHkPn3+FpsN4/4hn8nrh/PvZzd8f4zNhnH/kM/ktcltVIfJbVSLyW1Ui8ltVIvJbVSLyW1US5D72f0DKI5J693Yd6YAAAAASUVORK5CYII=" SearchSteps="FuzzySelector, Image" />
+                                </scg:List>
+                              </uix:TargetAnchorable.Anchors>
+                            </uix:TargetAnchorable>
+                          </uix:VerifyExecutionOptions.Target>
+                          <uix:VerifyExecutionOptions.Timeout>
+                            <InArgument x:TypeArguments="x:Double" />
+                          </uix:VerifyExecutionOptions.Timeout>
+                        </uix:VerifyExecutionOptions>
+                      </uix:NClick.VerifyOptions>
                     </uix:NClick>
                     <uix:NClick ClickType="Single" DelayBefore="1" DisplayName="Click 'Create New Claim'" sap:VirtualizedContainerService.HintSize="334,156" sap2010:WorkflowViewState.IdRef="NClick_5" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="bfd53c9d-324e-43d2-a41a-119fec958b1e" Version="V1">
                       <uix:NClick.Target>
